@@ -1,0 +1,13 @@
+workload_name,minTime,maxTime
+Workload_AllServices.xml,70,85
+WorkloadTest_addBookmark.xml,25,35
+WorkloadTest_newPoll.xml,8,18
+WorkloadTest_createFolder.xml,10,30
+WorkloadTest_addBookmarkFolder.xml,8,12
+WorkloadTest_removeEventInCalendar.xml,12,20
+WorkloadTest_getBookmarkFolder.xml,20,35
+WorkloadTest_addFiles.xml,20,28
+WorkloadTest_deleteFolder.xml,12,16
+WorkloadTest_addEventInCalendar.xml,25,30
+WorkloadTest_getCredentials.xml,10,12
+WorkloadTest_getFolder.xml,10,20

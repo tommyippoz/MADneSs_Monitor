@@ -1,0 +1,7 @@
+SLAVE_IP_ADDRESS=192.168.2.151
+IN_PORT=9876
+OUT_PORT=9875
+TEST_ITERATIONS=2
+EXPERIMENT_FILE=datafiles/master/experimentSetup.csv
+WORKLOAD_FOLDER=workloads
+WORKLOAD_DETAILS=datafiles/master/workloadDescription.csv
