@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ippoz.multilayer.monitor.master;
+package ippoz.madness.monitor.master;
 
 import ippoz.multilayer.commons.support.AppLogger;
 import ippoz.multilayer.commons.support.PreferencesManager;
@@ -26,10 +26,10 @@ public class ExperimentMaster {
 	 */
 	public static void main(String[] args) {
 		PreferencesManager masterPreferences;
-		MasterManager master;
+		LiferayMasterManager master;
 		try {
 			masterPreferences = new PreferencesManager(new File("masterPreferences.preferences"));
-			master = new MasterManager(masterPreferences);
+			master = new LiferayMasterManager(masterPreferences);
 			master.setupEnvironment();
 			master.startExperimentalCampaign();
 			master.flush();

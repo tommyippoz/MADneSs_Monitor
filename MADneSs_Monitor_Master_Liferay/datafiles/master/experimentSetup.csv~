@@ -1,2 +1,0 @@
-workload_name,experiment_type,iterations,injected_error
-Workload_AllServices.xml,FAULTY,50,TEST;FIREFOX;35000
