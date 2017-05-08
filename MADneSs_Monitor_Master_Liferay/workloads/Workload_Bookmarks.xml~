@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+	<tns:Include configuration-file="Portlet_Bookmarks_BookmarksEntryService.xml" />
+	<tns:Include configuration-file="Portlet_Bookmarks_BookmarksFolderService.xml" />
+	<tns:Include configuration-file="Portal_UserService.xml" />
+	<tns:Include configuration-file="Portal_GroupService.xml" />
+  </tns:Configuration>
+  <tns:Workloads><!--Recupera le info di autenticazione-->
+  	<tns:Workload name="getCredentials">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portal_UserService" method="getUserById/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="companyId" name="companyId" /></tns:Results></tns:Call>
+  			<tns:Call portlet="Portal_GroupService" method="getUserGroup/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="companyId" variable="companyId"></tns:Parameter>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="groupId" name="groupId" /></tns:Results></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload><!--Aggiunge un bookmark (preceduto da getCredentials)--><!--Specificare folderId o eseguire prima addBookmarkFolder o getBookmarkFolder-->
+  	<tns:Workload name="addBookmark">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portlet_Bookmarks_BookmarksEntryService" method="addEntry/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+  					<tns:Parameter name="url">http://www.provabook.it</tns:Parameter>
+		  			<tns:Parameter name="name">book1</tns:Parameter>
+  					<tns:Parameter name="description">bookmark1</tns:Parameter>
+  					<tns:Parameter name="folderId" variable="0"></tns:Parameter>
+  				</tns:Parameters></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload><!--Crea una nuova bookmarkFolder (preceduto da getCredentials)-->
+  	<tns:Workload name="addBookmarkFolder">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portlet_Bookmarks_BookmarksFolderService" method="addFolder/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="parentFolderId">0</tns:Parameter>
+  					<tns:Parameter name="name">folder1</tns:Parameter>
+  					<tns:Parameter name="description">Sono una folder</tns:Parameter>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="folderId" name="folderId" /></tns:Results></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload><!--Recupera un bookmark folder (preceduto da getCredentials)-->
+  	<tns:Workload name="getBookmarkFolder">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portlet_Bookmarks_BookmarksFolderService" method="getFolders/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="folderId" name="folderId" /></tns:Results></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload>
+  </tns:Workloads>
+  <tns:Run>
+  	<tns:Declarations>
+  		<tns:Declare name="userId">10196</tns:Declare>
+  		<tns:Declare name="companyId"></tns:Declare>
+  		<tns:Declare name="groupId"></tns:Declare></tns:Declarations>
+
+  	<tns:WorkloadReference name="getCredentials" />
+<tns:WorkloadReference name="addBookmarkFolder" />
+  	<tns:WorkloadReference name="getBookmarkFolder" />
+<tns:WorkloadReference name="addBookmark" />
+</tns:Run>
+</tns:FunctionalTest>

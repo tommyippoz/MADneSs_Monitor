@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/Tommy/Work/EclipseProjects/JavaProjects/MultiLayer_AnomalyDetector/lib/commons-beanutils-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tommy/Work/EclipseProjects/JavaProjects/MultiLayer_AnomalyDetector/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tommy/Work/EclipseProjects/JavaProjects/MultiLayer_AnomalyDetector/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tommy/Work/EclipseProjects/JavaProjects/MultiLayer_AnomalyDetector/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tommy/Work/EclipseProjects/JavaProjects/MultiLayer_AnomalyDetector/lib/ezmorph-0.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tommy/Work/EclipseProjects/JavaProjects/MultiLayer_AnomalyDetector/lib/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tommy/Work/EclipseProjects/JavaProjects/MultiLayer_AnomalyDetector/lib/mysql-connector-java-5.1.35-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tommy/Work/EclipseProjects/JavaProjects/MultiLayer_AnomalyDetector/lib/ibatis-2.3.3.720.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TestProject"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

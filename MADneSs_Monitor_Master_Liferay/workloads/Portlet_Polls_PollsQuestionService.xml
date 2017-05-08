@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+	<tns:Configuration>
+		<tns:Request portlet="Portlet_Polls_PollsQuestionService" method="addQuestion/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBCategoryService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.polls.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addQuestion soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <titleMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>
+         	{$titleMapLanguageId1}
+         	</string>
+         </titleMapLanguageIds>
+         <titleMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>
+         	{$titleMapValues1}
+         	</string>
+         </titleMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>
+         	{$descriptionMapLanguageIds1}
+         	</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>
+         	{$descriptionMapValues}
+         	</string>
+         </descriptionMapValues>
+         <expirationDateMonth xsi:type="xsd:int">10</expirationDateMonth>
+         <expirationDateDay xsi:type="xsd:int">10</expirationDateDay>
+         <expirationDateYear xsi:type="xsd:int">2010</expirationDateYear>
+         <expirationDateHour xsi:type="xsd:int">0</expirationDateHour>
+         <expirationDateMinute xsi:type="xsd:int">0</expirationDateMinute>
+         <neverExpire xsi:type="xsd:boolean">true</neverExpire>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         	<scopeGroupId xsi:type="xsd:long">{$groupId}</scopeGroupId>
+         </serviceContext>
+      </urn:addQuestion>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+			<tns:results>
+				<tns:result name="categoryId">
+					<tns:Path>//categoryId</tns:Path>
+				</tns:result>
+			</tns:results>
+		</tns:Request>
+	</tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

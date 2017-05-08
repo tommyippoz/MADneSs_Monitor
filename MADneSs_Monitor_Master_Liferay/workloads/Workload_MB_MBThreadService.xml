@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  </tns:Configuration>
+  <tns:Workloads>
+  	<tns:Workload name="">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portlet_MB_MBThreadService" method="getThreads/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter>
+  					<tns:Parameter name="status">0</tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="threadId" name="threadId" /></tns:Results>
+  			</tns:Call>
+  			<tns:Condition variable="userId" operator="!=" value="null">
+  				<tns:IfTrue>
+  				</tns:IfTrue>
+  			</tns:Condition>
+  		</tns:Choreography>
+  	</tns:Workload>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

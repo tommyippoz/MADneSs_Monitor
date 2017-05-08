@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portlet_Announcements_AnnouncementsEntryService" method="addEntry/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Announcements_AnnouncementsEntryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.announcements.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <plid xsi:type="xsd:long">{$layoutId}</plid>
+         <classNameId xsi:type="xsd:long">{$classId}</classNameId>
+         <classPK xsi:type="xsd:long">0</classPK>
+         <title xsi:type="xsd:string">{$titolo}</title>
+         <content xsi:type="xsd:string">{$contenuto}</content>
+         <url xsi:type="xsd:string">{$url}</url>
+         <type xsi:type="xsd:string">{$type}</type>
+         <displayDateMonth xsi:type="xsd:int">{$displayDateMonth}</displayDateMonth>
+         <displayDateDay xsi:type="xsd:int">{$displayDateDayOfMonth}</displayDateDay>
+         <displayDateYear xsi:type="xsd:int">{$displayDateYear}</displayDateYear>
+         <displayDateHour xsi:type="xsd:int">{$displayDateHour}</displayDateHour>
+         <displayDateMinute xsi:type="xsd:int">{$displayDateMinute}</displayDateMinute>
+         <expirationDateMonth xsi:type="xsd:int">{$expirationDateMonth}</expirationDateMonth>
+         <expirationDateDay xsi:type="xsd:int">{$expirationDateDayOfMonth}</expirationDateDay>
+         <expirationDateYear xsi:type="xsd:int">{$expirationDateYear}</expirationDateYear>
+         <expirationDateHour xsi:type="xsd:int">{$expirationDateHour}</expirationDateHour>
+         <expirationDateMinute xsi:type="xsd:int">{$expirationDateMinute}</expirationDateMinute>
+         <priority xsi:type="xsd:int">{$priority}</priority>
+         <alert xsi:type="xsd:boolean">false</alert>
+      </urn:addEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="entryId">
+  				<tns:Path>//entryId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Announcements_AnnouncementsEntryService" method="deleteEntry/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Announcements_AnnouncementsEntryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.announcements.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <entryId xsi:type="xsd:long">{$entryId}</entryId>
+      </urn:deleteEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Announcements_AnnouncementsEntryService" method="updateEntry/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Announcements_AnnouncementsEntryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.announcements.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <entryId xsi:type="xsd:long">{$entryId}</entryId>
+         <title xsi:type="xsd:string">{$titolo}</title>
+         <content xsi:type="xsd:string">{$contenuto}</content>
+         <url xsi:type="xsd:string">{$url}</url>
+         <type xsi:type="xsd:string">{$type}</type>
+         <displayDateMonth xsi:type="xsd:int">{$displayDateMonth}</displayDateMonth>
+         <displayDateDay xsi:type="xsd:int">{$displayDateDayOfMonth}</displayDateDay>
+         <displayDateYear xsi:type="xsd:int">{$displayDateYear}</displayDateYear>
+         <displayDateHour xsi:type="xsd:int">{$displayDateHour}</displayDateHour>
+         <displayDateMinute xsi:type="xsd:int">{$displayDateMinute}</displayDateMinute>
+         <expirationDateMonth xsi:type="xsd:int">{$expirationDateMonth}</expirationDateMonth>
+         <expirationDateDay xsi:type="xsd:int">{$expirationDateDayOfMonth}</expirationDateDay>
+         <expirationDateYear xsi:type="xsd:int">{$expirationDateYear}</expirationDateYear>
+         <expirationDateHour xsi:type="xsd:int">{$expirationDateHour}</expirationDateHour>
+         <expirationDateMinute xsi:type="xsd:int">{$expirationDateMinute}</expirationDateMinute>
+         <priority xsi:type="xsd:int">{$priority}</priority>
+      </urn:updateEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

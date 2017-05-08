@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/configurationValidator" xmlns:tns="http://www.example.org/configurationValidator" elementFormDefault="qualified">
+
+
+
+
+    <include schemaLocation=""></include>
+    <complexType name="RequestDefinitionType">
+    	<sequence minOccurs="1" maxOccurs="1">
+    		<element name="url" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+            <element name="content" type="tns:RequestContentType" minOccurs="1" maxOccurs="1"></element>
+            <element name="results"
+    			type="tns:ResultsArrayDefinitionType" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+        </sequence>
+    	<attribute name="method" type="string" use="required"></attribute>
+    	<attribute name="portlet" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="ResultDefinitionType">
+    	<sequence>
+    		<element name="Path" type="string" minOccurs="1" maxOccurs="1"></element>
+    	</sequence>
+    	<attribute name="name" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="ResultsArrayDefinitionType">
+    	<sequence>
+    		<element name="result" type="tns:ResultDefinitionType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="IncludeType">
+    	<attribute name="configuration-file" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="ConfigurationType">
+	    <sequence maxOccurs="unbounded" minOccurs="0">
+	    	<choice>
+	    		<element name="Include" type="tns:IncludeType"></element>
+	    		<element name="Request" type="tns:RequestDefinitionType"></element>
+	    	</choice>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="FunctionalTestType">
+    	<sequence>
+    		<element name="Configuration" type="tns:ConfigurationType"
+    			minOccurs="1" maxOccurs="1">
+    		</element>
+    		<element name="Workloads" type="tns:WorkloadsType"
+    			minOccurs="1" maxOccurs="1">
+    		</element>
+    		<element name="Run" type="tns:RunType" minOccurs="1" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="WorkloadDefinitionType">
+    	<sequence>
+    		<element name="Choreography" type="tns:CompoundStatments" minOccurs="1" maxOccurs="1"></element>
+    	</sequence>
+    	<attribute name="name" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="RequestCallType">
+    	<complexContent>
+    		<extension base="tns:StatementType">
+    			<sequence>
+    				<element name="Parameters"
+    					type="tns:RequestCallParametersType" minOccurs="0">
+    				</element>
+    				<element name="Results" type="tns:RequestCallResultsType" minOccurs="0"></element>
+    			</sequence>
+    			<attribute name="method" type="string" use="required"></attribute>
+    			<attribute name="portlet" type="string"
+    				use="required">
+    			</attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="StoreResultType">
+    	<attribute name="put-in" type="string" use="required"></attribute>
+    	<attribute name="result-name" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="StatementType"></complexType>
+
+    <complexType name="CompoundStatments">
+    	<complexContent>
+    		<extension base="tns:StatementType">
+    			<sequence>
+    				<element name="Declarations"
+    					type="tns:DeclareVariablesType" minOccurs="0">
+    				</element>
+    				<sequence minOccurs="0" maxOccurs="unbounded">
+    					<choice>
+    						<element name="Call"
+    							type="tns:RequestCallType">
+    						</element>
+    						<element name="Cycle"
+    							type="tns:CycleType">
+    						</element>
+    						<element name="Condition"
+    							type="tns:ConditionalType">
+    						</element>
+    						<element name="Sleep"
+    							type="tns:SleepType">
+    						</element>
+    						<element name="Parallel"
+    							type="tns:ParallelType">
+    						</element>
+    					</choice>
+    				</sequence>
+    			</sequence>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="CycleType">
+    	<complexContent>
+    		<extension base="tns:CompoundStatments">
+    			<attribute name="cycles" type="int" use="required"></attribute>
+    			<attribute name="cycle-variable-name" type="string"
+    				use="optional">
+    			</attribute>
+    			<attribute name="mode" use="required">
+    				<simpleType>
+    					<restriction base="string">
+    						<enumeration value="seconds"></enumeration>
+    						<enumeration value="times"></enumeration>
+    					</restriction>
+    				</simpleType>
+    			</attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="ConditionalType">
+    	<complexContent>
+    		<extension base="tns:StatementType">
+    			<sequence>
+    				<element name="IfTrue"
+    					type="tns:CompoundStatments" minOccurs="1" maxOccurs="1">
+    				</element>
+    				<element name="IfFalse" type="tns:CompoundStatments" minOccurs="0" maxOccurs="1"></element>
+    			</sequence>
+                <attribute name="variable" type="string" use="required">
+    			</attribute>
+                <attribute name="operator">
+    				<simpleType>
+    					<restriction base="string">
+    						<enumeration value="&lt;"></enumeration>
+    						<enumeration value="&gt;"></enumeration>
+    						<enumeration value="="></enumeration>
+    						<enumeration value="!="></enumeration>
+    						<enumeration value="startsWith"></enumeration>
+    						<enumeration value="endsWith"></enumeration>
+    						<enumeration value="&lt;="></enumeration>
+    						<enumeration value="&gt;="></enumeration>
+    					</restriction>
+    				</simpleType>
+    			</attribute>
+    			<attribute name="value" type="string"></attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <element name="FunctionalTest" type="tns:FunctionalTestType"></element>
+
+
+    <complexType name="WorkloadsType">
+    	<sequence minOccurs="0" maxOccurs="unbounded">
+    		<choice>
+	    		<element name="Include" type="tns:IncludeType"></element>
+	    		<element name="Workload" type="tns:WorkloadDefinitionType"></element>
+    		</choice>
+    	</sequence>
+    </complexType>
+
+
+
+    <complexType name="RequestContentType">
+    	<simpleContent>
+    		<extension base="string">
+    			<attribute name="file" type="string" use="optional"></attribute>
+    		</extension>
+    	</simpleContent>
+    </complexType>
+
+    <complexType name="RunType">
+    	<sequence>
+            <element name="Declarations" type="tns:DeclareVariablesType" minOccurs="0" maxOccurs="1"></element>
+            <element name="WorkloadReference"
+    			type="tns:WorkloadReferenceType" minOccurs="0"
+    			maxOccurs="unbounded">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="WorkloadReferenceType">
+		<attribute name="name" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="ParameterType">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="name" type="string" use="required"></attribute>
+				<attribute name="variable" type="string"></attribute>
+			</extension>
+		</simpleContent>
+    </complexType>
+
+    <complexType name="RequestCallParametersType">
+    	<sequence>
+    		<element name="Parameter" type="tns:ParameterType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RequestCallResultsType">
+    	<sequence>
+    		<element name="StoreResult" type="tns:RequestCallStoreResultType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RequestCallStoreResultType">
+    	<attribute name="name" type="string" use="required"></attribute>
+    	<attribute name="variable" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="DeclareVariableType">
+    	<simpleContent>
+    		<extension base="string">
+    			<attribute name="name" type="string" use="required"></attribute>
+    		</extension>
+    	</simpleContent>
+    </complexType>
+
+    <complexType name="DeclareVariablesType">
+    	<sequence>
+    		<element name="Declare" type="tns:DeclareVariableType" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="SleepType">
+    	<complexContent>
+    		<extension base="tns:StatementType">
+    			<attribute name="for" type="double" use="required"></attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="ParallelType">
+    	<complexContent>
+    		<extension base="tns:CompoundStatments">
+    			<attribute name="numberOfThreads" type="int"></attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <attribute name="NewAttribute" type="string"></attribute>
+
+</schema>

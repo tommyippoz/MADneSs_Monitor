@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portlet_Announcements_AnnouncementsFlagService" method="addFlag/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Announcements_AnnouncementsFlagService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.announcements.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addFlag soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <entryId xsi:type="xsd:long">{$entryId}</entryId>
+         <value xsi:type="xsd:int">{$value}</value>
+      </urn:addFlag>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Announcements_AnnouncementsFlagService" method="deleteFlag/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Announcements_AnnouncementsFlagService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.announcements.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteFlag soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <flagId xsi:type="xsd:long">{$flagId}</flagId>
+      </urn:deleteFlag>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request><tns:Request portlet="Portlet_Announcements_AnnouncementsFlagService" method="getFlag/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Announcements_AnnouncementsFlagService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.announcements.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFlag soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <entryId xsi:type="xsd:long">{$entryId}</entryId>
+         <value xsi:type="xsd:int">{$value}</value>
+      </urn:getFlag>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="flagId">
+  				<tns:Path>//flagId</tns:Path>
+  			</tns:result>
+  			<tns:result name="entryId">
+  				<tns:Path>//entryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId</tns:Path>
+  			</tns:result>
+  			<tns:result name="value">
+  				<tns:Path>//value</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

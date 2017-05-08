@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portal_UserGroupService" method="addUserGroup">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addUserGroup soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <name xsi:type="xsd:string">{$name}</name>
+         <description xsi:type="xsd:string">{$description}</description>
+      </urn:addUserGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="userGroupId">
+  				<tns:Path>//userGroupId</tns:Path>
+  			</tns:result>
+  			<tns:result name="name">
+  				<tns:Path>//name</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="addGroupUserGroups/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addGroupUserGroups soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userGroupIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$userGroupId}</long>
+         </userGroupIds>
+      </urn:addGroupUserGroups>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="addTeamUserGroups/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addTeamUserGroups soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <teamId xsi:type="xsd:long">{$teamId}</teamId>
+         <userGroupIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$userGroupId}</long>
+         </userGroupIds>
+      </urn:addTeamUserGroups>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="addUserGroup">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addUserGroup soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <name xsi:type="xsd:string">{$name}</name>
+         <description xsi:type="xsd:string">{$descrizione}</description>
+      </urn:addUserGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="userGroupId">
+  				<tns:Path>//userGroupId</tns:Path>
+  			</tns:result>
+  			<tns:result name="name">
+  				<tns:Path>//name</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="deleteUserGroup/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteUserGroup soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userGroupId xsi:type="xsd:long">{$userGroupId}</userGroupId>
+      </urn:deleteUserGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="getUserGroup/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserGroup soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userGroupId xsi:type="xsd:long">{$userGroupId}</userGroupId>
+      </urn:getUserGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="getUserUserGroups/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserUserGroups soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+      </urn:getUserUserGroups>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="userGroupId">
+  				<tns:Path>//userGroupId</tns:Path>
+  			</tns:result>
+  			<tns:result name="name">
+  				<tns:Path>//name</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="unsetGroupUserGroups/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetGroupUserGroups soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userGroupIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userGroupId}</long>
+         </userGroupIds>
+      </urn:unsetGroupUserGroups>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="unsetTeamUserGroups/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetTeamUserGroups soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <teamId xsi:type="xsd:long">{$teamId}</teamId>
+         <userGroupIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userGroupId}</long>
+         </userGroupIds>
+      </urn:unsetTeamUserGroups>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserGroupService" method="updateUserGroup/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserGroupService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateUserGroup soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userGroupId xsi:type="xsd:long">{$userGroupId}</userGroupId>
+         <name xsi:type="xsd:string">{$name}</name>
+         <description xsi:type="xsd:string">{$description}</description>
+      </urn:updateUserGroup>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

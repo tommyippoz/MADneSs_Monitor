@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portal_CompanyService" method="addCompany/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addCompany soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <webId xsi:type="xsd:string">{$companyWebsite}</webId>
+         <virtualHost xsi:type="xsd:string">{$companyWebsite}</virtualHost>
+         <mx xsi:type="xsd:string">{$companyWebsite}</mx>
+         <shardName xsi:type="xsd:string">{$sharedName}</shardName>
+         <system xsi:type="xsd:boolean">false</system>
+         <maxUsers xsi:type="xsd:int">1000</maxUsers>
+         <active xsi:type="xsd:boolean">true</active>
+      </urn:addCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="accountId">
+  				<tns:Path>//accountId</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="logoId">
+  				<tns:Path>//logoId</tns:Path>
+  			</tns:result>
+  			<tns:result name="mx">
+  				<tns:Path>//mx</tns:Path>
+  			</tns:result>
+  			<tns:result name="webId">
+  				<tns:Path>//webId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="deleteLogo/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteLogo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+      </urn:deleteLogo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="getCompanyById/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCompanyById soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+      </urn:getCompanyById>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="accountId">
+  				<tns:Path>//accountId</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="logoId">
+  				<tns:Path>//logoId</tns:Path>
+  			</tns:result>
+  			<tns:result name="mx">
+  				<tns:Path>//mx</tns:Path>
+  			</tns:result>
+  			<tns:result name="webId">
+  				<tns:Path>//webId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="getCompanyByMx/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCompanyByMx soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <mx xsi:type="xsd:string">{$companyMx}</mx>
+      </urn:getCompanyByMx>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="getCompanyByVirtualHost/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCompanyByVirtualHost soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <virtualHost xsi:type="xsd:string">{$virtualHost}</virtualHost>
+      </urn:getCompanyByVirtualHost>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="accountId">
+  				<tns:Path>//accountId</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="logoId">
+  				<tns:Path>//logoId</tns:Path>
+  			</tns:result>
+  			<tns:result name="mx">
+  				<tns:Path>//mx</tns:Path>
+  			</tns:result>
+  			<tns:result name="webId">
+  				<tns:Path>//webId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="getCompanyByWebId/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCompanyByWebId soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <webId xsi:type="xsd:string">{$webSite}</webId>
+      </urn:getCompanyByWebId>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="removePreferences/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:removePreferences soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <keys xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <string>{$preferenceName}</string>
+         </keys>
+      </urn:removePreferences>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="updateCompany/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateCompany soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <virtualHost xsi:type="xsd:string">{$virtualHost}</virtualHost>
+         <mx xsi:type="xsd:string">{$mx}</mx>
+         <maxUsers xsi:type="xsd:int">{$maxNumberOfUsers}</maxUsers>
+         <active xsi:type="xsd:boolean">true</active>
+      </urn:updateCompany>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="updateDisplay/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateDisplay soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <languageId xsi:type="xsd:string">{$languageId}</languageId>
+         <timeZoneId xsi:type="xsd:string">{$timezoneId}</timeZoneId>
+      </urn:updateDisplay>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_CompanyService" method="updateSecurity/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_CompanyService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateSecurity soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <authType xsi:type="xsd:string">{$authorizationType}</authType>
+         <autoLogin xsi:type="xsd:boolean">true</autoLogin>
+         <sendPassword xsi:type="xsd:boolean">false</sendPassword>
+         <strangers xsi:type="xsd:boolean">{$areStrangersAllowed}</strangers>
+         <strangersWithMx xsi:type="xsd:boolean">true</strangersWithMx>
+         <strangersVerify xsi:type="xsd:boolean">false</strangersVerify>
+         <siteLogo xsi:type="xsd:boolean">false</siteLogo>
+      </urn:updateSecurity>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

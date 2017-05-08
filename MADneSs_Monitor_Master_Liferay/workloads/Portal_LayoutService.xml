@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portal_LayoutService" method="addLayout/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addLayout soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <parentLayoutId xsi:type="xsd:long">0</parentLayoutId>
+         <localeNamesMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </localeNamesMapLanguageIds>
+         <localeNamesMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutName}</string>
+         </localeNamesMapValues>
+         <localeTitlesMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </localeTitlesMapLanguageIds>
+         <localeTitlesMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutTitle}</string>
+         </localeTitlesMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutDescription}</string>
+         </descriptionMapValues>
+         <keywordsMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </keywordsMapLanguageIds>
+         <keywordsMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutKeywords}</string>
+         </keywordsMapValues>
+         <robotsMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </robotsMapLanguageIds>
+         <robotsMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutRobots}</string>
+         </robotsMapValues>
+         <type xsi:type="xsd:string">portlet</type>
+         <hidden xsi:type="xsd:boolean">false</hidden>
+         <friendlyURL xsi:type="xsd:string">{$layoutFriendlyUrl}</friendlyURL>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:addLayout>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId</tns:Path>
+  			</tns:result>
+  			<tns:result name="layoutId">
+  				<tns:Path>//layoutId</tns:Path>
+  			</tns:result>
+  			<tns:result name="plid">
+  				<tns:Path>//plid</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="deleteLayout/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteLayout soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <plid xsi:type="xsd:long">{$plid}</plid>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:deleteLayout>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="getDefaultPlid/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getDefaultPlid soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <scopeGroupId xsi:type="xsd:long">{$groupId}</scopeGroupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <portletId xsi:type="xsd:string">portlet</portletId>
+      </urn:getDefaultPlid>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="plid">
+  				<tns:Path>//getDefaultPlidReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="getLayoutName/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getLayoutName soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <layoutId xsi:type="xsd:long">{$layoutId}</layoutId>
+         <languageId xsi:type="xsd:string">en_US</languageId>
+      </urn:getLayoutName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="name">
+  				<tns:Path>//getLayoutNameReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="getLayouts/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getLayouts soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+      </urn:getLayouts>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="layoutId">
+  				<tns:Path>//layoutId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="plid">
+  				<tns:Path>//plid[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="setLayouts/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:setLayouts soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <parentLayoutId xsi:type="xsd:long">0</parentLayoutId>
+         <layoutIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$layoutId}</long>
+         </layoutIds>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:setLayouts>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="unschedulePublishToLive/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unschedulePublishToLive soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <jobName xsi:type="xsd:string">{$jobName}</jobName>
+         <groupName xsi:type="xsd:string">{$groupName}</groupName>
+      </urn:unschedulePublishToLive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="unschedulePublishToRemote/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unschedulePublishToRemote soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <jobName xsi:type="xsd:string">{$jobName}</jobName>
+         <groupName xsi:type="xsd:string">{$groupName}</groupName>
+      </urn:unschedulePublishToRemote>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="updateLayout/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateLayout soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <layoutId xsi:type="xsd:long">{$layoutId}</layoutId>
+         <parentLayoutId xsi:type="xsd:long">0</parentLayoutId>
+         <localeNamesMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </localeNamesMapLanguageIds>
+         <localeNamesMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutName}</string>
+         </localeNamesMapValues>
+         <localeTitlesMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </localeTitlesMapLanguageIds>
+         <localeTitlesMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutTitle}</string>
+         </localeTitlesMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutDescription}</string>
+         </descriptionMapValues>
+         <keywordsMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </keywordsMapLanguageIds>
+         <keywordsMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutKeywords}</string>
+         </keywordsMapValues>
+         <robotsMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </robotsMapLanguageIds>
+         <robotsMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$layoutRobots}</string>
+         </robotsMapValues>
+         <type xsi:type="xsd:string">portlet</type>
+         <hidden xsi:type="xsd:boolean">false</hidden>
+         <friendlyURL xsi:type="xsd:string">{$layoutFriendlyUrl}</friendlyURL>
+         <iconImage xsi:type="xsd:boolean">false</iconImage>
+         <iconBytes xsi:type="xsd:base64Binary"></iconBytes>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:updateLayout>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="updateLookAndFeel/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateLookAndFeel soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <layoutId xsi:type="xsd:long">{$layoutId}</layoutId>
+         <themeId xsi:type="xsd:string">{$theme}</themeId>
+         <colorSchemeId xsi:type="xsd:string">{$colorSchema}</colorSchemeId>
+         <css xsi:type="xsd:string">{$css}</css>
+         <wapTheme xsi:type="xsd:boolean">false</wapTheme>
+      </urn:updateLookAndFeel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request><tns:Request portlet="Portal_LayoutService" method="updateName/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateName soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <layoutId xsi:type="xsd:long">{$layoutId}</layoutId>
+         <name xsi:type="xsd:string">{$layoutName}</name>
+         <languageId xsi:type="xsd:string">{$language}</languageId>
+      </urn:updateName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="updateParentLayoutId/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateParentLayoutId soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">187244</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <layoutId xsi:type="xsd:long">6</layoutId>
+         <parentLayoutId xsi:type="xsd:long">0</parentLayoutId>
+      </urn:updateParentLayoutId>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_LayoutService" method="updatePriority/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_LayoutService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updatePriority soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <privateLayout xsi:type="xsd:boolean">false</privateLayout>
+         <layoutId xsi:type="xsd:long">{$layoutId}</layoutId>
+         <priority xsi:type="xsd:int">{$priority}</priority>
+      </urn:updatePriority>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

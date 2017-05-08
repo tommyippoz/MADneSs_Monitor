@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+	<tns:Configuration>
+
+		<tns:Include configuration-file="Portlet_Cal_CalEventService.xml" />
+		<tns:Include configuration-file="Portal_UserService.xml" />
+		<tns:Include configuration-file="Portal_GroupService.xml" />
+  		<tns:Include configuration-file="Portlet_DL_DLFolderService.xml" />
+  		<tns:Include configuration-file="Portlet_DL_DLAppService.xml" />
+		<tns:Include configuration-file="Portlet_SC_SCProductEntryService.xml" />
+		<tns:Include configuration-file="Portlet_Wiki_WikiPageService.xml" />
+		<tns:Include configuration-file="Portlet_Asset_AssetTagService.xml" />
+		<tns:Include configuration-file="Portlet_Bookmarks_BookmarksEntryService.xml" />
+		<tns:Include configuration-file="Portlet_Bookmarks_BookmarksFolderService.xml" />
+		<tns:Include configuration-file="Portlet_Polls_PollsQuestionService.xml" />
+
+	</tns:Configuration>
+	<tns:Workloads>
+	    
+		
+		<tns:Include configuration-file="Workload_DocumentsAndMedia.xml" />
+		<tns:Include configuration-file="Workload_Bookmarks.xml" />
+		<tns:Include configuration-file="Workload_Poll.xml" />
+		
+		
+		<!--Recupera le info di autenticazione-->
+		<tns:Workload name="getCredentials">
+			<tns:Choreography>
+				<tns:Call portlet="Portal_UserService" method="getUserById/1">
+					<tns:Parameters>
+						<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="companyId" name="companyId" /></tns:Results></tns:Call>
+				<tns:Call portlet="Portal_GroupService" method="getUserGroup/1">
+					<tns:Parameters>
+						<tns:Parameter name="companyId" variable="companyId"></tns:Parameter>
+						<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="groupId" name="groupId" /></tns:Results></tns:Call>
+				<tns:Sleep for="2"/>			
+			</tns:Choreography>
+  		</tns:Workload>
+		
+		
+		<!--Inserisce un evento in calendario (preceduto da getCredentials)-->
+		<tns:Workload name="addEventInCalendar">
+			<tns:Choreography>
+				
+				<tns:Call portlet="Portlet_Cal_CalEventService" method="getEvents/1">
+					<tns:Parameters>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+						<tns:Parameter name="start">0</tns:Parameter>
+						<tns:Parameter name="end">1393592163</tns:Parameter>
+					</tns:Parameters>
+				</tns:Call>
+				<tns:Call portlet="Portlet_Cal_CalEventService" method="addEvent/1">
+					<tns:Parameters>
+						<tns:Parameter name="title">titoloEvento</tns:Parameter>
+						<tns:Parameter name="description">descrizione evento</tns:Parameter>
+						<tns:Parameter name="startDateMonth">10</tns:Parameter>
+						<tns:Parameter name="startDateDay">10</tns:Parameter>
+						<tns:Parameter name="startDateYear">2013</tns:Parameter>
+						<tns:Parameter name="endDateMonth">10</tns:Parameter>
+						<tns:Parameter name="endDateDay">10</tns:Parameter>
+						<tns:Parameter name="endDateYear">2014</tns:Parameter>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="eventId" name="eventId" />
+					</tns:Results>
+				</tns:Call>
+				<tns:Sleep for="1"/>
+			</tns:Choreography>
+		</tns:Workload><!--Elimina un evento in calendario (preceduto da getCredentials)-->
+		<tns:Workload name="removeEventInCalendar">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Cal_CalEventService" method="getEvents/1">
+					<tns:Parameters>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+						<tns:Parameter name="start">0</tns:Parameter>
+						<tns:Parameter name="end">1</tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="eventId" name="eventId" /></tns:Results></tns:Call>
+				<tns:Call portlet="Portlet_Cal_CalEventService" method="deleteEvent/1">
+					<tns:Parameters>
+						<tns:Parameter name="eventId" variable="eventId"></tns:Parameter></tns:Parameters></tns:Call>
+				<tns:Sleep for="1"/>
+			</tns:Choreography>
+		</tns:Workload>
+	
+	
+		<!--Aggiunge un bookmark (preceduto da getCredentials)-->
+		<!--Specificare folderId o eseguire prima addBookmarkFolder o getBookmarkFolder-->
+		<tns:Workload name="addBookmark">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Bookmarks_BookmarksEntryService" method="addEntry/1">
+					<tns:Parameters>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+						<tns:Parameter name="url">http://www.provabook.it</tns:Parameter>
+						<tns:Parameter name="name">book1</tns:Parameter>
+						<tns:Parameter name="description">bookmark1</tns:Parameter>
+						<tns:Parameter name="folderId" variable="0"></tns:Parameter>
+					</tns:Parameters></tns:Call>
+				<tns:Sleep for="1"/>
+			</tns:Choreography>
+		</tns:Workload><!--Crea una nuova bookmarkFolder (preceduto da getCredentials)-->
+		<tns:Workload name="addBookmarkFolder">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Bookmarks_BookmarksFolderService" method="addFolder/1">
+					<tns:Parameters>
+						<tns:Parameter name="parentFolderId">0</tns:Parameter>
+						<tns:Parameter name="name">folder1</tns:Parameter>
+						<tns:Parameter name="description">Sono una folder</tns:Parameter>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="folderId" name="folderId" /></tns:Results></tns:Call><tns:Sleep for="1"/>
+			</tns:Choreography>
+				
+		</tns:Workload><!--Recupera un bookmark folder (preceduto da getCredentials)-->
+		<tns:Workload name="getBookmarkFolder">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Bookmarks_BookmarksFolderService" method="getFolders/1">
+					<tns:Parameters>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="folderId" name="folderId" /></tns:Results></tns:Call>
+<tns:Sleep for="1"/>
+			</tns:Choreography>
+				
+		</tns:Workload>
+		
+		
+		<!--Aggiunge un Poll-->
+		<tns:Workload name="newPoll">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Polls_PollsQuestionService" method="addQuestion/1">
+					<tns:Parameters>
+						<tns:Parameter name="titleMapLanguageId1">titoloEsempioLang</tns:Parameter>
+						<tns:Parameter name="titleMapValues1">titoloValueEsempio</tns:Parameter>
+						<tns:Parameter name="descriptionMapLanguageIds1">descriptionEsempioLan</tns:Parameter>
+						<tns:Parameter name="descriptionMapValues">descriptionValueEsempio</tns:Parameter>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+				</tns:Call>  
+				<tns:Sleep for="1"/>			
+			</tns:Choreography>
+		</tns:Workload>
+		
+		
+		<!--Inserisce un nuovo software al catalogo (preceduto da getCredentials)-->
+		<tns:Workload name="addProduct">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_SC_SCProductEntryService" method="addProductEntry/1">
+					<tns:Parameters>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+						<tns:Parameter name="name">nome prodotto</tns:Parameter>
+						<tns:Parameter name="shortDescription">descrizione corta del prodotto</tns:Parameter>
+						<tns:Parameter name="longDescription">descrizione lunga del prodotto</tns:Parameter>
+						<tns:Parameter name="repoGroupId" variable="repoGroupId"></tns:Parameter>
+						<tns:Parameter name="repoArtifactId"
+							variable="repoArtifactId">
+						</tns:Parameter>
+						<tns:Parameter name="licenseId" variable="licenseId"></tns:Parameter>
+						<tns:Parameter name="author">me stesso</tns:Parameter>
+						<tns:Parameter name="pageURL">http://www.product.com</tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="productEntryId" name="productEntryId" /></tns:Results>
+				</tns:Call>
+			</tns:Choreography>
+		</tns:Workload>
+		<!--Inserisce un nuova versione al software (preceduto da getCredentials)-->
+		<tns:Workload name="addProductVersion">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_SC_SCProductVersionService" method="addProductVersion/1">
+					<tns:Parameters>
+						<tns:Parameter name="productEntryId"
+							variable="productEntryId">
+						</tns:Parameter>
+						<tns:Parameter name="version">2.5</tns:Parameter>
+						<tns:Parameter name="changeLog">cambiato il link al link</tns:Parameter>
+						<tns:Parameter name="downloadPageURL">http://www.urldidownload.com</tns:Parameter>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="productVersionId" name="productVersionId" /></tns:Results></tns:Call>
+			</tns:Choreography>
+		</tns:Workload>
+		<!--Inserisce una nuova licenza e la associa ad un prodotto-->
+		<tns:Workload name="licenseAssign">
+			<tns:Choreography>
+				<!--Inserisco una nuova licenza-->
+				<tns:Call portlet="Portlet_SC_SCLicenseService" method="addLicense/1">
+					<tns:Parameters>
+						<tns:Parameter name="name">testLCS</tns:Parameter>
+						<tns:Parameter name="url">http://www.license.org</tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="licenseId" name="licenseId" />
+					</tns:Results>
+				</tns:Call>
+				<!--Recupero il prodotto software-->
+				<tns:Call portlet="Portlet_SC_SCProductEntryService" method="getProductEntry/1">
+					<tns:Parameters>
+						<tns:Parameter name="productEntryId" variable="productEntryId"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="name" name="name" />
+						<tns:StoreResult variable="shortDescription" name="shortDescription" />
+						<tns:StoreResult variable="longDescription" name="longDescription" />
+						<tns:StoreResult variable="pageURL" name="pageURL" />
+						<tns:StoreResult variable="author" name="author" />
+						<tns:StoreResult variable="repoGroupId" name="repoGroupId" />
+						<tns:StoreResult variable="repoArtifactId" name="repoArtifactId" /></tns:Results>
+				</tns:Call>
+				<!--Aggiorno l'id della licenza-->
+				<tns:Call portlet="Portlet_SC_SCProductEntryService" method="updateProductEntry/1">
+					<tns:Parameters>
+						<tns:Parameter name="productEntryId" variable="productEntryId"></tns:Parameter>
+						<tns:Parameter name="name" variable="name"></tns:Parameter>
+						<tns:Parameter name="shortDescription"
+							variable="shortDescription"></tns:Parameter>
+						<tns:Parameter name="longDescription"
+							variable="longDescription"></tns:Parameter>
+						<tns:Parameter name="pageURL" variable="pageURL"></tns:Parameter>
+						<tns:Parameter name="author" variable="author"></tns:Parameter>
+						<tns:Parameter name="repoGroupId" variable="repoGroupId"></tns:Parameter>
+						<tns:Parameter name="repoArtifactId" variable="repoArtifactId"></tns:Parameter>
+						<tns:Parameter name="licenseId" variable="licenseId"></tns:Parameter></tns:Parameters></tns:Call>
+			</tns:Choreography>
+		</tns:Workload>
+		
+		<!--Recupera i tags-->
+		<tns:Workload name="getTags">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Asset_AssetTagService" method="getGroupsTags/1">
+					<tns:Parameters>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="tagId" name="tagId" /></tns:Results></tns:Call>
+			</tns:Choreography>
+		</tns:Workload>
+		<!--Aggiungo un tag-->
+		<tns:Workload name="AddNewTag">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Asset_AssetTagService" method="addTag/1">
+					<tns:Parameters>
+						<tns:Parameter name="nameTag">tag2Prova</tns:Parameter>
+						<tns:Parameter name="groupId" variable="groupId">
+						</tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="tagId" name="tagId" /></tns:Results></tns:Call>
+			</tns:Choreography>
+		</tns:Workload>
+		
+		
+		<tns:Workload name="addNode">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Wiki_WikiNodeService" method="addNode/1">
+					<tns:Parameters>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+						<tns:Parameter name="name" variable="nameWikiNode"></tns:Parameter>
+						<tns:Parameter name="description">descrizione del nodo di prova</tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="nodeId" name="nodeId" /></tns:Results>
+				</tns:Call>
+			</tns:Choreography>
+		</tns:Workload>
+		<tns:Workload name="addPage">
+			<tns:Choreography>
+				<tns:Call portlet="Portlet_Wiki_WikiNodeService" method="getNode/2">
+					<tns:Parameters>
+						<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+						<tns:Parameter name="name" variable="nameWikiNode"></tns:Parameter></tns:Parameters>
+					<tns:Results>
+						<tns:StoreResult variable="nodeId" name="nodeId" /></tns:Results>
+				</tns:Call>
+				<tns:Call portlet="Portlet_Wiki_WikiPageService" method="addPage/1">
+					<tns:Parameters>
+						<tns:Parameter name="nodeId" variable="nodeId">
+						</tns:Parameter>
+						<tns:Parameter name="title">
+							title Wiki
+						</tns:Parameter>
+						<tns:Parameter name="content">
+							content Wiki
+						</tns:Parameter>
+						<tns:Parameter name="summary">
+							summary Wiki
+						</tns:Parameter>
+					</tns:Parameters>
+				</tns:Call>
+			</tns:Choreography>
+		</tns:Workload>
+	
+	
+	</tns:Workloads>
+	<tns:Run >
+	
+		<tns:Declarations>
+		
+			<tns:Declare name="userId">10196</tns:Declare>
+			<tns:Declare name="groupId"></tns:Declare>
+			<tns:Declare name="companyId"></tns:Declare>
+			<tns:Declare name="eventId"></tns:Declare>
+	  		<tns:Declare name="nameFolder">provaFolderTmp65</tns:Declare>
+	  		<tns:Declare name="folderId" />
+			<tns:Declare name="productEntryId">188711</tns:Declare>
+			<tns:Declare name="repoGroupId"></tns:Declare>
+			<tns:Declare name="repoArtifactId"></tns:Declare>
+			<tns:Declare name="licenseId"></tns:Declare>
+			<tns:Declare name="name"></tns:Declare>
+			<tns:Declare name="shortDescription"></tns:Declare>
+			<tns:Declare name="longDescription"></tns:Declare>
+			<tns:Declare name="pageURL"></tns:Declare>
+			<tns:Declare name="author"></tns:Declare>
+			<tns:Declare name="tagId"></tns:Declare>
+			<tns:Declare name="nameWikiNode">nodo di prova</tns:Declare>
+			
+		</tns:Declarations>
+		
+		<tns:WorkloadReference name="getCredentials" />
+		<tns:WorkloadReference name="getBookmarkFolder" />
+
+	</tns:Run>
+</tns:FunctionalTest>

@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator configurationValidator.xsd ">
+	<tns:Configuration>
+		<tns:Include configuration-file="" />
+		<tns:Request portlet="Portlet_DL_DLAppService" method="addFileEntry/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <sourceFileName xsi:type="xsd:string">{$sourceFileName}</sourceFileName>
+         <mimeType xsi:type="xsd:string">{$mimeType}</mimeType>
+         <title xsi:type="xsd:string">null</title>
+         <description xsi:type="xsd:string">{$description}</description>
+         <changeLog xsi:type="xsd:string"></changeLog>
+         <bytes xsi:type="xsd:base64Binary">{$data}</bytes>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:addFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+			<tns:results>
+				<tns:result name="fileEntryId">
+					<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/fileEntryId]]></tns:Path>
+				</tns:result>
+			</tns:results>
+		</tns:Request>
+				
+    <tns:Request portlet="Portlet_DL_DLAppService" method="addFileShortcut/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addFileShortcut soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <toFileEntryId xsi:type="xsd:long">{$fileEntryId}</toFileEntryId>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:addFileShortcut>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+    	<tns:results>
+    		<tns:result name="fileShortcutId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/fileShortcutId]]></tns:Path>
+    		</tns:result>
+    	</tns:results>
+</tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="addFolder/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <parentFolderId xsi:type="xsd:long">0</parentFolderId>
+         <name xsi:type="xsd:string">{$name}</name>
+         <description xsi:type="xsd:string">{$description}</description>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:addFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+    	<tns:results>
+    		<tns:result name="folderId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/folderId]]></tns:Path>
+    		</tns:result>
+    	</tns:results>
+</tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="cancelCheckOut/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:cancelCheckOut soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+      </urn:cancelCheckOut>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+</tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="checkInFileEntry/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:checkInFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+         <majorVersion xsi:type="xsd:boolean">false</majorVersion>
+         <changeLog xsi:type="xsd:string"></changeLog>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:checkInFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+    	<tns:results>
+    		<tns:result name="checkInFileEntryResponse">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]]]></tns:Path>
+    		</tns:result>
+    	</tns:results>
+</tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="checkOutFileEntry/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:checkOutFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:checkOutFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+    	<tns:results>
+    		<tns:result name="checkOutFileEntry">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]]]></tns:Path>
+    		</tns:result>
+    	</tns:results>
+</tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="copyFolder/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:copyFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <sourceFolderId xsi:type="xsd:long">{$sourceFolderId}</sourceFolderId>
+         <parentFolderId xsi:type="xsd:long">0</parentFolderId>
+         <name xsi:type="xsd:string">{$name}</name>
+         <description xsi:type="xsd:string">{$description}</description>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:copyFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+    	<tns:results>
+    		<tns:result name="folderId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/folderId]]></tns:Path>
+    		</tns:result>
+    	</tns:results>
+</tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="deleteFileEntry/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+      </urn:deleteFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+</tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="deleteFileEntryByTitle/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteFileEntryByTitle soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <title xsi:type="xsd:string">logo_final_cyspa.png</title>
+      </urn:deleteFileEntryByTitle>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+ </tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="deleteFileShortcut/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteFileShortcut soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileShortcutId xsi:type="xsd:long">{$fileShortcutId}</fileShortcutId>
+      </urn:deleteFileShortcut>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+</tns:Request>
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="deleteFolder/1">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+      </urn:deleteFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+</tns:Request>
+
+
+    <tns:Request portlet="Portlet_DL_DLAppService" method="getFileEntries/2">
+    	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <title xsi:type="xsd:string">{$title}</title>
+      </urn:getFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+    	</tns:content>
+    	<tns:results>
+    		<tns:result name="createDate">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="description">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="extension">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/extension]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="fileEntryId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/fileEntryId]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="mimeType">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/mimeType]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="title">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/title]]></tns:Path>
+    		</tns:result>
+       		<tns:result name="uuid">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+    		</tns:result>
+     		<tns:result name="size">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/size]]></tns:Path>
+    		</tns:result>
+  		
+    	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFileEntriesAndFileShortcutsCount/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFileEntriesAndFileShortcutsCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <status xsi:type="xsd:int">0</status>
+      </urn:getFileEntriesAndFileShortcutsCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="getFileEntriesAndFileShortcutsCount">
+  			<tns:Path>//multiRef</tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFileEntriesCount/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFileEntriesCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+      </urn:getFileEntriesCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="getFileEntriesCount">
+  			<tns:Path>//multiRef</tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFileEntry/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+      </urn:getFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+   		<tns:result name="createDate">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="description">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="extension">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/extension]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="fileEntryId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/fileEntryId]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="mimeType">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/mimeType]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="title">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/title]]></tns:Path>
+    		</tns:result>
+       		<tns:result name="uuid">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+    		</tns:result>
+     		<tns:result name="size">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/size]]></tns:Path>
+    		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFileEntryByUuidAndGroupId/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFileEntryByUuidAndGroupId soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <uuid xsi:type="xsd:string">{$uuid}</uuid>
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+      </urn:getFileEntryByUuidAndGroupId>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+   		<tns:result name="createDate">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="description">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="extension">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/extension]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="fileEntryId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/fileEntryId]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="mimeType">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/mimeType]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="title">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/title]]></tns:Path>
+    		</tns:result>
+       		<tns:result name="uuid">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+    		</tns:result>
+     		<tns:result name="size">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/size]]></tns:Path>
+    		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFileShortcut/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFileShortcut soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileShortcutId xsi:type="xsd:long">{$fileShortcutId}</fileShortcutId>
+      </urn:getFileShortcut>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="createDate">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="folderId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/folderId]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="groupId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/groupId]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="repositoryId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/repositoryId]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="status">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/status]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="toFileEntryId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/toFileEntryId]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="uuid">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+   		</tns:result>   		
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFolder/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+      </urn:getFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="createDate">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="description">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="groupId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/groupId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="name">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/name]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="parentFolderId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/parentFolderId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="repositoryId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/repositoryId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="uuid">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+   		</tns:result>
+    		
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFolders/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFolders soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <parentFolderId xsi:type="xsd:long">{$parentFolderId}</parentFolderId>
+      </urn:getFolders>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="createDate">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="description">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="groupId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/groupId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="name">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/name]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="parentFolderId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/parentFolderId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="repositoryId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/repositoryId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="uuid">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFoldersAndFileEntriesAndFileShortcutsCount/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFoldersAndFileEntriesAndFileShortcutsCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <status xsi:type="xsd:int">0</status>
+         <mimeTypes xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+         <includeMountFolders xsi:type="xsd:boolean">false</includeMountFolders>
+      </urn:getFoldersAndFileEntriesAndFileShortcutsCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="getFoldersAndFileEntriesAndFileShortcutsCount">
+  			<tns:Path>//multiRef</tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFoldersCount/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFoldersCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <parentFolderId xsi:type="xsd:long">{$parentFolderId}</parentFolderId>
+      </urn:getFoldersCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="getFoldersCount">
+  			<tns:Path>//multiRef</tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getFoldersFileEntriesCount/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFoldersFileEntriesCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">185653</repositoryId>
+         <folderIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>
+         {$folderId}
+         </long>
+         </folderIds>
+         <status xsi:type="xsd:int">0</status>
+      </urn:getFoldersFileEntriesCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="getFoldersFileEntriesCount">
+  			<tns:Path>//multiRef</tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getGroupFileEntries/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getGroupFileEntries soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <start xsi:type="xsd:int">{$start}</start>
+         <end xsi:type="xsd:int">{$end}</end>
+      </urn:getGroupFileEntries>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+   		<tns:result name="createDate">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="description">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="extension">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/extension]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="fileEntryId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/fileEntryId]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="mimeType">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/mimeType]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="title">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/title]]></tns:Path>
+    		</tns:result>
+       		<tns:result name="uuid">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+    		</tns:result>
+     		<tns:result name="size">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/size]]></tns:Path>
+    		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="getGroupFileEntriesCount/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getGroupFileEntriesCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userId xsi:type="xsd:long">{$userId}</userId>
+      </urn:getGroupFileEntriesCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="getGroupFileEntriesCount">
+  			<tns:Path>//multiRef</tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="moveFileEntry/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:moveFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+         <newFolderId xsi:type="xsd:long">{$newFolderId}</newFolderId>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:moveFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="createDate">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="description">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="extension">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/extension]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="fileEntryId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/fileEntryId]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="mimeType">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/mimeType]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="title">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/title]]></tns:Path>
+    		</tns:result>
+       		<tns:result name="uuid">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+    		</tns:result>
+     		<tns:result name="size">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/size]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="version">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/version]]></tns:Path>
+    		</tns:result>
+    		
+      	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="moveFolder/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:moveFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <parentFolderId xsi:type="xsd:long">{$parentFolderId}</parentFolderId>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:moveFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	<tns:results>
+  		<tns:result name="createDate">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="description">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="groupId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/groupId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="name">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/name]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="parentFolderId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/parentFolderId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="repositoryId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/repositoryId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="uuid">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+   		</tns:result>   	
+   	</tns:results>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="revertFileEntry/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:revertFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+         <version xsi:type="xsd:string">{$version}</version>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:revertFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+</tns:Request>
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="unlockFileEntry/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unlockFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+      </urn:unlockFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+</tns:Request>
+	
+<tns:Request portlet="Portlet_DL_DLAppService" method="unlockFolder/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unlockFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <repositoryId xsi:type="xsd:long">{$repositoryId}</repositoryId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <lockUuid xsi:type="xsd:string">{$uuid}</lockUuid>
+      </urn:unlockFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+</tns:Request>
+		
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="updateFileEntry/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateFileEntry soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileEntryId xsi:type="xsd:long">{$fileEntryId}</fileEntryId>
+         <sourceFileName xsi:type="xsd:string">{$sourceFileName}</sourceFileName>
+         <mimeType xsi:type="xsd:string">{$mimeType}</mimeType>
+         <title xsi:type="xsd:string">{$title}</title>
+         <description xsi:type="xsd:string">{$description}</description>
+         <changeLog xsi:type="xsd:string"></changeLog>
+         <majorVersion xsi:type="xsd:boolean">false</majorVersion>
+         <bytes xsi:type="xsd:base64Binary">{$data}</bytes>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:updateFileEntry>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	 	<tns:results>
+  		<tns:result name="createDate">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="description">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="extension">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/extension]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="fileEntryId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/fileEntryId]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="mimeType">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/mimeType]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="title">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/title]]></tns:Path>
+    		</tns:result>
+       		<tns:result name="uuid">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+    		</tns:result>
+     		<tns:result name="size">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/size]]></tns:Path>
+    		</tns:result>
+    		<tns:result name="version">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/version]]></tns:Path>
+    		</tns:result>
+    		
+      	</tns:results>
+</tns:Request>
+		
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="updateFileShortcut/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateFileShortcut soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <fileShortcutId xsi:type="xsd:long">{$fileShortcutId}</fileShortcutId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <toFileEntryId xsi:type="xsd:long">{$toFileEntryId}</toFileEntryId>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:updateFileShortcut>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+</tns:Request>
+		
+
+<tns:Request portlet="Portlet_DL_DLAppService" method="updateFolder/1">
+ 	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_DL_DLAppService</tns:url>    	
+	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.documentlibrary.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <name xsi:type="xsd:string">{$name}</name>
+         <description xsi:type="xsd:string">{$description}</description>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:updateFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+  	</tns:content>
+  	  	<tns:results>
+  		<tns:result name="createDate">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/createDate]]></tns:Path>
+   		</tns:result>
+  		<tns:result name="description">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/description]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="groupId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/groupId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="name">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/name]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="parentFolderId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/parentFolderId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="repositoryId">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/repositoryId]]></tns:Path>
+   		</tns:result>
+   		<tns:result name="uuid">
+  			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/uuid]]></tns:Path>
+   		</tns:result>   	
+   	</tns:results>
+  	
+</tns:Request>
+		
+		
+	</tns:Configuration>
+	<tns:Workloads>
+		<tns:Include configuration-file="" />
+	</tns:Workloads>
+	<tns:Run />
+</tns:FunctionalTest>

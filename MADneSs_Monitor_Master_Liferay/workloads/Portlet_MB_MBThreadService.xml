@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+		<tns:Request portlet="MB_MBThreadService" method="deleteThread/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBThreadService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.messageboards.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteThread soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <threadId xsi:type="xsd:long">{$threadId}</threadId>
+      </urn:deleteThread>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>			
+		</tns:Request><tns:Request portlet="Portlet_MB_MBThreadService" method="getThreads/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBThreadService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.messageboards.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getThreads soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <categoryId xsi:type="xsd:long">-1</categoryId>
+         <status xsi:type="xsd:int">0</status>
+         <start xsi:type="xsd:int">{$from}</start>
+         <end xsi:type="xsd:int">{$to}</end>
+      </urn:getThreads>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+			<tns:results>
+				<tns:result name="lastPostByUserId">
+					<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/lastPostByUserId]]></tns:Path>
+				</tns:result>
+				<tns:result name="lastPostDate">
+					<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/lastPostDate]]></tns:Path>
+				</tns:result>
+				<tns:result name="question">
+					<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/question]]></tns:Path>
+				</tns:result>
+				<tns:result name="status">
+					<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/status]]></tns:Path>
+				</tns:result>
+				<tns:result name="threadId">
+					<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/threadId]]></tns:Path>
+				</tns:result>
+				<tns:result name="mbCategoryId">
+					<tns:Path>//categoryId</tns:Path>
+				</tns:result>
+			</tns:results>
+		</tns:Request>
+		<tns:Request portlet="Portlet_MB_MBThreadService" method="unlockThread/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBThreadService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.messageboards.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unlockThread soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <threadId xsi:type="xsd:long">{$threadId}</threadId>
+      </urn:unlockThread>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></tns:content>			
+		</tns:Request>
+		<tns:Request portlet="Portlet_MB_MBThreadService" method="getGroupThreads/4">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBThreadService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.messageboards.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getGroupThreads soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <status xsi:type="xsd:int">0</status>
+         <start xsi:type="xsd:int">0</start>
+         <end xsi:type="xsd:int">1</end>
+      </urn:getGroupThreads>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+			<tns:results>
+				<tns:result name="categoryId">
+					<tns:Path>//categoryId</tns:Path>
+				</tns:result>
+				<tns:result name="companyId">
+					<tns:Path>//companyId</tns:Path>
+				</tns:result>
+				<tns:result name="groupId">
+					<tns:Path>//groupId</tns:Path>
+				</tns:result>
+				<tns:result name="rootMessageId">
+					<tns:Path>//rootMessageId</tns:Path>
+				</tns:result>
+				<tns:result name="rootMessageUserId">
+					<tns:Path>//rootMessageUserId</tns:Path>
+				</tns:result>
+				<tns:result name="threadId">
+					<tns:Path>//threadId</tns:Path>
+				</tns:result></tns:results>
+		</tns:Request>
+		<tns:Request portlet="Portlet_MB_MBThreadService" method="getGroupThreadsCount/2">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBThreadService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.messageboards.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getGroupThreadsCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <status xsi:type="xsd:int">{$status}</status>
+      </urn:getGroupThreadsCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+			<tns:results>
+				<tns:result name="count">
+					<tns:Path>//getGroupThreadsCountReturn</tns:Path>
+				</tns:result></tns:results>
+		</tns:Request>
+		<tns:Request portlet="Portlet_MB_MBThreadService" method="getThreadsCount/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBThreadService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.messageboards.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getThreadsCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <categoryId xsi:type="xsd:long">-1</categoryId>
+         <status xsi:type="xsd:int">{$status}</status>
+      </urn:getThreadsCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+			<tns:results>
+				<tns:result name="count">
+					<tns:Path>//getThreadsCountReturn</tns:Path>
+				</tns:result></tns:results>
+		</tns:Request>
+		<tns:Request portlet="Portlet_MB_MBThreadService" method="moveThread/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBThreadService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.messageboards.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:moveThread soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <categoryId xsi:type="xsd:long">{$mbCategoryId}</categoryId>
+         <threadId xsi:type="xsd:long">{$threadId}</threadId>
+      </urn:moveThread>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+		</tns:Request>
+		<tns:Request portlet="Portlet_MB_MBThreadService" method="splitThread/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_MB_MBThreadService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.messageboards.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:splitThread soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <messageId xsi:type="xsd:long">{$messageId}</messageId>
+         <subject xsi:type="xsd:string">{$messageSubject}</subject>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:splitThread>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+			<tns:results>
+				<tns:result name="categoryId">
+					<tns:Path>//categoryId</tns:Path>
+				</tns:result>
+				<tns:result name="companyId">
+					<tns:Path>//companyId</tns:Path>
+				</tns:result>
+				<tns:result name="groupId">
+					<tns:Path>//groupId</tns:Path>
+				</tns:result>
+				<tns:result name="rootMessageId">
+					<tns:Path>//rootMessageId</tns:Path>
+				</tns:result>
+				<tns:result name="rootMessageUserId">
+					<tns:Path>//rootMessageUserId</tns:Path>
+				</tns:result>
+				<tns:result name="threadId">
+					<tns:Path>//threadId</tns:Path>
+				</tns:result></tns:results>
+		</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>
