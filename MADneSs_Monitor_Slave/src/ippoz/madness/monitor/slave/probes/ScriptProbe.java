@@ -3,9 +3,9 @@
  */
 package ippoz.madness.monitor.slave.probes;
 
-import ippoz.multilayer.commons.layers.LayerType;
-import ippoz.multilayer.commons.support.AppLogger;
-import ippoz.multilayer.commons.support.AppUtility;
+import ippoz.madness.commons.layers.LayerType;
+import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppUtility;
 
 import java.io.File;
 import java.io.IOException;

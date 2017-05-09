@@ -6,10 +6,10 @@ package ippoz.multilayer.monitor.master.experiment;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-import ippoz.multilayer.commons.indicator.Indicator;
-import ippoz.multilayer.commons.support.AppLogger;
-import ippoz.multilayer.commons.support.AppUtility;
-import ippoz.multilayer.monitor.communication.CommunicationManager;
+import ippoz.madness.commons.indicator.Indicator;
+import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppUtility;
+import ippoz.madness.monitor.communication.CommunicationManager;
 import ippoz.multilayer.monitor.master.database.DatabaseManager;
 import ippoz.multilayer.monitor.master.observation.Observation;
 import ippoz.multilayer.monitor.master.services.Service;

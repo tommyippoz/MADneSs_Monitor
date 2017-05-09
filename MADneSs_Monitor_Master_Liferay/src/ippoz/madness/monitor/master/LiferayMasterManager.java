@@ -3,7 +3,7 @@
  */
 package ippoz.madness.monitor.master;
 
-import ippoz.multilayer.commons.support.PreferencesManager;
+import ippoz.madness.commons.support.PreferencesManager;
 import ippoz.multilayer.monitor.master.workload.SoapXmlWorkload;
 import ippoz.multilayer.monitor.master.workload.Workload;
 

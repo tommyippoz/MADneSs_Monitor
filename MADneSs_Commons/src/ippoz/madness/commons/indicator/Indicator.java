@@ -1,9 +1,9 @@
 /**
  * 
  */
-package ippoz.multilayer.commons.indicator;
+package ippoz.madness.commons.indicator;
 
-import ippoz.multilayer.commons.layers.LayerType;
+import ippoz.madness.commons.layers.LayerType;
 
 /**
  * The Class Indicator.

@@ -3,7 +3,7 @@
  */
 package ippoz.madness.monitor.slave.probes.mbean;
 
-import ippoz.multilayer.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppLogger;
 
 import javax.management.MBeanAttributeInfo;
 import javax.management.MBeanInfo;

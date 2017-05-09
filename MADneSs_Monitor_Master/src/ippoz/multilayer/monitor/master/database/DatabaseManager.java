@@ -3,10 +3,10 @@
  */
 package ippoz.multilayer.monitor.master.database;
 
-import ippoz.multilayer.commons.indicator.Indicator;
-import ippoz.multilayer.commons.layers.LayerType;
-import ippoz.multilayer.commons.support.AppLogger;
-import ippoz.multilayer.commons.support.AppUtility;
+import ippoz.madness.commons.indicator.Indicator;
+import ippoz.madness.commons.layers.LayerType;
+import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppUtility;
 import ippoz.multilayer.monitor.master.experiment.ExperimentType;
 import ippoz.multilayer.monitor.master.experiment.Failure;
 import ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment;

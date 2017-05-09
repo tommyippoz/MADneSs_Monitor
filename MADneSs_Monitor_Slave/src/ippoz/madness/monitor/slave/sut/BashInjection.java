@@ -3,8 +3,8 @@
  */
 package ippoz.madness.monitor.slave.sut;
 
-import ippoz.multilayer.commons.support.AppLogger;
-import ippoz.multilayer.commons.support.AppUtility;
+import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppUtility;
 
 import java.io.IOException;
 

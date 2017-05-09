@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ippoz.multilayer.monitor.communication;
+package ippoz.madness.monitor.communication;
 
 /**
  * The Enum MessageType.

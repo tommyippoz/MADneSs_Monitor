@@ -3,7 +3,7 @@
  */
 package ippoz.multilayer.monitor.master.database;
 
-import ippoz.multilayer.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppLogger;
 
 import java.io.BufferedReader;
 import java.io.File;

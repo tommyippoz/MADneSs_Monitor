@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ippoz.multilayer.commons.layers;
+package ippoz.madness.commons.layers;
 
 /**
  * The Enum LayerType.

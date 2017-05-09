@@ -3,6 +3,12 @@
  */
 package ippoz.madness.monitor.slave;
 
+import ippoz.madness.commons.layers.LayerType;
+import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppUtility;
+import ippoz.madness.commons.support.PreferencesManager;
+import ippoz.madness.monitor.communication.CommunicationManager;
+import ippoz.madness.monitor.communication.MessageType;
 import ippoz.madness.monitor.slave.probes.CentOSProbe;
 import ippoz.madness.monitor.slave.probes.JMXProbe;
 import ippoz.madness.monitor.slave.probes.Probe;
@@ -13,12 +19,6 @@ import ippoz.madness.monitor.slave.sut.EnvInjection;
 import ippoz.madness.monitor.slave.sut.Injection;
 import ippoz.madness.monitor.slave.sut.Liferay612SUT;
 import ippoz.madness.monitor.slave.sut.SUT;
-import ippoz.multilayer.commons.layers.LayerType;
-import ippoz.multilayer.commons.support.AppLogger;
-import ippoz.multilayer.commons.support.AppUtility;
-import ippoz.multilayer.commons.support.PreferencesManager;
-import ippoz.multilayer.monitor.communication.CommunicationManager;
-import ippoz.multilayer.monitor.communication.MessageType;
 
 import java.io.File;
 import java.io.IOException;

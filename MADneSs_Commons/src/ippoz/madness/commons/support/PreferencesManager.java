@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ippoz.multilayer.commons.support;
+package ippoz.madness.commons.support;
 
 import java.io.File;
 import java.io.IOException;

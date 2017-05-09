@@ -9,10 +9,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-import ippoz.multilayer.commons.layers.LayerType;
-import ippoz.multilayer.commons.support.AppLogger;
-import ippoz.multilayer.monitor.communication.CommunicationManager;
-import ippoz.multilayer.monitor.communication.MessageType;
+import ippoz.madness.commons.layers.LayerType;
+import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.monitor.communication.CommunicationManager;
+import ippoz.madness.monitor.communication.MessageType;
 import ippoz.multilayer.monitor.master.database.DatabaseManager;
 import ippoz.multilayer.monitor.master.observation.ObservationCollector;
 import ippoz.multilayer.monitor.master.performance.ExperimentTiming;

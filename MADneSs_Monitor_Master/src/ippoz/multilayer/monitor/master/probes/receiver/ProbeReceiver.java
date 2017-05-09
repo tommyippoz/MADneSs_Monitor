@@ -5,7 +5,7 @@ package ippoz.multilayer.monitor.master.probes.receiver;
 
 import java.io.InputStream;
 
-import ippoz.multilayer.commons.layers.LayerType;
+import ippoz.madness.commons.layers.LayerType;
 import ippoz.multilayer.monitor.master.observation.Observation;
 import ippoz.multilayer.monitor.master.observation.ObservationCollector;
 

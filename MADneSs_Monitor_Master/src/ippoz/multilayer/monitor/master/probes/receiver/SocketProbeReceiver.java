@@ -9,8 +9,8 @@ import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import ippoz.multilayer.commons.layers.LayerType;
-import ippoz.multilayer.commons.support.AppLogger;
+import ippoz.madness.commons.layers.LayerType;
+import ippoz.madness.commons.support.AppLogger;
 import ippoz.multilayer.monitor.master.observation.ObservationCollector;
 
 /**

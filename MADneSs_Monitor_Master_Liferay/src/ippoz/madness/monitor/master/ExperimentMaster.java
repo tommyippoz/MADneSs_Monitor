@@ -3,8 +3,8 @@
  */
 package ippoz.madness.monitor.master;
 
-import ippoz.multilayer.commons.support.AppLogger;
-import ippoz.multilayer.commons.support.PreferencesManager;
+import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.commons.support.PreferencesManager;
 
 import java.io.File;
 import java.io.IOException;

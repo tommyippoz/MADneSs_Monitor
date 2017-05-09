@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ippoz.multilayer.commons.datacategory;
+package ippoz.madness.commons.datacategory;
 
 /**
  * The Enum DataCategory.

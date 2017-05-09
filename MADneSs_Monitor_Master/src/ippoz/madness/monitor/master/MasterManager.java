@@ -11,10 +11,10 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-import ippoz.multilayer.commons.support.AppLogger;
-import ippoz.multilayer.commons.support.PreferencesManager;
-import ippoz.multilayer.monitor.communication.CommunicationManager;
-import ippoz.multilayer.monitor.communication.MessageType;
+import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.commons.support.PreferencesManager;
+import ippoz.madness.monitor.communication.CommunicationManager;
+import ippoz.madness.monitor.communication.MessageType;
 import ippoz.multilayer.monitor.master.database.DatabaseManager;
 import ippoz.multilayer.monitor.master.experiment.Experiment;
 import ippoz.multilayer.monitor.master.experiment.ExperimentType;

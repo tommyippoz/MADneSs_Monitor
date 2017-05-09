@@ -3,9 +3,9 @@
  */
 package ippoz.multilayer.monitor.master.probes.receiver;
 
-import ippoz.multilayer.commons.indicator.Indicator;
-import ippoz.multilayer.commons.layers.LayerType;
-import ippoz.multilayer.commons.support.AppLogger;
+import ippoz.madness.commons.indicator.Indicator;
+import ippoz.madness.commons.layers.LayerType;
+import ippoz.madness.commons.support.AppLogger;
 import ippoz.multilayer.monitor.master.observation.Observation;
 import ippoz.multilayer.monitor.master.observation.ObservationCollector;
 import ippoz.multilayer.monitor.master.performance.ExperimentTiming;

@@ -3,7 +3,7 @@
  */
 package ippoz.madness.monitor.slave.probes;
 
-import ippoz.multilayer.commons.layers.LayerType;
+import ippoz.madness.commons.layers.LayerType;
 
 /**
  * @author Tommy

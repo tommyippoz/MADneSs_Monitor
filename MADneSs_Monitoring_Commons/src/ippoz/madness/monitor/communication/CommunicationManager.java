@@ -1,9 +1,9 @@
 /**
  * 
  */
-package ippoz.multilayer.monitor.communication;
+package ippoz.madness.monitor.communication;
 
-import ippoz.multilayer.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppLogger;
 
 import java.io.EOFException;
 import java.io.IOException;
