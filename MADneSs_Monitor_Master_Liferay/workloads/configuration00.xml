@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+	<tns:Request portlet="Wiki_Wiki" method="getPage">
+    	<tns:url>http://192.168.2.151:8080/getPage</tns:url>
+    	<tns:content><![CDATA[<xml>pippo</xml>]]></tns:content>
+    	<tns:results>
+    		<tns:result name="id">
+    			<tns:Path>//Ciro/pippo/id</tns:Path>
+    		</tns:result>
+    		<tns:result name="nome">
+    			<tns:Path>//Ciro/pippo/nome</tns:Path>
+    		</tns:result>
+    	</tns:results>
+	</tns:Request>
+	<tns:Request portlet="Wiki_Wiki" method="addPage">
+    	<tns:url>http://192.168.2.151:8080/addPage</tns:url>
+    	<tns:content><![CDATA[<xml>pippo2</xml>]]></tns:content>
+    	<tns:results>
+    		<tns:result name="id2">
+    			<tns:Path>//Ciro/pippo/id2</tns:Path>
+    		</tns:result>
+    		<tns:result name="nome2">
+    			<tns:Path>//Ciro/pippo/nome2</tns:Path>
+    		</tns:result>
+    	</tns:results>
+	</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  	<tns:Workload name="ChangeWikiPage">
+  		<tns:Choreography xsi:type="tns:CompoundStatments">
+  			<tns:Call portlet="Wiki_Wiki" method="getPage" >
+  				<tns:Parameters>
+  					<tns:Parameter name="pippo" >23</tns:Parameter>
+  				</tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="idPagina" name="id" /></tns:Results></tns:Call><tns:Cycle
+  				cycles="2">
+	<tns:Call portlet="Wiki_Wiki" method="addPage"></tns:Call>
+</tns:Cycle>
+  		</tns:Choreography>
+  	</tns:Workload>
+  </tns:Workloads>
+  <tns:Run>
+  	<tns:WorkloadReference name="ChangeWikiPage" /></tns:Run>
+</tns:FunctionalTest>

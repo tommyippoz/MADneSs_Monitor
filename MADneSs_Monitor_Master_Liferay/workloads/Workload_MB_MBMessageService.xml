@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+    <tns:Include configuration-file="Portlet_MB_MBMessageService.xml"></tns:Include>
+    <tns:Include configuration-file="Portal_UserService.xml" ></tns:Include>
+    <tns:Include configuration-file="Portlet_MB_MBCategoryService.xml" /><tns:Include
+    	configuration-file="Portal_GroupService.xml" /><tns:Include
+  		configuration-file="Portlet_MB_MBThreadService.xml" />
+  </tns:Configuration>
+  <tns:Workloads>
+  	<tns:Workload name="getMBCategory">
+  		<tns:Choreography>
+  		<tns:Call portlet="Portal_UserService" method="getUserById/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="companyId" name="companyId" /></tns:Results></tns:Call><tns:Call portlet="Portal_GroupService" method="getUserGroup/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="companyId" variable="companyId"></tns:Parameter>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="groupId" name="groupId" /></tns:Results></tns:Call><tns:Call portlet="Portlet_MB_MBCategoryService" method="getCategories/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="mbCategoryId" name="mbCategoryId" /></tns:Results></tns:Call></tns:Choreography>
+  	</tns:Workload><tns:Workload name="createForumThread">
+  		<tns:Choreography>
+  			<tns:Declarations>
+  				<tns:Declare name="soggetto">Qui il soggetto del messaggio testing 2</tns:Declare>
+  				<tns:Declare name="corpo">Qui il corpo del messaggio testing 2</tns:Declare></tns:Declarations>
+
+
+
+  			<tns:Call portlet="Portlet_MB_MBMessageService" method="addMessage/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+  					<tns:Parameter name="mbCategoryId" variable="mbCategoryId"></tns:Parameter>
+  					<tns:Parameter name="soggetto" variable="soggetto"></tns:Parameter>
+  					<tns:Parameter name="corpo" variable="corpo"></tns:Parameter>
+  				</tns:Parameters>
+  			</tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload>
+  	<tns:Workload name="continueForumThread">
+  		<tns:Choreography>
+  			<tns:Declarations>
+  				<tns:Declare name="userId" >184801</tns:Declare>
+  				<tns:Declare name="companyId"></tns:Declare>
+  				<tns:Declare name="groupId" ></tns:Declare>
+  				<tns:Declare name="messageId" ></tns:Declare>
+  				<tns:Declare name="threadId" ></tns:Declare>
+  				<tns:Declare name="mbCategoryId" /></tns:Declarations>
+  			<tns:Call portlet="Portal_UserService" method="getUserById/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="companyId" name="companyId" /></tns:Results></tns:Call>
+  			<tns:Call portlet="Portal_GroupService" method="getUserGroup/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="companyId" variable="companyId"></tns:Parameter>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="groupId" name="groupId" /></tns:Results></tns:Call>
+  			<tns:Call portlet="Portlet_MB_MBCategoryService" method="getCategories/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId">0</tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="mbCategoryId" name="mbCategoryId" /></tns:Results></tns:Call>
+  					
+  			<tns:Call portlet="Portlet_MB_MBMessageService" method="addMessage/2">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId" />
+  					<tns:Parameter name="categoryId" variable="mbCategoryId" />
+  				</tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="messageId" name="messageId" />
+  					<tns:StoreResult variable="threadId" name="threadId" />
+  				</tns:Results>
+  			</tns:Call>
+
+  			<tns:Call portlet="Portlet_MB_MBMessageService" method="addMessage/2">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+  					<tns:Parameter name="mbCategoryId" variable="mbCategoryId"></tns:Parameter>
+  					<tns:Parameter name="messageId" variable="messageId"></tns:Parameter>
+  					<tns:Parameter name="threadId" variable="threadId"></tns:Parameter>
+  					<tns:Parameter name="soggetto">Qui il soggetto del messaggio</tns:Parameter>
+  					<tns:Parameter name="corpo">
+  						Qui il corpo del messaggio
+  					</tns:Parameter></tns:Parameters></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload>
+  	<tns:Workload name="deleteThread">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portlet_MB_MBMessageService" method="getCategoryMessages/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+  					<tns:Parameter name="categoryId" variable="mbCategoryId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="messageId" name="messageId" /></tns:Results></tns:Call>
+  			<tns:Call portlet="Portlet_MB_MBMessageService" method="deleteMessage/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="messageId" variable="messageId"></tns:Parameter></tns:Parameters></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload>
+
+  </tns:Workloads>
+  <tns:Run>
+			<tns:Declarations>
+				<tns:Declare name="userId" >184801</tns:Declare>
+				<tns:Declare name="companyId"></tns:Declare>
+				<tns:Declare name="groupId" ></tns:Declare>
+				<tns:Declare name="mbCategoryId" /><tns:Declare
+					name="messageId"></tns:Declare>
+			</tns:Declarations>
+  	
+  	<tns:WorkloadReference name="getMBCategory" ></tns:WorkloadReference><tns:WorkloadReference name="deleteThread" /></tns:Run>
+</tns:FunctionalTest>

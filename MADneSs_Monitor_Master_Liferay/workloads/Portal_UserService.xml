@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portal_UserService" method="addGroupUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addGroupUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$userId}</long>
+         </userIds>
+      </urn:addGroupUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="addOrganizationUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addOrganizationUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <organizationId xsi:type="xsd:long">{$organizationId}</organizationId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$userId}</long>
+         </userIds>
+      </urn:addOrganizationUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="addPasswordPolicyUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addPasswordPolicyUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <passwordPolicyId xsi:type="xsd:long">{$passwordPolicyId}</passwordPolicyId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$userId}</long>
+         </userIds>
+      </urn:addPasswordPolicyUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="addRoleUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addRoleUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">{$roleId}</roleId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$userId}</long>
+         </userIds>
+      </urn:addRoleUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	
+		<tns:Request portlet="Portal_UserService" method="addTeamUsers/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addTeamUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <teamId xsi:type="xsd:long">{$teamId}</teamId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userId}</long>
+         </userIds>
+      </urn:addTeamUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+		</tns:Request><tns:Request portlet="Portal_UserService" method="addUserGroupUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addUserGroupUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userGroupId xsi:type="xsd:long">187346</userGroupId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>184801</long>
+         </userIds>
+      </urn:addUserGroupUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request><tns:Request portlet="Portal_UserService" method="addUser/1">
+			<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+			<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addUser soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <autoPassword xsi:type="xsd:boolean">false</autoPassword>
+         <password1 xsi:type="xsd:string">{$password}</password1>
+         <password2 xsi:type="xsd:string">{$password}</password2>
+         <autoScreenName xsi:type="xsd:boolean">false</autoScreenName>
+         <screenName xsi:type="xsd:string">{$screenName}</screenName>
+         <emailAddress xsi:type="xsd:string">{$email}</emailAddress>
+         <facebookId xsi:type="xsd:long">0</facebookId>
+         <openId xsi:type="xsd:string"></openId>
+         <locale xsi:type="xsd:string"></locale>
+         <firstName xsi:type="xsd:string">{$firstName}</firstName>
+         <middleName xsi:type="xsd:string"></middleName>
+         <lastName xsi:type="xsd:string">{$lastName}</lastName>
+         <prefixId xsi:type="xsd:int">0</prefixId>
+         <suffixId xsi:type="xsd:int">0</suffixId>
+         <male xsi:type="xsd:boolean">false</male>
+         <birthdayMonth xsi:type="xsd:int">1</birthdayMonth>
+         <birthdayDay xsi:type="xsd:int">1</birthdayDay>
+         <birthdayYear xsi:type="xsd:int">1991</birthdayYear>
+         <jobTitle xsi:type="xsd:string">jobtitle</jobTitle>
+         <sendEmail xsi:type="xsd:boolean">false</sendEmail>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:addUser>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+			<tns:results>
+				<tns:result name="userId">
+					<tns:Path>//userId</tns:Path>
+				</tns:result>
+			</tns:results>
+		</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="deletePortrait/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deletePortrait soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">184801</userId>
+      </urn:deletePortrait>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="deleteRoleUser/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteRoleUser soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">187207</roleId>
+         <userId xsi:type="xsd:long">184801</userId>
+      </urn:deleteRoleUser>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="deleteUser/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteUser soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+      </urn:deleteUser>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getCompanyUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCompanyUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <start xsi:type="xsd:int">0</start>
+         <end xsi:type="xsd:int">1</end>
+      </urn:getCompanyUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="contactId">
+  				<tns:Path>//contactId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="emailAddress">
+  				<tns:Path>//emailAddress[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="facebookId">
+  				<tns:Path>//facebookId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="portraitId">
+  				<tns:Path>//portraitId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="screenName">
+  				<tns:Path>//screenName[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getCompanyUsersCount/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCompanyUsersCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+      </urn:getCompanyUsersCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="count">
+  				<tns:Path>//getCompanyUsersCountReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getDefaultUserId/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getDefaultUserId soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+      </urn:getDefaultUserId>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="userId">
+  				<tns:Path>//getDefaultUserIdReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getGroupUserIds/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getGroupUserIds soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+      </urn:getGroupUserIds>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="userId">
+  				<tns:Path>//getGroupUserIdsReturn[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getGroupUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getGroupUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+      </urn:getGroupUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="contactId">
+  				<tns:Path>//contactId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="emailAddress">
+  				<tns:Path>//emailAddress[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="facebookId">
+  				<tns:Path>//facebookId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="portraitId">
+  				<tns:Path>//portraitId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="screenName">
+  				<tns:Path>//screenName[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getRoleUserIds/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getRoleUserIds soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">187207</roleId>
+      </urn:getRoleUserIds>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="userId">
+  				<tns:Path>//getRoleUserIdsReturn[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getUserByEmailAddress/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserByEmailAddress soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <emailAddress xsi:type="xsd:string">{$userEmailAddress}</emailAddress>
+      </urn:getUserByEmailAddress>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="contactId">
+  				<tns:Path>//contactId</tns:Path>
+  			</tns:result>
+  			<tns:result name="emailAddress">
+  				<tns:Path>//emailAddress</tns:Path>
+  			</tns:result>
+  			<tns:result name="facebookId">
+  				<tns:Path>//facebookId</tns:Path>
+  			</tns:result>
+  			<tns:result name="portraitId">
+  				<tns:Path>//portraitId</tns:Path>
+  			</tns:result>
+  			<tns:result name="screenName">
+  				<tns:Path>//screenName</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getUserById/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserById soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+      </urn:getUserById>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="contactId">
+  				<tns:Path>//contactId</tns:Path>
+  			</tns:result>
+  			<tns:result name="emailAddress">
+  				<tns:Path>//emailAddress</tns:Path>
+  			</tns:result>
+  			<tns:result name="facebookId">
+  				<tns:Path>//facebookId</tns:Path>
+  			</tns:result>
+  			<tns:result name="portraitId">
+  				<tns:Path>//portraitId</tns:Path>
+  			</tns:result>
+  			<tns:result name="screenName">
+  				<tns:Path>//screenName</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getUserByScreenName/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserByScreenName soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <screenName xsi:type="xsd:string">{$screenName}</screenName>
+      </urn:getUserByScreenName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="contactId">
+  				<tns:Path>//contactId</tns:Path>
+  			</tns:result>
+  			<tns:result name="emailAddress">
+  				<tns:Path>//emailAddress</tns:Path>
+  			</tns:result>
+  			<tns:result name="facebookId">
+  				<tns:Path>//facebookId</tns:Path>
+  			</tns:result>
+  			<tns:result name="portraitId">
+  				<tns:Path>//portraitId</tns:Path>
+  			</tns:result>
+  			<tns:result name="screenName">
+  				<tns:Path>//screenName</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getUserIdByEmailAddress/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserIdByEmailAddress soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">10132</companyId>
+         <emailAddress xsi:type="xsd:string">alessandra.aurelio@eng.it</emailAddress>
+      </urn:getUserIdByEmailAddress>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="userId">
+  				<tns:Path>//getUserIdByEmailAddressReturn[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="getUserIdByScreenName/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserIdByScreenName soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <screenName xsi:type="xsd:string">{$userScreenName}</screenName>
+      </urn:getUserIdByScreenName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="userId">
+  				<tns:Path>//getUserIdByScreenNameReturn[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="hasGroupUser/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:hasGroupUser soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">187244</groupId>
+         <userId xsi:type="xsd:long">184801</userId>
+      </urn:hasGroupUser>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="hasGroupUser">
+  				<tns:Path>//hasGroupUserReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="hasRoleUser/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:hasRoleUser soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">21828</roleId>
+         <userId xsi:type="xsd:long">184801</userId>
+      </urn:hasRoleUser>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="hasRoleUser">
+  				<tns:Path>//hasRoleUserReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="setRoleUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:setRoleUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">21828</roleId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>184801</long>
+         </userIds>
+      </urn:setRoleUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="setUserGroupUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:setUserGroupUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userGroupId xsi:type="xsd:long">{$userGroupId}</userGroupId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userId}</long>
+         </userIds>
+      </urn:setUserGroupUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="unsetGroupTeamsUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetGroupTeamsUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$userId}</long>
+         </userIds>
+      </urn:unsetGroupTeamsUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="unsetGroupUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetGroupUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$userId}</long>
+         </userIds>
+      </urn:unsetGroupUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="unsetOrganizationUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetOrganizationUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <organizationId xsi:type="xsd:long">{$organizationId}</organizationId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userId}</long>
+         </userIds>
+      </urn:unsetOrganizationUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="unsetPasswordPolicyUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetPasswordPolicyUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <passwordPolicyId xsi:type="xsd:long">{$passwordPolicyId}</passwordPolicyId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userId}</long>
+         </userIds>
+      </urn:unsetPasswordPolicyUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="unsetRoleUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetRoleUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">{$roleId}</roleId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userId}</long>
+         </userIds>
+      </urn:unsetRoleUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="unsetTeamUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetTeamUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <teamId xsi:type="xsd:long">{$teamId}</teamId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userId}</long>
+         </userIds>
+      </urn:unsetTeamUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="unsetUserGroupUsers/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetUserGroupUsers soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userGroupId xsi:type="xsd:long">{$userGroupId}</userGroupId>
+         <userIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>{$userId}</long>
+         </userIds>
+      </urn:unsetUserGroupUsers>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updateAgreedToTermsOfUse/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateAgreedToTermsOfUse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <agreedToTermsOfUse xsi:type="xsd:boolean">true</agreedToTermsOfUse>
+      </urn:updateAgreedToTermsOfUse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updateEmailAddress/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateEmailAddress soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">184801</userId>
+         <password xsi:type="xsd:string"></password>
+         <emailAddress1 xsi:type="xsd:string">email12@rt.it</emailAddress1>
+         <emailAddress2 xsi:type="xsd:string">email12@rt.it</emailAddress2>
+      </urn:updateEmailAddress>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updateLockoutById/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateLockoutById soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <lockout xsi:type="xsd:boolean">false</lockout>
+      </urn:updateLockoutById>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updateOpenId/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateOpenId soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <openId xsi:type="xsd:string">{$OpenIdString}</openId>
+      </urn:updateOpenId>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updatePassword/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updatePassword soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <password1 xsi:type="xsd:string">{$password}</password1>
+         <password2 xsi:type="xsd:string">{$password}</password2>
+         <passwordReset xsi:type="xsd:boolean">false</passwordReset>
+      </urn:updatePassword>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updatePortrait/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updatePortrait soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <bytes xsi:type="xsd:base64Binary">{$userPortrait}</bytes>
+      </urn:updatePortrait>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updateReminderQuery/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateReminderQuery soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <question xsi:type="xsd:string">{$userQuestion}</question>
+         <answer xsi:type="xsd:string">{$userAnswer}</answer>
+      </urn:updateReminderQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updateScreenName/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateScreenName soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <screenName xsi:type="xsd:string">{$screenName}</screenName>
+      </urn:updateScreenName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_UserService" method="updateStatus/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_UserService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateStatus soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <status xsi:type="xsd:int">{$status}</status>
+      </urn:updateStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

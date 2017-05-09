@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portlet_Journal_JournalTemplateService" method="addTemplate/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Journal_JournalTemplateService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.journal.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addTemplate soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <templateId xsi:type="xsd:string">{$templateId}</templateId>
+         <autoTemplateId xsi:type="xsd:boolean">false</autoTemplateId>
+         <structureId xsi:type="xsd:string">{$structureId}</structureId>
+         <nameMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </nameMapLanguageIds>
+         <nameMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$templateName}</string>
+         </nameMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>en_US</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>{$templateDescription}</string>
+         </descriptionMapValues>
+         <xsl xsi:type="xsd:string">xsl</xsl>
+         <formatXsl xsi:type="xsd:boolean">false</formatXsl>
+         <langType xsi:type="xsd:string">en_US</langType>
+         <cacheable xsi:type="xsd:boolean">false</cacheable>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:addTemplate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId</tns:Path>
+  			</tns:result>
+  			<tns:result name="templateId">
+  				<tns:Path>//templateId</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId</tns:Path>
+  			</tns:result>
+  			<tns:result name="structureId">
+  				<tns:Path>//structureId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Journal_JournalTemplateService" method="copyTemplate/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Journal_JournalTemplateService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.journal.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:copyTemplate soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <oldTemplateId xsi:type="xsd:string">{$srcTemplateName}</oldTemplateId>
+         <newTemplateId xsi:type="xsd:string">{$newTemplateName}</newTemplateId>
+         <autoTemplateId xsi:type="xsd:boolean">false</autoTemplateId>
+      </urn:copyTemplate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Journal_JournalTemplateService" method="deleteTemplate/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Journal_JournalTemplateService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.journal.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteTemplate soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <templateId xsi:type="xsd:string">{$templateId}</templateId>
+      </urn:deleteTemplate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Journal_JournalTemplateService" method="getStructureTemplates/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Journal_JournalTemplateService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.journal.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getStructureTemplates soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">187244</groupId>
+         <structureId xsi:type="xsd:string">Welcome Content Structure</structureId>
+      </urn:getStructureTemplates>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="templateId">
+  				<tns:Path>//templateId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="structureId">
+  				<tns:Path>//structureId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Journal_JournalTemplateService" method="getTemplate/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Journal_JournalTemplateService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.journal.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getTemplate soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">187244</groupId>
+         <templateId xsi:type="xsd:string">TestTemplate</templateId>
+      </urn:getTemplate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId</tns:Path>
+  			</tns:result>
+  			<tns:result name="templateId">
+  				<tns:Path>//templateId</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId</tns:Path>
+  			</tns:result>
+  			<tns:result name="structureId">
+  				<tns:Path>//structureId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Journal_JournalTemplateService" method="updateTemplate/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Journal_JournalTemplateService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.journal.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateTemplate soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <templateId xsi:type="xsd:string">{$templateId}</templateId>
+         <structureId xsi:type="xsd:string">{$structureId}</structureId>
+         <nameMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>en_US</string>
+         </nameMapLanguageIds>
+         <nameMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         <string>{$templateName}</string>
+         </nameMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>en_US</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>{$templateDescription}</string>
+         </descriptionMapValues>
+         <xsl xsi:type="xsd:string">xsl</xsl>
+         <formatXsl xsi:type="xsd:boolean">false</formatXsl>
+         <langType xsi:type="xsd:string">en_US</langType>
+         <cacheable xsi:type="xsd:boolean">false</cacheable>
+
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:updateTemplate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>
