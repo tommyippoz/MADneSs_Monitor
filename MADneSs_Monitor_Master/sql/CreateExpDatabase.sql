@@ -32,7 +32,7 @@ create table run (run_id int primary key auto_increment, run_type_id int, worklo
 
 create table failure_type (failure_type_id int primary key auto_increment, ft_description varchar(30));
 
-create table failure (failure_id int primary key auto_increment, failure_type_id int, run_id int, fa_description varchar(100), fa_time datetime, 
+create table failure (failure_id int primary key auto_increment, failure_type_id int, run_id int, fa_description varchar(100), fa_time datetime, fa_duratio int default 2, 
     foreign key (failure_type_id) references failure_type(failure_type_id) on delete cascade,
     foreign key (run_id) references run(run_id) on delete cascade);
 

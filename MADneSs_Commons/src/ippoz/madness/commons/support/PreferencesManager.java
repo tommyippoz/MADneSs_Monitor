@@ -27,4 +27,8 @@ public class PreferencesManager {
 		return preferences.get(tag);
 	}
 
+	public boolean hasPreference(String tag) {
+		return preferences.containsKey(tag);
+	}
+
 }

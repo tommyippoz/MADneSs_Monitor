@@ -65,8 +65,12 @@ public abstract class MasterManager {
 	 */
 	public MasterManager(PreferencesManager prefManager) throws IOException {
 		this.prefManager = prefManager;
-		dbManager = new DatabaseManager("experiment", false);
+		dbManager = new DatabaseManager(prefManager, false);
 		cManager = new CommunicationManager(prefManager.getPreference("SLAVE_IP_ADDRESS"), Integer.parseInt(prefManager.getPreference("OUT_PORT")), Integer.parseInt(prefManager.getPreference("IN_PORT")));
+	}
+	
+	public boolean isInitialized() {
+		return dbManager != null && cManager != null && dbManager.isAlive() && cManager.isAlive();
 	}
 	
 	/**
@@ -75,20 +79,17 @@ public abstract class MasterManager {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public void setupEnvironment() throws IOException {
-		availableWorkloads = readWorkloads();
+		availableWorkloads = readWorkloads(new File(prefManager.getPreference("WORKLOAD_DETAILS")), new File(prefManager.getPreference("WORKLOAD_FOLDER")));
 		setupExperiments();
 	}
-	
-	protected abstract Workload createDefaultWorkload(File wFile);
-	
-	protected abstract Workload createWorkload(File wFile, HashMap<String, HashMap<String, Integer>> workloadDetails);
 	
 	/**
 	 * Reads all the available workloads.
 	 *
 	 * @return the list of workloads
 	 */
-	private LinkedList<Workload> readWorkloads(){
+	protected abstract LinkedList<Workload> readWorkloads(File detailsFile, File workloadFolder);
+	/*private LinkedList<Workload> readWorkloads(){
 		Workload currentWorkload;
 		LinkedList<Workload> workloads = new LinkedList<Workload>();
 		HashMap<String, HashMap<String, Integer>> workloadDetails = getWorkloadDetails(new File(prefManager.getPreference("WORKLOAD_DETAILS")));
@@ -111,7 +112,7 @@ public abstract class MasterManager {
 		}
 		System.out.println(" Available workloads: " + workloads.size());
 		return workloads;
-	}
+	}*/
 	
 	private HashMap<String, HashMap<String, Integer>> getWorkloadDetails(File workloadDetailFile) {
 		String readed;

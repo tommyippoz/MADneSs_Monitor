@@ -1,5 +1,0 @@
-SCRIPT_PATH=/home/cecris
-START_SCRIPT_NAME=start_instrumented.sh
-SHUTDOWN_SCRIPT_NAME=shutdown_instrumented.sh
-START_DELAY=120000
-SHUTDOWN_DELAY=40000

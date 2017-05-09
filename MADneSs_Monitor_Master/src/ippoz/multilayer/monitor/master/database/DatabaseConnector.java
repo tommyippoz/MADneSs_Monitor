@@ -27,21 +27,28 @@ import com.ibatis.common.jdbc.ScriptRunner;
 public class DatabaseConnector {
 	
 	private Connection conn;
+	private boolean alive;
 	
 	public DatabaseConnector(String dbName, String username, String password, boolean create){
 		this("jdbc:mysql://localhost:3306/", dbName, "com.mysql.jdbc.Driver", username, password, create);
 	}
 	
+	public boolean isAlive() {
+		return alive;
+	}
+	
 	public DatabaseConnector(String url, String dbName, String driver, String username, String password, boolean create){
 		try {
+			alive = false;
 			if(create){
 				dbName = "experiment";
 				createDatabase(url, dbName, username, password);
 			}
 			Class.forName(driver).newInstance();
 			conn = DriverManager.getConnection(url + dbName, username, password);
+			alive = true;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
-			AppLogger.logException(getClass(), e, "Impossible to estalish DB connection");
+			AppLogger.logError(getClass(), "MySQLError", "Impossible to estalish DB connection");
 		} 
 	}
 	

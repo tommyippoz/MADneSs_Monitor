@@ -30,9 +30,11 @@ public class ExperimentMaster {
 		try {
 			masterPreferences = new PreferencesManager(new File("masterPreferences.preferences"));
 			master = new JSeduiteMasterManager(masterPreferences);
-			master.setupEnvironment();
-			master.startExperimentalCampaign();
-			master.flush();
+			if(master.isInitialized()){
+				master.setupEnvironment();
+				master.startExperimentalCampaign();
+				master.flush();
+			}
 			System.exit(0);
 		} catch (IOException e) {
 			AppLogger.logException(ExperimentMaster.class, e, "Unhandled IOException");
