@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration><tns:Include
+  		configuration-file="Portlet_SC_SCProductEntryService.xml" /><tns:Include
+  		configuration-file="Portal_UserService.xml" ></tns:Include><tns:Include
+  		configuration-file="Portal_GroupService.xml" /><tns:Include
+  		configuration-file="Portlet_SC_SCProductVersionService.xml" /><tns:Include
+  		configuration-file="Portlet_SC_SCLicenseService.xml" />
+  </tns:Configuration>
+  <tns:Workloads><!--Recupera le info di autenticazione-->
+  	<tns:Workload name="getCredentials">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portal_UserService" method="getUserById/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="companyId" name="companyId" /></tns:Results></tns:Call>
+  			<tns:Call portlet="Portal_GroupService" method="getUserGroup/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="companyId" variable="companyId"></tns:Parameter>
+  					<tns:Parameter name="userId" variable="userId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="groupId" name="groupId" /></tns:Results></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload><!--Inserisce un nuovo software al catalogo (preceduto da getCredentials)-->
+  	<tns:Workload name="addProduct">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portlet_SC_SCProductEntryService" method="addProductEntry/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter>
+  					<tns:Parameter name="name">nome prodotto</tns:Parameter>
+  					<tns:Parameter name="shortDescription">descrizione corta del prodotto</tns:Parameter>
+  					<tns:Parameter name="longDescription">descrizione lunga del prodotto</tns:Parameter>
+  					<tns:Parameter name="repoGroupId" variable="repoGroupId"></tns:Parameter>
+  					<tns:Parameter name="repoArtifactId"
+  						variable="repoArtifactId">
+  					</tns:Parameter>
+  					<tns:Parameter name="licenseId" variable="licenseId"></tns:Parameter>
+  					<tns:Parameter name="author">me stesso</tns:Parameter>
+  					<tns:Parameter name="pageURL">http://www.product.com</tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="productEntryId" name="productEntryId" /></tns:Results>
+  			</tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload><!--Inserisce un nuova versione al software (preceduto da getCredentials)-->
+  	<tns:Workload name="addProductVersion">
+  		<tns:Choreography>
+  			<tns:Call portlet="Portlet_SC_SCProductVersionService" method="addProductVersion/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="productEntryId"
+  						variable="productEntryId">
+  					</tns:Parameter>
+  					<tns:Parameter name="version">2.5</tns:Parameter>
+  					<tns:Parameter name="changeLog">cambiato il link al link</tns:Parameter>
+  					<tns:Parameter name="downloadPageURL">http://www.urldidownload.com</tns:Parameter>
+  					<tns:Parameter name="groupId" variable="groupId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="productVersionId" name="productVersionId" /></tns:Results></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload><!--Inserisce una nuova licenza e la associa ad un prodotto-->
+  	<tns:Workload name="licenseAssign">
+  		<tns:Choreography><!--Inserisco una nuova licenza-->
+  			<tns:Call portlet="Portlet_SC_SCLicenseService" method="addLicense/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="name">testLCS</tns:Parameter>
+  					<tns:Parameter name="url">http://www.license.org</tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="licenseId" name="licenseId" /></tns:Results></tns:Call><!--Recupero il prodotto software-->
+  			<tns:Call portlet="Portlet_SC_SCProductEntryService" method="getProductEntry/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="productEntryId" variable="productEntryId"></tns:Parameter></tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="name" name="name" />
+  					<tns:StoreResult variable="shortDescription" name="shortDescription" />
+  					<tns:StoreResult variable="longDescription" name="longDescription" />
+  					<tns:StoreResult variable="pageURL" name="pageURL" />
+  					<tns:StoreResult variable="author" name="author" />
+  					<tns:StoreResult variable="repoGroupId" name="repoGroupId" />
+  					<tns:StoreResult variable="repoArtifactId" name="repoArtifactId" /></tns:Results>
+  			</tns:Call><!--Aggiorno l'id della licenza-->
+  			<tns:Call portlet="Portlet_SC_SCProductEntryService" method="updateProductEntry/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="productEntryId" variable="productEntryId"></tns:Parameter>
+  					<tns:Parameter name="name" variable="name"></tns:Parameter>
+  					<tns:Parameter name="shortDescription"
+  						variable="shortDescription"></tns:Parameter>
+  					<tns:Parameter name="longDescription"
+  						variable="longDescription"></tns:Parameter>
+  					<tns:Parameter name="pageURL" variable="pageURL"></tns:Parameter>
+  					<tns:Parameter name="author" variable="author"></tns:Parameter>
+  					<tns:Parameter name="repoGroupId" variable="repoGroupId"></tns:Parameter>
+  					<tns:Parameter name="repoArtifactId" variable="repoArtifactId"></tns:Parameter>
+  					<tns:Parameter name="licenseId" variable="licenseId"></tns:Parameter></tns:Parameters></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload>
+  </tns:Workloads>
+  <tns:Run>
+  	<tns:Declarations>
+  		<tns:Declare name="userId">184801</tns:Declare>
+  		<tns:Declare name="companyId"></tns:Declare>
+  		<tns:Declare name="groupId"></tns:Declare>
+  		<tns:Declare name="productEntryId">188711</tns:Declare>
+  		<tns:Declare name="repoGroupId"></tns:Declare>
+  		<tns:Declare name="repoArtifactId"></tns:Declare>
+  		<tns:Declare name="licenseId"></tns:Declare>
+  		<tns:Declare name="name"></tns:Declare>
+  		<tns:Declare name="shortDescription"></tns:Declare>
+  		<tns:Declare name="longDescription"></tns:Declare>
+  		<tns:Declare name="pageURL"></tns:Declare>
+  		<tns:Declare name="author"></tns:Declare></tns:Declarations>
+  	<tns:WorkloadReference name="getCredentials" ></tns:WorkloadReference>
+	<tns:WorkloadReference name="licenseAssign" /></tns:Run>
+</tns:FunctionalTest>

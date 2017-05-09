@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portal_ClassNameService" method="fetchClassNameId/2">
+  		<tns:url>http://192.168.2.151:8080/api/axis/Portal_ClassNameService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:fetchClassNameId soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <value xsi:type="xsd:string">{$className}</value>
+      </urn:fetchClassNameId>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="classId">
+  				<tns:Path>//fetchClassNameIdReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_ClassNameService" method="fetchClassName/1">
+  		<tns:url>http://192.168.2.151:8080/api/axis/Portal_ClassNameService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:fetchClassName soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <value xsi:type="xsd:string">{$className}</value>
+      </urn:fetchClassName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="classNameId">
+  				<tns:Path>//classNameId</tns:Path>
+  			</tns:result>
+  		</tns:results>
+  	</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+    <tns:Include configuration-file=""/>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

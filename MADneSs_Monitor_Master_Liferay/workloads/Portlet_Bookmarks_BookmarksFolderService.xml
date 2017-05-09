@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator configurationValidator.xsd ">
+  <tns:Configuration>
+    <tns:Include configuration-file=""/>
+    
+ <tns:Request portlet="Portlet_Bookmarks_BookmarksFolderService" method="addFolder/1">
+  	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Bookmarks_BookmarksFolderService</tns:url>    	
+   	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.bookmarks.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <parentFolderId xsi:type="xsd:long">{$parentFolderId}</parentFolderId>
+         <name xsi:type="xsd:string">{$name}</name>
+         <description xsi:type="xsd:string">{$description}</description>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+            <scopeGroupId xsi:type="xsd:long">{$groupId}</scopeGroupId> 
+        </serviceContext>
+      </urn:addFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+   	</tns:content>
+   	<tns:results>
+   		<tns:result name="folderId">
+   			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/folderId]]></tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+   
+ <tns:Request portlet="Portlet_Bookmarks_BookmarksFolderService" method="deleteFolder/1">
+  	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Bookmarks_BookmarksFolderService</tns:url>    	
+   	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.bookmarks.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+      </urn:deleteFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+   	</tns:content>
+</tns:Request>
+
+ <tns:Request portlet="Portlet_Bookmarks_BookmarksFolderService" method="getFolder/1">
+  	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Bookmarks_BookmarksFolderService</tns:url>    	
+   	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.bookmarks.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+      </urn:getFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+   	</tns:content>
+   	<tns:results>
+   		<tns:result name="uuid">
+   			<tns:Path>//uuid</tns:Path>
+   		</tns:result>
+   		<tns:result name="userId">
+   			<tns:Path>//userId</tns:Path>
+   		</tns:result>
+   		<tns:result name="parentFolderId">
+   			<tns:Path>//parentFolderId</tns:Path>
+   		</tns:result>
+   		<tns:result name="name">
+   			<tns:Path>//name</tns:Path>
+   		</tns:result>
+   		<tns:result name="groupId">
+   			<tns:Path>//groupId</tns:Path>
+   		</tns:result>
+   		<tns:result name="description">
+   			<tns:Path>//description</tns:Path>
+   		</tns:result>
+   		<tns:result name="companyId">
+   			<tns:Path>//companyId</tns:Path>
+   		</tns:result>	
+   	</tns:results>
+</tns:Request>
+
+ <tns:Request portlet="Portlet_Bookmarks_BookmarksFolderService" method="getFolders/1">
+  	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Bookmarks_BookmarksFolderService</tns:url>    	
+   	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.bookmarks.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFolders soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+      </urn:getFolders>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+   	</tns:content>
+   	<tns:results>
+   		<tns:result name="folderId">
+   			<tns:Path>//folderId</tns:Path>
+   		</tns:result>
+   	</tns:results>
+   	</tns:Request>
+
+ <tns:Request portlet="Portlet_Bookmarks_BookmarksFolderService" method="getFoldersCount/1">
+  	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Bookmarks_BookmarksFolderService</tns:url>    	
+   	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.bookmarks.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getFoldersCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <parentFolderId xsi:type="xsd:long">{$parentFolderId}</parentFolderId>
+      </urn:getFoldersCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+   	</tns:content>
+   	<tns:results>
+   		<tns:result name="foldersCount">
+   			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]]]></tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+ <tns:Request portlet="Portlet_Bookmarks_BookmarksFolderService" method="getSubfolderIds/1">
+  	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Bookmarks_BookmarksFolderService</tns:url>    	
+   	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.bookmarks.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getSubfolderIds soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <folderIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>
+         {$folderId}
+         </long>
+         </folderIds>
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+      </urn:getSubfolderIds>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+   	</tns:content>
+   	<tns:results>
+   		<tns:result name="folderId">
+   			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/folderId]]></tns:Path>
+   		</tns:result>
+   	</tns:results>
+</tns:Request>
+
+ <tns:Request portlet="Portlet_Bookmarks_BookmarksFolderService" method="updateFolder/1">
+  	<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Bookmarks_BookmarksFolderService</tns:url>    	
+   	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.bookmarks.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateFolder soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <folderId xsi:type="xsd:long">{$folderId}</folderId>
+         <parentFolderId xsi:type="xsd:long">{$parentFolderId}</parentFolderId>
+         <name xsi:type="xsd:string">{$name}</name>
+         <description xsi:type="xsd:string">{$description}</description>
+         <mergeWithParentFolder xsi:type="xsd:boolean">false</mergeWithParentFolder>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:updateFolder>
+   </soapenv:Body>
+</soapenv:Envelope>]]>
+   	</tns:content>
+</tns:Request>
+
+  </tns:Configuration>
+  <tns:Workloads>
+    <tns:Include configuration-file=""/>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portlet_SC_SCLicenseService" method="addLicense/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_SC_SCLicenseService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.softwarecatalog.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addLicense soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <name xsi:type="xsd:string">{$name}</name>
+         <url xsi:type="xsd:string">{$url}</url>
+         <openSource xsi:type="xsd:boolean">true</openSource>
+         <active xsi:type="xsd:boolean">true</active>
+         <recommended xsi:type="xsd:boolean">true</recommended>
+      </urn:addLicense>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+   			<tns:result name="licenseId">
+  				<tns:Path>//licenseId</tns:Path>
+  			</tns:result>
+  		</tns:results>
+  	</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

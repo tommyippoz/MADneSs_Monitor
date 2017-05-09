@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="addCategory/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addCategory soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <parentCategoryId xsi:type="xsd:long">{$parentCategoryId}</parentCategoryId>
+         <titleMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>en_US</string>
+         </titleMapLanguageIds>
+         <titleMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>{$title}</string>
+         </titleMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>en_US</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>{$description}</string>
+         </descriptionMapValues>
+         <vocabularyId xsi:type="xsd:long">{$vocabularyId}</vocabularyId>
+         <categoryProperties xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:addCategory>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="categoryId">
+  				<tns:Path>//categoryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="leftCategoryId">
+  				<tns:Path>//leftCategoryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId</tns:Path>
+  			</tns:result>
+  			<tns:result name="parentCategoryId">
+  				<tns:Path>//parentCategoryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="rightCategoryId">
+  				<tns:Path>//rightCategoryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId</tns:Path>
+  			</tns:result>
+  			<tns:result name="vocabularyId">
+  				<tns:Path>//vocabularyId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="deleteCategories/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteCategories soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <categoryIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$categoryId}</long>
+         </categoryIds>
+      </urn:deleteCategories>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="deleteCategory/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteCategory soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <categoryId xsi:type="xsd:long">{$categoryId}</categoryId>
+      </urn:deleteCategory>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="getCategory/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCategory soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <categoryId xsi:type="xsd:long">{$categoryId}</categoryId>
+      </urn:getCategory>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="categoryId">
+  				<tns:Path>//categoryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId</tns:Path>
+  			</tns:result>
+  			<tns:result name="leftCategoryId">
+  				<tns:Path>//leftCategoryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId</tns:Path>
+  			</tns:result>
+  			<tns:result name="parentCategoryId">
+  				<tns:Path>//parentCategoryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="rightCategoryId">
+  				<tns:Path>//rightCategoryId</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId</tns:Path>
+  			</tns:result>
+  			<tns:result name="vocabularyId">
+  				<tns:Path>//vocabularyId</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="getChildCategories/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getChildCategories soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <parentCategoryId xsi:type="xsd:long">0</parentCategoryId>
+      </urn:getChildCategories>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="categoryId">
+  				<tns:Path>//categoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="leftCategoryId">
+  				<tns:Path>//leftCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="parentCategoryId">
+  				<tns:Path>//parentCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="rightCategoryId">
+  				<tns:Path>//rightCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="vocabularyId">
+  				<tns:Path>//vocabularyId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="getJSONSearch/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getJSONSearch soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <name xsi:type="xsd:string">%</name>
+         <vocabularyIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$vocabularyId}</long>
+         </vocabularyIds>
+         <start xsi:type="xsd:int">0</start>
+         <end xsi:type="xsd:int">1</end>
+      </urn:getJSONSearch>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="jsonDescription">
+  				<tns:Path>//getJSONSearchReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="getJSONVocabularyCategories/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getJSONVocabularyCategories soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <vocabularyId xsi:type="xsd:long">{$vocabularyId}</vocabularyId>
+         <start xsi:type="xsd:int">0</start>
+         <end xsi:type="xsd:int">1</end>
+         <obc xsi:type="util:OrderByComparator" xmlns:util="http://util.kernel.portal.liferay.com">
+            <ascending xsi:type="xsd:boolean">false</ascending>
+            <orderBy xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">vocabularyId</orderBy>
+            <orderByConditionFields xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+            <orderByFields xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+         </obc>
+      </urn:getJSONVocabularyCategories>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="jsonDescription">
+  				<tns:Path>//getJSONVocabularyCategoriesReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="getVocabularyCategories/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getVocabularyCategories soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <vocabularyId xsi:type="xsd:long">{$vocabularyId}</vocabularyId>
+         <start xsi:type="xsd:int">0</start>
+         <end xsi:type="xsd:int">1</end>
+         <obc xsi:type="util:OrderByComparator" xmlns:util="http://util.kernel.portal.liferay.com">
+            <ascending xsi:type="xsd:boolean">false</ascending>
+            <orderBy xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">vocabularyId</orderBy>
+            <orderByConditionFields xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+            <orderByFields xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+         </obc>
+      </urn:getVocabularyCategories>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="categoryId">
+  				<tns:Path>//categoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="leftCategoryId">
+  				<tns:Path>//leftCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="parentCategoryId">
+  				<tns:Path>//parentCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="rightCategoryId">
+  				<tns:Path>//rightCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="vocabularyId">
+  				<tns:Path>//vocabularyId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="getVocabularyCategoriesCount/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getVocabularyCategoriesCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+         <vocabularyId xsi:type="xsd:long">{$vocabularyId}</vocabularyId>
+      </urn:getVocabularyCategoriesCount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="count">
+  				<tns:Path>//getVocabularyCategoriesCountReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="getVocabularyRootCategories/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getVocabularyRootCategories soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <vocabularyId xsi:type="xsd:long">{$vocabularyId}</vocabularyId>
+         <start xsi:type="xsd:int">0</start>
+         <end xsi:type="xsd:int">1</end>
+         <obc xsi:type="util:OrderByComparator" xmlns:util="http://util.kernel.portal.liferay.com">
+            <ascending xsi:type="xsd:boolean">false</ascending>
+            <orderBy xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">vocabularyId</orderBy>
+            <orderByConditionFields xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+            <orderByFields xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+         </obc>
+      </urn:getVocabularyRootCategories>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="categoryId">
+  				<tns:Path>//categoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="leftCategoryId">
+  				<tns:Path>//leftCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="groupId">
+  				<tns:Path>//groupId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="parentCategoryId">
+  				<tns:Path>//parentCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="rightCategoryId">
+  				<tns:Path>//rightCategoryId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="userId">
+  				<tns:Path>//userId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="vocabularyId">
+  				<tns:Path>//vocabularyId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="moveCategory/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:moveCategory soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <categoryId xsi:type="xsd:long">{$categoryId}</categoryId>
+         <parentCategoryId xsi:type="xsd:long">{$newParentCategoryId}</parentCategoryId>
+         <vocabularyId xsi:type="xsd:long">{$vocabularyId}</vocabularyId>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:moveCategory>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="search/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">0</groupId>
+         <name xsi:type="xsd:string">%</name>
+         <categoryProperties xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+         <start xsi:type="xsd:int">0</start>
+         <end xsi:type="xsd:int">1</end>
+      </urn:search>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="return">
+  				<tns:Path>//searchReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portlet_Asset_AssetCategoryService" method="updateCategory/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetCategoryService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateCategory soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <categoryId xsi:type="xsd:long">{$categoryId}</categoryId>
+         <parentCategoryId xsi:type="xsd:long">{$parentCategoryId}</parentCategoryId>
+         <titleMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>en_US</string>
+         </titleMapLanguageIds>
+         <titleMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>{$title}</string>
+         </titleMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>en_US</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]">
+         	<string>{$description}</string>
+         </descriptionMapValues>
+         <vocabularyId xsi:type="xsd:long">{$vocabularyId}</vocabularyId>
+         <categoryProperties xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]"/>
+
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">         </serviceContext>
+      </urn:updateCategory>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="">
+  				<tns:Path>tns:Path</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  	<tns:Workload name="TestFunzionale">
+  		<tns:Choreography>
+  			<tns:Declarations>
+  				<tns:Declare name="categoryRoot" >00</tns:Declare></tns:Declarations>
+  			<tns:Call portlet="Portlet_Asset_AssetCategoryService" method="getChildCategories/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="categoryId" variable="categoryRoot"/>
+  			</tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="categoryRoot" name="categoryId" /></tns:Results></tns:Call>
+  			<tns:Call portlet="Portlet_Asset_AssetCategoryService" method="addCategory/1"></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

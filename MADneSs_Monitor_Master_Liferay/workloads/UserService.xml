@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration><tns:Request portlet="Portal_UserService"
+    	method="addUser/1">
+    	<tns:url>http://192.168.2.138:8080/api/axis/Portal_UserService</tns:url>
+    	<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addUser soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <autoPassword xsi:type="xsd:boolean">false</autoPassword>
+         <password1 xsi:type="xsd:string">{$password}</password1>
+         <password2 xsi:type="xsd:string">{$password}</password2>
+         <autoScreenName xsi:type="xsd:boolean">false</autoScreenName>
+         <screenName xsi:type="xsd:string">{$screenName}</screenName>
+         <emailAddress xsi:type="xsd:string">{$email}</emailAddress>
+         <facebookId xsi:type="xsd:long">0</facebookId>
+         <openId xsi:type="xsd:string"></openId>
+         <locale xsi:type="xsd:string"></locale>
+         <firstName xsi:type="xsd:string">{$firstName}</firstName>
+         <middleName xsi:type="xsd:string"></middleName>
+         <lastName xsi:type="xsd:string">{$lastName}</lastName>
+         <prefixId xsi:type="xsd:int">0</prefixId>
+         <suffixId xsi:type="xsd:int">0</suffixId>
+         <male xsi:type="xsd:boolean">false</male>
+         <birthdayMonth xsi:type="xsd:int">1</birthdayMonth>
+         <birthdayDay xsi:type="xsd:int">1</birthdayDay>
+         <birthdayYear xsi:type="xsd:int">1991</birthdayYear>
+         <jobTitle xsi:type="xsd:string">jobtitle</jobTitle>
+         <groupIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]"/>
+         <roleIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]"/>
+         <userGroupIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]"/>
+         <sendEmail xsi:type="xsd:boolean">false</sendEmail>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+         </serviceContext>
+      </urn:addUser>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+    	<tns:results>
+    		<tns:result name="userId">
+    			<tns:Path><![CDATA[/soapenv:Envelope/soapenv:Body/multiRef[1]/userId]]></tns:Path>
+    		</tns:result></tns:results>
+</tns:Request>
+  </tns:Configuration>
+  <tns:Workloads>
+  	<tns:Workload name="vanniGay">
+  		<tns:Choreography>
+  			<tns:Declarations>
+  				<tns:Declare name="companyId" >10132</tns:Declare>
+  				<tns:Declare name="password" >resiltech</tns:Declare>
+  				<tns:Declare name="screenName" >ciro21232112111ciro2M33adeInNY</tns:Declare>
+  				<tns:Declare name="email" >cir2ocir21232112111o@s33ap.it</tns:Declare>
+  				<tns:Declare name="firstName" >il budello della mamma</tns:Declare>
+  				<tns:Declare name="lastName" >di gigi</tns:Declare>
+
+  				<tns:Declare name="userId" />
+  			</tns:Declarations>
+  			<tns:Call portlet="Portal_UserService" method="addUser/1">
+  				<tns:Parameters>
+  					<tns:Parameter name="companyId" variable="companyId"/>
+  					<tns:Parameter name="password" variable="password"/>
+  					<tns:Parameter name="screenName" variable="screenName"/>
+  					<tns:Parameter name="email" variable="email"/>
+  					<tns:Parameter name="firstName" variable="firstName"/>
+  					<tns:Parameter name="lastName" variable="lastName"/>
+  				</tns:Parameters>
+  				<tns:Results>
+  					<tns:StoreResult variable="user" name="userId" />
+  				</tns:Results></tns:Call>
+  		</tns:Choreography>
+  	</tns:Workload>
+  </tns:Workloads>
+  <tns:Run>
+  	<tns:WorkloadReference name="vanniGay" /></tns:Run>
+</tns:FunctionalTest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portlet_Asset_AssetTagService" method="getGroupsTags/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetTagService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getGroupsTags soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         <long>
+         {$groupId}
+         </long>
+         </groupIds>
+      </urn:getGroupsTags>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="tagId">
+  				<tns:Path>//tagId</tns:Path>
+  			</tns:result>
+  			<tns:result name="name">
+  				<tns:Path>//name</tns:Path>
+  			</tns:result>
+  			<tns:result name="createDate">
+  				<tns:Path>//createDate</tns:Path>
+  			</tns:result>
+  			
+	</tns:results>
+  	</tns:Request>
+  	
+  	 	<tns:Request portlet="Portlet_Asset_AssetTagService" method="addTag/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portlet_Asset_AssetTagService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.asset.portlet.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addTag soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <name xsi:type="xsd:string">{$nameTag}</name>
+         <serviceContext xsi:type="ser:ServiceContext" xmlns:ser="http://service.portal.liferay.com">
+            <scopeGroupId xsi:type="xsd:long">{$groupId}</scopeGroupId>
+         </serviceContext>
+      </urn:addTag>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="tagId">
+  				<tns:Path>//tagId</tns:Path>
+  			</tns:result>  			
+	</tns:results>
+  	</tns:Request>
+  	
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>

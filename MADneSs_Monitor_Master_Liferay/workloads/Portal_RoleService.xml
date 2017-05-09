@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:FunctionalTest xmlns:tns="http://www.example.org/configurationValidator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configurationValidator ../model/configurationValidator.xsd ">
+  <tns:Configuration>
+  	<tns:Request portlet="Portal_RoleService" method="getUserRoles/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserRoles soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+      </urn:getUserRoles>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="roleId">
+  				<tns:Path>//roleId[1]</tns:Path>
+  			</tns:result>
+  		</tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="addRole/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addRole soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <name xsi:type="xsd:string">{$name}</name>
+         <titleMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         	<string>en_US</string>
+         </titleMapLanguageIds>
+         <titleMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         	<string>{$titolo}</string>
+         </titleMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         	<string>en_US</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         	<string>{$descrizione}</string>
+         </descriptionMapValues>
+         <type xsi:type="xsd:int">1</type>
+      </urn:addRole>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="roleId">
+  				<tns:Path>//roleId</tns:Path>
+  			</tns:result>
+  			<tns:result name="name">
+  				<tns:Path>//name[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="addUserRoles/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:addUserRoles soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <roleIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$roleId}</long>
+         </roleIds>
+      </urn:addUserRoles>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="deleteRole/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:deleteRole soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">{$userId}</roleId>
+      </urn:deleteRole>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="getGroupRoles/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getGroupRoles soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+      </urn:getGroupRoles>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="roleId">
+  				<tns:Path>//roleId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="name">
+  				<tns:Path>//name[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="getRole/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getRole soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">{$roleId}</roleId>
+      </urn:getRole>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="name">
+  				<tns:Path>//name</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="roleId">
+  				<tns:Path>//roleId</tns:Path></tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="getRole/2">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getRole soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <companyId xsi:type="xsd:long">{$companyId}</companyId>
+         <name xsi:type="xsd:string">{$roleName}</name>
+      </urn:getRole>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="name">
+  				<tns:Path>//name</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="roleId">
+  				<tns:Path>//roleId</tns:Path></tns:result></tns:results>
+  	</tns:Request><tns:Request portlet="Portal_RoleService" method="getUserGroupRoles/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserGroupRoles soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <groupId xsi:type="xsd:long">{$groupId}</groupId>
+      </urn:getUserGroupRoles>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="roleId">
+  				<tns:Path>//roleId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="name">
+  				<tns:Path>//name[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="getUserRoles/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getUserRoles soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+      </urn:getUserRoles>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="roleId">
+  				<tns:Path>//roleId[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="name">
+  				<tns:Path>//name[1]</tns:Path>
+  			</tns:result>
+  			<tns:result name="companyId">
+  				<tns:Path>//companyId[1]</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="hasUserRole/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:hasUserRole soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <companyId xsi:type="xsd:long">{$roleCompanyId}</companyId>
+         <name xsi:type="xsd:string">{$roleName}</name>
+         <inherited xsi:type="xsd:boolean">true</inherited>
+      </urn:hasUserRole>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="hasUserRole">
+  				<tns:Path>//hasUserRoleReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="hasUserRoles/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:hasUserRoles soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <companyId xsi:type="xsd:long">{$roleCompanyId}</companyId>
+         <names xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         <string>{$roleName1}</string>
+         <string>{$roleName2}</string>
+         </names>
+         <inherited xsi:type="xsd:boolean">true</inherited>
+      </urn:hasUserRoles>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  		<tns:results>
+  			<tns:result name="hasUserRoles">
+  				<tns:Path>//hasUserRolesReturn</tns:Path>
+  			</tns:result></tns:results>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="unsetUserRoles/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:unsetUserRoles soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:long">{$userId}</userId>
+         <roleIds xsi:type="urn:ArrayOf_xsd_long" soapenc:arrayType="xsd:long[]">
+         	<long>{$roleId}</long>
+         </roleIds>
+      </urn:unsetUserRoles>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	<tns:Request portlet="Portal_RoleService" method="updateRole/1">
+  		<tns:url>http://192.168.2.151:8080/api/secure/axis/Portal_RoleService</tns:url>
+  		<tns:content><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:http.service.portal.liferay.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:updateRole soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <roleId xsi:type="xsd:long">{$roleId}</roleId>
+         <name xsi:type="xsd:string">{$name}</name>
+         <titleMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         	<string>en_US</string>
+         </titleMapLanguageIds>
+         <titleMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         	<string>{$title}</string>
+         </titleMapValues>
+         <descriptionMapLanguageIds xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         	<string>en_US</string>
+         </descriptionMapLanguageIds>
+         <descriptionMapValues xsi:type="urn:ArrayOf_xsd_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+         	<string>{$description}</string>
+         </descriptionMapValues>
+         <subtype xsi:type="xsd:string">{$subType}</subtype>
+      </urn:updateRole>
+   </soapenv:Body>
+</soapenv:Envelope>]]></tns:content>
+  	</tns:Request>
+  	
+  </tns:Configuration>
+  <tns:Workloads>
+  </tns:Workloads>
+  <tns:Run/>
+</tns:FunctionalTest>
