@@ -139,8 +139,8 @@ public class AppUtility {
 				readed = reader.readLine();
 				if(readed.length() > 0) {
 					if(readed.contains("=") && readed.split("=").length == 2){
-						tag = readed.split("=")[0];
-						value = readed.split("=")[1];
+						tag = readed.split("=")[0].trim();
+						value = readed.split("=")[1].trim();
 						if(tags != null && tags.length > 0){
 							for(String current : tags){
 								if(current.toUpperCase().equals(tag.toUpperCase())){

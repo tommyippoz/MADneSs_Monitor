@@ -7,6 +7,7 @@ import ippoz.madness.commons.indicator.Indicator;
 import ippoz.madness.commons.layers.LayerType;
 import ippoz.madness.commons.support.AppLogger;
 import ippoz.madness.commons.support.AppUtility;
+import ippoz.madness.commons.support.PreferencesManager;
 import ippoz.multilayer.monitor.master.experiment.ExperimentType;
 import ippoz.multilayer.monitor.master.experiment.Failure;
 import ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment;
@@ -33,6 +34,10 @@ import java.util.Set;
  */
 public class DatabaseManager {
 	
+	private static final String DB_USERNAME = "DB_USERNAME";
+	private static final String DB_PASSWORD = "DB_PASSWORD";
+	private static final String DB_NAME = "DB_NAME";
+	
 	private DatabaseConnector connector;
 	private HashMap<ExperimentType, String> expTypes;
 	private HashMap<LayerType, String> layerTypes;
@@ -41,13 +46,21 @@ public class DatabaseManager {
 	private HashMap<String, String> indicators;
 	private HashMap<String, String> performanceTypes;
 	
-	public DatabaseManager(String dbName, boolean create){
+	public DatabaseManager(PreferencesManager prefManager, boolean create){
 		try {
-			connector = new DatabaseConnector(dbName, "root", "resiltech", create);
-			updateInfo();
+			if(prefManager.hasPreference(DB_USERNAME) && prefManager.hasPreference(DB_PASSWORD) && prefManager.hasPreference(DB_NAME)){
+				connector = new DatabaseConnector(prefManager.getPreference(DB_NAME), prefManager.getPreference(DB_USERNAME), prefManager.getPreference(DB_PASSWORD), create);
+				updateInfo();
+			} else {
+				AppLogger.logError(getClass(), "DbPrefError", "Database Preferences not specified correctly");
+			}
 		} catch(Exception ex){
 			AppLogger.logInfo(getClass(), "Need to start MySQL Server...");
 		}
+	}
+	
+	public boolean isAlive() {
+		return connector.isAlive();
 	}
 
 	private void updateInfo() {
