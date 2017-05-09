@@ -89,53 +89,6 @@ public abstract class MasterManager {
 	 * @return the list of workloads
 	 */
 	protected abstract LinkedList<Workload> readWorkloads(File detailsFile, File workloadFolder);
-	/*private LinkedList<Workload> readWorkloads(){
-		Workload currentWorkload;
-		LinkedList<Workload> workloads = new LinkedList<Workload>();
-		HashMap<String, HashMap<String, Integer>> workloadDetails = getWorkloadDetails(new File(prefManager.getPreference("WORKLOAD_DETAILS")));
-		AppLogger.logOngoingInfo(getClass(), "Fetching workloads ");
-		for(File wFile : new File(prefManager.getPreference("WORKLOAD_FOLDER")).listFiles()){
-			currentWorkload = null;
-			try {
-				if(wFile.getName().endsWith(".xml") && wFile.getName().toUpperCase().contains("WORKLOAD")){
-					if(workloadDetails.get(wFile.getName()) != null)
-						currentWorkload = createWorkload(wFile, workloadDetails);
-					else currentWorkload = createDefaultWorkload(wFile);
-				}
-				if(currentWorkload != null){
-					workloads.add(currentWorkload);
-					System.out.print(".");
-				} 
-			} catch(Exception ex){
-				AppLogger.logError(getClass(), ex.getClass().getName(), "Unable to load workload: " + wFile.getName());
-			}	
-		}
-		System.out.println(" Available workloads: " + workloads.size());
-		return workloads;
-	}*/
-	
-	private HashMap<String, HashMap<String, Integer>> getWorkloadDetails(File workloadDetailFile) {
-		String readed;
-		String[] splitted;
-		BufferedReader reader = null;
-		HashMap<String, HashMap<String, Integer>> wlDetails = new HashMap<String, HashMap<String, Integer>>();
-		try {
-			reader = new BufferedReader(new FileReader(workloadDetailFile));
-			while(reader.ready()){
-				readed = reader.readLine();
-				if(readed != null && readed.length() > 0 && !readed.startsWith("workload_name")){
-					splitted = readed.trim().split(",");
-					wlDetails.put(splitted[0], new HashMap<String, Integer>());
-					wlDetails.get(splitted[0]).put("MIN_TIME", Integer.parseInt(splitted[1]));
-					wlDetails.get(splitted[0]).put("MAX_TIME", Integer.parseInt(splitted[2]));
-				}
-			}
-			reader.close();	
-		} catch(IOException ex){
-			AppLogger.logException(getClass(), ex, "Unable to load experiments");
-		}
-		return wlDetails;
-	}
 
 	/**
 	 * Reads the test and the golden/faulty experiments.
