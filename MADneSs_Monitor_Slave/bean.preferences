@@ -1,0 +1,14 @@
+OperatingSystem.CommittedVirtualMemorySize
+OperatingSystem.FreePhysicalMemorySize
+OperatingSystem.FreeSwapSpaceSize
+OperatingSystem.ProcessCpuTime
+OperatingSystem.TotalPhysicalMemorySize
+OperatingSystem.TotalSwapSpaceSize
+OperatingSystem.Name
+OperatingSystem.AvailableProcessors
+OperatingSystem.Arch
+OperatingSystem.SystemLoadAverage
+OperatingSystem.Version
+CompilationImpl.Name
+CompilationImpl.CompilationTimeMonitoringSupported
+CompilationImpl.TotalCompilationTime

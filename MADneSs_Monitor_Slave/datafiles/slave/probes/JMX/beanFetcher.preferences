@@ -1,0 +1,5 @@
+bean_pref_filename=bean.preferences
+dest_ip_address=192.168.2.42
+dest_port_number=9858
+observation_ms_delay=1000
+conn_attempts_number=20
