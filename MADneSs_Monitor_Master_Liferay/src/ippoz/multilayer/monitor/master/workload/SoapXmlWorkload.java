@@ -89,21 +89,6 @@ public class SoapXmlWorkload extends FileWorkload {
 		}
 		return servicesList;
 	}
-	
-	/**
-	 * Checks if the service exists in the list.
-	 *
-	 * @param service the service
-	 * @param serviceList the service list
-	 * @return true, if the service exists in the list
-	 */
-	private static boolean existsIn(Service service, LinkedList<Service> serviceList){
-		for(Service currentService : serviceList){
-			if(service.compareTo(currentService) == 0)
-				return true;
-		}
-		return false;
-	}
 
 	/* (non-Javadoc)
 	 * @see ippoz.multilayer.monitor.master.workload.Workload#isRunning()

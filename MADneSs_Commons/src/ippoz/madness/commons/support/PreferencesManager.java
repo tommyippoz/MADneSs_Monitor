@@ -31,4 +31,8 @@ public class PreferencesManager {
 		return preferences.containsKey(tag);
 	}
 
+	public int getIntPreference(String tag) {
+		return Integer.parseInt(getPreference(tag));
+	}
+
 }

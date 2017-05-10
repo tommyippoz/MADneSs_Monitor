@@ -24,7 +24,7 @@ public abstract class FileWorkload extends Workload {
 	 * @param maxTime the maximum execution time
 	 */
 	public FileWorkload(File file, int minTime, int maxTime){
-		super(minTime, maxTime);
+		super(file.getName(), minTime, maxTime);
 		workloadFile = file;
 	}
 

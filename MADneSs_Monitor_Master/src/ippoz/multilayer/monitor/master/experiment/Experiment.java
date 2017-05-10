@@ -65,20 +65,24 @@ public class Experiment {
 	}
 	
 	public boolean canExecute(){
-		for(Service service : workload.usedServices()){
-			if(service.needTest(dbManager))
-				return false;
-		}
-		return true;
+		if(workload != null && workload.usedServices() != null) {
+			for(Service service : workload.usedServices()){
+				if(service.needTest(dbManager))
+					return false;
+			}
+			return true;
+		} else return false;
 	}
 	
 	public LinkedList<Experiment> getNeededTests(LinkedList<Workload> availableWorkloads, int testIterations){
 		LinkedList<Experiment> tests = new LinkedList<Experiment>();
-		for(Service service : workload.usedServices()){
-			if(service.needTest(dbManager)) {
-				tests.add(new ServiceTestExperiment(service, availableWorkloads, dbManager, testIterations));
-				if(tests.getLast().getWorkload() == null)
-					tests.removeLast();
+		if(workload != null && workload.usedServices() != null) {
+			for(Service service : workload.usedServices()){
+				if(service.needTest(dbManager)) {
+					tests.add(new ServiceTestExperiment(service, availableWorkloads, dbManager, testIterations));
+					if(tests.getLast().getWorkload() == null)
+						tests.removeLast();
+				}
 			}
 		}
 		return tests;

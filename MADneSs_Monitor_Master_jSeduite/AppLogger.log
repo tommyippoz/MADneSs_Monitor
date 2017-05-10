@@ -1,2 +1,8 @@
-May 09, 2017 1:32:09 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Fetching workloads 
+May 10, 2017 3:12:24 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Readed 'GOLDEN' experiment: test.jsw
+May 10, 2017 3:12:24 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'
+May 10, 2017 3:12:24 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'
+May 10, 2017 3:12:24 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'

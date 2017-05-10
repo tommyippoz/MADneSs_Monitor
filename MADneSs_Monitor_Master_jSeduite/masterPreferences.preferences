@@ -1,14 +1,14 @@
-SLAVE_IP_ADDRESS=192.168.2.151
+SLAVE_IP_ADDRESS = 192.168.88.99
 
-IN_PORT=9876
-OUT_PORT=9875
+IN_PORT = 9876
+OUT_PORT = 9875
 
-TEST_ITERATIONS=2
-EXPERIMENT_FILE=datafiles/master/experimentSetup.csv
+TEST_ITERATIONS = 2
+EXPERIMENT_FILE = datafiles/master/experimentSetup.csv
 
-WORKLOAD_FOLDER=workloads
-WORKLOAD_DETAILS=datafiles/master/workloadDescription.csv
+WORKLOAD_FOLDER = workloads
+WORKLOAD_DETAILS = datafiles/master/workloadDescription.csv
 
-DB_USERNAME=root
-DB_PASSWORD=andrea
-DB_NAME=experiment
+DB_USERNAME = root
+DB_PASSWORD = andrea
+DB_NAME = experiment

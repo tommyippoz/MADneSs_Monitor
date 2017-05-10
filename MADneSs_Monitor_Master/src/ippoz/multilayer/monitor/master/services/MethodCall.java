@@ -20,6 +20,7 @@ public class MethodCall {
 	public String getPortlet() {
 		return portlet;
 	}
+	
 	public String getMethod() {
 		return method;
 	}

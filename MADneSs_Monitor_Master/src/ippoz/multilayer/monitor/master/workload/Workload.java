@@ -16,6 +16,8 @@ import java.util.LinkedList;
  */
 public abstract class Workload {
 	
+	private String name;
+	
 	/** The minimum execution time of the workload. */
 	private int minTime;
 	
@@ -28,7 +30,8 @@ public abstract class Workload {
 	 * @param minTime the minimum execution time of the workload
 	 * @param maxTime the maximum execution time of the workload
 	 */
-	protected Workload(int minTime, int maxTime){
+	protected Workload(String name, int minTime, int maxTime){
+		this.name = name;
 		this.minTime = minTime;
 		this.maxTime = maxTime;
 	}
@@ -56,7 +59,9 @@ public abstract class Workload {
 	 *
 	 * @return the name of the workload
 	 */
-	public abstract String getName();
+	public String getName(){
+		return name;
+	}
 	
 	/**
 	 * Checks if the workload is valid.
@@ -104,5 +109,50 @@ public abstract class Workload {
 	 * Flushes.
 	 */
 	public abstract void flush();
+	
+	/**
+	 * Checks if the service exists in the list.
+	 *
+	 * @param service the service
+	 * @param serviceList the service list
+	 * @return true, if the service exists in the list
+	 */
+	public static boolean existsIn(Service service, LinkedList<Service> serviceList){
+		for(Service currentService : serviceList){
+			if(service.compareTo(currentService) == 0)
+				return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * Checks if the service exists in the list.
+	 *
+	 * @param service the service
+	 * @param serviceList the service list
+	 * @return true, if the service exists in the list
+	 */
+	public static boolean existsIn(String serviceName, LinkedList<Service> serviceList){
+		for(Service currentService : serviceList){
+			if(serviceName.equals(currentService.getName()))
+				return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * Gets a service if existing in the list.
+	 *
+	 * @param service the service
+	 * @param serviceList the service list
+	 * @return true, if the service exists in the list
+	 */
+	public static Service getServiceFrom(String serviceName, LinkedList<Service> serviceList){
+		for(Service currentService : serviceList){
+			if(serviceName.equals(currentService.getName()))
+				return currentService;
+		}
+		return null;
+	}
 	
 }

@@ -29,6 +29,20 @@ import ippoz.multilayer.monitor.master.workload.Workload;
  */
 public abstract class MasterManager {
 	
+	protected static final String SLAVE_IP = "SLAVE_IP_ADDRESS";
+	
+	protected static final String SOCKET_OUT_PORT = "OUT_PORT";
+	
+	protected static final String SOCKET_IN_PORT = "IN_PORT";
+	
+	protected static final String WORKLOAD_FOLDER = "WORKLOAD_FOLDER";
+	
+	protected static final String WORKLOAD_DETAILS = "WORKLOAD_DETAILS";
+	
+	protected static final String EXPERIMENT_FILE = "EXPERIMENT_FILE";
+	
+	protected static final String TEST_ITERATIONS = "TEST_ITERATIONS";
+	
 	/** The database manager. */
 	private DatabaseManager dbManager;
 	
@@ -66,7 +80,7 @@ public abstract class MasterManager {
 	public MasterManager(PreferencesManager prefManager) throws IOException {
 		this.prefManager = prefManager;
 		dbManager = new DatabaseManager(prefManager, false);
-		cManager = new CommunicationManager(prefManager.getPreference("SLAVE_IP_ADDRESS"), Integer.parseInt(prefManager.getPreference("OUT_PORT")), Integer.parseInt(prefManager.getPreference("IN_PORT")));
+		cManager = new CommunicationManager(prefManager.getPreference(SLAVE_IP), Integer.parseInt(prefManager.getPreference(SOCKET_OUT_PORT)), Integer.parseInt(prefManager.getPreference(SOCKET_IN_PORT)));
 	}
 	
 	public boolean isInitialized() {
@@ -75,12 +89,13 @@ public abstract class MasterManager {
 	
 	/**
 	 * Setups the environment.
-	 *
-	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
-	public void setupEnvironment() throws IOException {
-		availableWorkloads = readWorkloads(new File(prefManager.getPreference("WORKLOAD_DETAILS")), new File(prefManager.getPreference("WORKLOAD_FOLDER")));
-		setupExperiments();
+	public boolean setupEnvironment() {
+		availableWorkloads = readWorkloads(new File(prefManager.getPreference(WORKLOAD_DETAILS)), new File(prefManager.getPreference(WORKLOAD_FOLDER)));
+		if(availableWorkloads != null && availableWorkloads.size() > 0){
+			setupExperiments();
+			return true;
+		} else return false;
 	}
 	
 	/**
@@ -100,7 +115,7 @@ public abstract class MasterManager {
 		try {
 			expList = new LinkedList<Experiment>();
 			testList = new LinkedList<Experiment>();
-			expFile = new File(prefManager.getPreference("EXPERIMENT_FILE"));
+			expFile = new File(prefManager.getPreference(EXPERIMENT_FILE));
 			reader = new BufferedReader(new FileReader(expFile));
 			while(reader.ready()){
 				readed = reader.readLine();
@@ -121,22 +136,23 @@ public abstract class MasterManager {
 	private void parseExperiment(String readed){
 		Experiment exp;
 		String[] splitted = readed.split(",");
-		if(splitted[0].endsWith(".xml")){
+		if(splitted[0].trim().endsWith(".xml") || splitted[0].endsWith(".jsw")){
 			if(ExperimentType.valueOf(readed.split(",")[1]) != ExperimentType.TEST) {
-				if(splitted.length > 3){
-					exp = new Experiment(getWorkloadByName(splitted[0]), ExperimentType.FAULTY, dbManager, Integer.parseInt(splitted[2]), parseFailures(readed));
-				} else exp = new Experiment(getWorkloadByName(splitted[0]), ExperimentType.GOLDEN, dbManager, Integer.parseInt(splitted[2]), null);
-				if(!exp.canExecute()){
-					for(Experiment newExp : exp.getNeededTests(availableWorkloads, Integer.parseInt(prefManager.getPreference("TEST_ITERATIONS")))){
-						if(!isInTestList(newExp))
-							testList.add(newExp);
+				if(getWorkloadByName(splitted[0].trim()) != null){
+					if(splitted.length > 3){
+						exp = new Experiment(getWorkloadByName(splitted[0].trim()), ExperimentType.FAULTY, dbManager, Integer.parseInt(splitted[2].trim()), parseFailures(readed));
+					} else exp = new Experiment(getWorkloadByName(splitted[0].trim()), ExperimentType.GOLDEN, dbManager, Integer.parseInt(splitted[2].trim()), null);
+					if(!exp.canExecute()){
+						for(Experiment newExp : exp.getNeededTests(availableWorkloads, Integer.parseInt(prefManager.getPreference(TEST_ITERATIONS)))){
+							if(!isInTestList(newExp))
+								testList.add(newExp);
+						}
 					}
-				}
-				expList.add(exp);
-				AppLogger.logInfo(getClass(), "Readed '"+ exp.getExpType().toString() + "' experiment: " + exp.getWorkload().getName());
+					expList.add(exp);
+					AppLogger.logInfo(getClass(), "Readed '"+ exp.getExpType().toString() + "' experiment: " + exp.getWorkload().getName());
+				} else AppLogger.logInfo(getClass(), "Unable to parse workload '" + splitted[0].trim() + "'");
 			} else {} // TODO
 		}
-		System.out.print(".");
 	}
 	
 	/**
@@ -146,8 +162,10 @@ public abstract class MasterManager {
 	 * @return the workload by name
 	 */
 	private Workload getWorkloadByName(String wName){
+		String nUpper;
 		for(Workload workload : availableWorkloads){
-			if(workload.getName().toUpperCase().equals(wName.toUpperCase()))
+			nUpper = workload.getName().toUpperCase();
+			if(nUpper.equals(wName.toUpperCase()) || (nUpper.contains(".") && nUpper.split("\\.")[0].equals(wName.toUpperCase())))
 				return workload.cloneWorkload();
 		}
 		return null;

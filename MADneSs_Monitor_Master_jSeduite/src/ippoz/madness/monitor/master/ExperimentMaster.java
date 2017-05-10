@@ -31,11 +31,11 @@ public class ExperimentMaster {
 			masterPreferences = new PreferencesManager(new File("masterPreferences.preferences"));
 			master = new JSeduiteMasterManager(masterPreferences);
 			if(master.isInitialized()){
-				master.setupEnvironment();
-				master.startExperimentalCampaign();
+				if(master.setupEnvironment()){
+					master.startExperimentalCampaign();
+				} else AppLogger.logInfo(ExperimentMaster.class, "Unable to read workloads. Process will stop");
 				master.flush();
 			}
-			System.exit(0);
 		} catch (IOException e) {
 			AppLogger.logException(ExperimentMaster.class, e, "Unhandled IOException");
 		} catch (SQLException e) {
