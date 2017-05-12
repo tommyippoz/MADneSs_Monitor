@@ -27,6 +27,11 @@ public abstract class IteratingCommandProbe extends CycleProbe {
 		commandThread.start();
 	}
 
+	@Override
+	public boolean canRun() {
+		return commandThread != null;
+	}
+
 	protected abstract boolean isHeader(String line);
 
 	@Override

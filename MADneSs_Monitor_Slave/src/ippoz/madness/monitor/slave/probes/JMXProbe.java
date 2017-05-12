@@ -63,4 +63,9 @@ public class JMXProbe extends ScriptProbe {
 		
 	}
 
+	@Override
+	public boolean canRun() {
+		return true;
+	}
+
 }

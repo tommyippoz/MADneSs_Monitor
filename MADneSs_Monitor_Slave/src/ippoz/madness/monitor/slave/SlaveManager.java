@@ -14,11 +14,12 @@ import ippoz.madness.monitor.slave.probes.JMXProbe;
 import ippoz.madness.monitor.slave.probes.Probe;
 import ippoz.madness.monitor.slave.probes.ProbeManager;
 import ippoz.madness.monitor.slave.probes.UnixNetworkProbe;
-import ippoz.madness.monitor.slave.sut.BashInjection;
-import ippoz.madness.monitor.slave.sut.EnvInjection;
-import ippoz.madness.monitor.slave.sut.Injection;
+import ippoz.madness.monitor.slave.sut.JSeduite;
 import ippoz.madness.monitor.slave.sut.Liferay612SUT;
 import ippoz.madness.monitor.slave.sut.SUT;
+import ippoz.madness.monitor.slave.sut.injection.BashInjection;
+import ippoz.madness.monitor.slave.sut.injection.EnvInjection;
+import ippoz.madness.monitor.slave.sut.injection.Injection;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,7 +44,11 @@ public class SlaveManager {
 		prefManager = new PreferencesManager(prefFile);
 		pManager = new ProbeManager();
 		cManager = new CommunicationManager(prefManager.getPreference("MASTER_IP_ADDRESS"), Integer.parseInt(prefManager.getPreference("OUT_PORT")), Integer.parseInt(prefManager.getPreference("IN_PORT")));
+	}
+	
+	public void startListener(){
 		listenerThread = new Thread(new SlaveListener());
+		AppLogger.logInfo(getClass(), "Listener '" + AppUtility.getIP().getHostAddress().toString() + "' waiting for master at '" + prefManager.getPreference("MASTER_IP_ADDRESS") + "'");
 		listenerThread.start();
 	}
 	
@@ -89,9 +94,11 @@ public class SlaveManager {
 					break;
 				case SETUP_SUT:
 					SUT sut = null;
-					toCompare = (String)commArray[1];
-					if(toCompare.equals("LiferaySUT")){
+					toCompare = ((String)commArray[1]).toUpperCase();
+					if(toCompare.equals("LIFERAYSUT")){
 						sut = new Liferay612SUT("Liferay 6.1.2 CE SUT", new File(prefManager.getPreference("SUT_PREFERENCES_FILE")));
+					} else if(toCompare.equals("JSEDUITESUT")){
+						sut = new JSeduite("jSeduite - GlassFish V2.1", new File(prefManager.getPreference("SUT_PREFERENCES_FILE")));
 					} else {
 						AppLogger.logError(getClass(), "SUTNotRecognized", "Unable to recognize SUT type");
 					}

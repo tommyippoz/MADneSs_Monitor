@@ -1,5 +1,7 @@
-MASTER_IP_ADDRESS=192.168.2.42
+MASTER_IP_ADDRESS=192.168.88.98
+
 IN_PORT=9875
 OUT_PORT=9876
-SUT_PREFERENCES_FILE=./datafiles/slave/SUT.preferences
+
+SUT_PREFERENCES_FILE=./datafiles/slave/jSeduite_SUT.preferences
 PROBE_PREFERENCES_FILE=./datafiles/slave/probe.preferences

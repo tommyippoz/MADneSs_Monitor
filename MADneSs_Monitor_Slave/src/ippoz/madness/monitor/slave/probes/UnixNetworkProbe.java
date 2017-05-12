@@ -64,6 +64,6 @@ public class UnixNetworkProbe extends IteratingCommandProbe {
 		else if(cleared.endsWith("M"))
 			return String.valueOf(1000000*Integer.parseInt(splitted.substring(0, splitted.length()-1)));
 		else return splitted;
-	}	
+	}
 
 }

@@ -13,6 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -128,12 +129,12 @@ public class BeanManager {
 		writer.close();
 	}
 	
-	public void loadBeanPreferences(String preferencesFilename) {
+	public void loadBeanPreferences(File beanPrefFile) {
 		String readed = null;
 		BufferedReader reader = null;
 		selectedAttributes = new LinkedList<BeanAttribute>();
 		try {
-			reader = new BufferedReader(new FileReader(new File(preferencesFilename)));
+			reader = new BufferedReader(new FileReader(beanPrefFile));
 			while(reader.ready()){
 				readed = reader.readLine();
 				if(readed.length() > 0){
@@ -150,7 +151,10 @@ public class BeanManager {
 		} catch (IOException ex) {
 			AppLogger.logException(getClass(), ex, "Unable to load Bean Preferences");
 		}
-		
+	}
+	
+	public void loadBeanPreferences(String preferencesFilename) {
+		loadBeanPreferences(new File(preferencesFilename));
 	}
 
 	public JSONObject getObservation(){
@@ -167,4 +171,13 @@ public class BeanManager {
 		return jObj;
 		
 	}
+	
+	public HashMap<String, String> getObsValues(){
+		HashMap<String, String> outMap = new HashMap<String, String>();
+		for(BeanAttribute bAtt : selectedAttributes){
+			outMap.put(bAtt.getAttName(), bAtt.getStringValue(beanServer));
+		}
+		return outMap;
+	}
+	
 }

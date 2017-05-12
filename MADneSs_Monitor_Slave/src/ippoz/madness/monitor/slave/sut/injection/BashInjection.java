@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ippoz.madness.monitor.slave.sut;
+package ippoz.madness.monitor.slave.sut.injection;
 
 import ippoz.madness.commons.support.AppLogger;
 import ippoz.madness.commons.support.AppUtility;

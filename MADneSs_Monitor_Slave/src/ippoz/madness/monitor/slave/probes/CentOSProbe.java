@@ -99,5 +99,10 @@ public class CentOSProbe extends CycleProbe {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public boolean canRun() {
+		return AppUtility.isUNIX();
+	}
 	
 }

@@ -47,7 +47,11 @@ public abstract class Probe implements Runnable {
 
 	@Override
 	public void run() {
-		startProbe();
+		if(canRun()){
+			startProbe();
+		}
 	}
+	
+	public abstract boolean canRun();
 	
 }

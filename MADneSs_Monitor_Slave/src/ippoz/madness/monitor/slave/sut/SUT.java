@@ -5,9 +5,11 @@ package ippoz.madness.monitor.slave.sut;
 
 import ippoz.madness.commons.support.AppLogger;
 import ippoz.madness.commons.support.AppUtility;
+import ippoz.madness.monitor.slave.sut.injection.Injection;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
@@ -15,12 +17,16 @@ import java.util.LinkedList;
  *
  */
 public abstract class SUT {
-
+	
+	private static final String[] PARAMETER_TAGS = new String[]{"SCRIPT_PATH", "START_SCRIPT_NAME", "SHUTDOWN_SCRIPT_NAME", "START_DELAY", "SHUTDOWN_DELAY"};
+	
 	private String name;
 	protected String scriptFolder;
 	protected String startScriptName;
 	protected String shutdownScriptName;
 	protected LinkedList<Injection> injList;
+	private long startDelay;
+	private long shutdownDelay;
 	
 	protected SUT(String name, File prefFile){
 		this.name = name;
@@ -83,14 +89,30 @@ public abstract class SUT {
 		AppLogger.logInfo(getClass(), "SUT shutdowned");
 	}
 	
-	protected abstract void readParametersFromFile(File prefFile);
-	
-	protected abstract long getStartDelay();
-	
-	protected abstract long getShutdownDelay();
+	protected void readParametersFromFile(File prefFile) {
+		HashMap<String, String> readedParameters;
+		try {
+			readedParameters = AppUtility.loadPreferences(prefFile, PARAMETER_TAGS);
+			scriptFolder = readedParameters.get("SCRIPT_PATH");
+			startScriptName = readedParameters.get("START_SCRIPT_NAME");
+			shutdownScriptName = readedParameters.get("SHUTDOWN_SCRIPT_NAME");
+			startDelay = Long.parseLong(readedParameters.get("START_DELAY"));
+			shutdownDelay = Long.parseLong(readedParameters.get("SHUTDOWN_DELAY"));
+		} catch (IOException ex) {
+			AppLogger.logException(getClass(), ex, "Unable to process SUT parameters");
+		}
+	}
 
 	public boolean hasInjections() {
 		return injList != null;
+	}
+	
+	protected long getStartDelay() {
+		return startDelay;
+	}
+
+	protected long getShutdownDelay() {
+		return shutdownDelay;
 	}
 	
 }
