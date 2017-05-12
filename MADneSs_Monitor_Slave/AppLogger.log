@@ -1,0 +1,2 @@
+May 12, 2017 10:00:07 AM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.slave.SlaveManager] Listener '192.168.88.99' waiting for master at '192.168.88.98'
