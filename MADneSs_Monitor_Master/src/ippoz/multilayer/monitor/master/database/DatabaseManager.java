@@ -176,7 +176,7 @@ public class DatabaseManager {
 			for(Indicator ind : current.getIndicators()){
 				indId = indicators.get(ind.getName());
 				if(indId == null){
-					connector.update("insert into indicator (probe_type_id, in_tag, in_description) values (" + layerTypes.get(ind.getLayer()) + ", '" + ind.getName() + "', '')");
+					connector.update("insert into indicator (probe_type_id, in_tag, in_description) values (" + layerTypes.get(ind.getLayer()) + ", '" + ind.getName() + "', '" + ind.getDesc() + "')");
 					indicators.put(ind.getName(), DatabaseConnector.getFirstValueByTag(connector.executeCustomQuery(null, "select indicator_id from indicator where in_tag = '" + ind.getName() + "'"), "indicator_id"));
 					indId = indicators.get(ind.getName());
 				}

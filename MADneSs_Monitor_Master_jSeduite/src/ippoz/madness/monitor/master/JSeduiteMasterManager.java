@@ -48,5 +48,10 @@ public class JSeduiteMasterManager extends MasterManager {
 	private boolean isJSeduiteWorkload(File wFile) {
 		return wFile.getName().endsWith(".jsw");
 	}
+
+	@Override
+	protected String getSUTName() {
+		return "JSeduiteSUT";
+	}
 	
 }

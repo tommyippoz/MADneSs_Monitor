@@ -88,10 +88,10 @@ public class Experiment {
 		return tests;
 	}
 	
-	private void setupProbes(ObservationCollector obCollector, ProbeReceiverManager prManager, CommunicationManager cManager) throws IOException {
-		addProbe(cManager, prManager, new JSONSocketProbeReceiver("JMXReceiver", obCollector, LayerType.JVM, 9858, true), LayerType.JVM, 9858);
-		addProbe(cManager, prManager, new JSONSocketProbeReceiver("CentOSReceiver", obCollector, LayerType.CENTOS, 9859, true), LayerType.CENTOS, 9859);
-		addProbe(cManager, prManager, new JSONSocketProbeReceiver("UnixNetworkReceiver", obCollector, LayerType.UNIX_NETWORK, 9860, true), LayerType.UNIX_NETWORK, 9860);
+	private void setupProbes(ObservationCollector obCollector, ProbeReceiverManager prManager, CommunicationManager cManager, long msDelay) throws IOException {
+		addProbe(cManager, prManager, new JSONSocketProbeReceiver("JMXReceiver", obCollector, LayerType.JVM, 9858, msDelay, true), LayerType.JVM, 9858);
+		addProbe(cManager, prManager, new JSONSocketProbeReceiver("CentOSReceiver", obCollector, LayerType.CENTOS, 9859, msDelay, true), LayerType.CENTOS, 9859);
+		addProbe(cManager, prManager, new JSONSocketProbeReceiver("UnixNetworkReceiver", obCollector, LayerType.UNIX_NETWORK, 9860, msDelay, true), LayerType.UNIX_NETWORK, 9860);
 	}
 	
 	private void addProbe(CommunicationManager cManager, ProbeReceiverManager prManager, ProbeReceiver receiver, LayerType probeLayer, int port) throws IOException {
@@ -100,7 +100,7 @@ public class Experiment {
 		cManager.waitForConfirm();
 	}
 	
-	public void executeExperiment(CommunicationManager cManager){
+	public void executeExperiment(CommunicationManager cManager, long msDelay){
 		ObservationCollector obCollector;
 		ProbeReceiverManager prManager;
 		Workload baseWorkload;
@@ -111,7 +111,7 @@ public class Experiment {
 					obCollector = new ObservationCollector(dbManager, workload.getMinExecutionTime(), workload.getMaxExecutionTime());
 					prManager = new ProbeReceiverManager();
 					AppLogger.logInfo(getClass(), expType + " Experiment started: Run " + expRun + "/" + iterations);
-					setupProbes(obCollector, prManager, cManager);
+					setupProbes(obCollector, prManager, cManager, msDelay);
 					startExperiment(baseWorkload, cManager, obCollector);
 					executeWorkload(baseWorkload, obCollector, prManager);
 				} while(!endExperiment(baseWorkload, cManager, obCollector, prManager));
@@ -153,12 +153,14 @@ public class Experiment {
 	
 	private boolean endExperiment(Workload baseWorkload, CommunicationManager cManager, ObservationCollector obCollector, ProbeReceiverManager prManager) throws IOException {
 		boolean validFlag;
+		long startMs;
 		cManager.send(MessageType.END_EXPERIMENT);
 		cManager.waitFor(MessageType.CHECK_PROBE);
 		prManager.closeReceivers();
 		AppLogger.logOngoingInfo(getClass(), "Shutdowning SUT ..... ");
 		parseReceivedArray(cManager.receive());
 		System.out.println("DONE");
+		startMs = System.currentTimeMillis();
 		AppLogger.logInfo(getClass(), "Collecting Data on Database .....");
 		validFlag = obCollector.isValid();
 		if(validFlag){
@@ -167,6 +169,7 @@ public class Experiment {
 				dbManager.storeInjActivations(injections.keySet(), obCollector.getRunId());
 			dbManager.logExperimentInfo(baseWorkload);
 			dbManager.saveMonitorPerformance(obCollector.getRunId());
+			AppLogger.logInfo(getClass(), "Data Stored (" + (System.currentTimeMillis() - startMs) + " ms)");
 		} else {
 			dbManager.undoExperiment();
 			AppLogger.logInfo(getClass(), "Experiment needs to be repeated: collected " + obCollector.getObservationNumber() + " observations");

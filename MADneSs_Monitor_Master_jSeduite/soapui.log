@@ -1,0 +1,239 @@
+2017-05-16 12:03:51,096 WARN  [DefaultSoapUICore] Missing folder [/home/ippoz/git/MADneSs_Monitor/MADneSs_Monitor_Master_jSeduite/ext] for external libraries
+2017-05-16 12:03:51,100 INFO  [DefaultSoapUICore] Creating new settings at [/home/ippoz/git/MADneSs_Monitor/MADneSs_Monitor_Master_jSeduite/soapui-settings.xml]
+2017-05-16 12:03:51,837 INFO  [SchemaUtils] Added default schema from file:/home/ippoz/git/MADneSs_Monitor/MADneSs_Monitor_Master_jSeduite/lib/soapui-1.7.6.jar!/xop.xsd with targetNamespace http://www.w3.org/2004/08/xop/include
+2017-05-16 12:03:51,938 INFO  [SchemaUtils] Added default schema from file:/home/ippoz/git/MADneSs_Monitor/MADneSs_Monitor_Master_jSeduite/lib/soapui-1.7.6.jar!/XMLSchema.xsd with targetNamespace http://www.w3.org/2001/XMLSchema
+2017-05-16 12:03:51,945 INFO  [SchemaUtils] Added default schema from file:/home/ippoz/git/MADneSs_Monitor/MADneSs_Monitor_Master_jSeduite/lib/soapui-1.7.6.jar!/xml.xsd with targetNamespace http://www.w3.org/XML/1998/namespace
+2017-05-16 12:03:51,955 INFO  [SchemaUtils] Added default schema from file:/home/ippoz/git/MADneSs_Monitor/MADneSs_Monitor_Master_jSeduite/lib/soapui-1.7.6.jar!/swaref.xsd with targetNamespace http://ws-i.org/profiles/basic/1.1/xsd
+2017-05-16 12:03:51,961 INFO  [SchemaUtils] Added default schema from file:/home/ippoz/git/MADneSs_Monitor/MADneSs_Monitor_Master_jSeduite/lib/soapui-1.7.6.jar!/xmime200505.xsd with targetNamespace http://www.w3.org/2005/05/xmlmime
+2017-05-16 12:03:51,963 INFO  [SchemaUtils] Added default schema from file:/home/ippoz/git/MADneSs_Monitor/MADneSs_Monitor_Master_jSeduite/lib/soapui-1.7.6.jar!/xmime200411.xsd with targetNamespace http://www.w3.org/2004/11/xmlmime
+2017-05-16 12:03:52,554 INFO  [HttpClientSupport$Helper] Initializing SSL
+2017-05-16 12:03:52,973 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl]
+2017-05-16 12:03:52,973 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:03:52,982 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:03:53,008 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:03:53,009 INFO  [SchemaUtils] schema for [http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:03:53,475 INFO  [WsdlImporter] Finding importer for {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:03:53,479 INFO  [WsdlImporter] Importing binding {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:03:53,505 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService
+2017-05-16 12:03:53,554 INFO  [Soap11HttpBindingImporter] importing operation merge
+2017-05-16 12:03:53,568 INFO  [Soap11HttpBindingImporter] importing operation shuffle
+2017-05-16 12:03:53,569 INFO  [Soap11HttpBindingImporter] importing operation truncate
+2017-05-16 12:03:53,570 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:03:53,590 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:03:54,176 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl]
+2017-05-16 12:03:54,177 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:03:54,179 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:03:54,190 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:03:54,201 INFO  [SchemaUtils] schema for [http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:03:54,433 INFO  [WsdlImporter] Finding importer for {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:03:54,433 INFO  [WsdlImporter] Importing binding {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:03:54,434 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService
+2017-05-16 12:03:54,434 INFO  [Soap11HttpBindingImporter] importing operation merge
+2017-05-16 12:03:54,434 INFO  [Soap11HttpBindingImporter] importing operation shuffle
+2017-05-16 12:03:54,434 INFO  [Soap11HttpBindingImporter] importing operation truncate
+2017-05-16 12:03:54,435 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:03:54,436 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:03:55,704 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?wsdl]
+2017-05-16 12:03:55,704 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?wsdl
+2017-05-16 12:03:55,706 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?xsd=1
+2017-05-16 12:03:55,709 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:03:55,718 INFO  [SchemaUtils] schema for [http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:03:55,907 INFO  [WsdlImporter] Finding importer for {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetPortBinding
+2017-05-16 12:03:55,907 INFO  [WsdlImporter] Importing binding {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetPortBinding
+2017-05-16 12:03:55,907 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService
+2017-05-16 12:03:55,907 INFO  [Soap11HttpBindingImporter] importing operation merge
+2017-05-16 12:03:55,908 INFO  [Soap11HttpBindingImporter] importing operation shuffle
+2017-05-16 12:03:55,908 INFO  [Soap11HttpBindingImporter] importing operation truncate
+2017-05-16 12:03:55,908 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?wsdl
+2017-05-16 12:03:55,910 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?xsd=1
+2017-05-16 12:03:56,105 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?wsdl]
+2017-05-16 12:03:56,105 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?wsdl
+2017-05-16 12:03:56,107 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?xsd=1
+2017-05-16 12:03:56,113 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:03:56,116 INFO  [SchemaUtils] schema for [http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:03:56,269 INFO  [WsdlImporter] Finding importer for {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetPortBinding
+2017-05-16 12:03:56,269 INFO  [WsdlImporter] Importing binding {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetPortBinding
+2017-05-16 12:03:56,269 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService
+2017-05-16 12:03:56,269 INFO  [Soap11HttpBindingImporter] importing operation merge
+2017-05-16 12:03:56,270 INFO  [Soap11HttpBindingImporter] importing operation shuffle
+2017-05-16 12:03:56,270 INFO  [Soap11HttpBindingImporter] importing operation truncate
+2017-05-16 12:03:56,270 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?wsdl
+2017-05-16 12:03:56,273 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSet/PictureSetService?xsd=1
+2017-05-16 12:03:57,543 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?wsdl]
+2017-05-16 12:03:57,544 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?wsdl
+2017-05-16 12:03:57,548 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?xsd=1
+2017-05-16 12:03:57,564 INFO  [SchemaUtils] schema for [http://registry.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:03:57,567 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:03:57,703 INFO  [WsdlImporter] Finding importer for {http://registry.technical.jSeduite.modalis.i3s.unice.fr/}FeedRegistryPortBinding
+2017-05-16 12:03:57,703 INFO  [WsdlImporter] Importing binding {http://registry.technical.jSeduite.modalis.i3s.unice.fr/}FeedRegistryPortBinding
+2017-05-16 12:03:57,703 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService
+2017-05-16 12:03:57,704 INFO  [Soap11HttpBindingImporter] importing operation getCategories
+2017-05-16 12:03:57,704 INFO  [Soap11HttpBindingImporter] importing operation getNicknames
+2017-05-16 12:03:57,704 INFO  [Soap11HttpBindingImporter] importing operation getURL
+2017-05-16 12:03:57,709 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?wsdl
+2017-05-16 12:03:57,710 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?xsd=1
+2017-05-16 12:03:57,894 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?wsdl]
+2017-05-16 12:03:57,894 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?wsdl
+2017-05-16 12:03:57,895 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?xsd=1
+2017-05-16 12:03:57,896 INFO  [SchemaUtils] schema for [http://registry.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:03:57,899 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:03:58,021 INFO  [WsdlImporter] Finding importer for {http://registry.technical.jSeduite.modalis.i3s.unice.fr/}FeedRegistryPortBinding
+2017-05-16 12:03:58,021 INFO  [WsdlImporter] Importing binding {http://registry.technical.jSeduite.modalis.i3s.unice.fr/}FeedRegistryPortBinding
+2017-05-16 12:03:58,021 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService
+2017-05-16 12:03:58,021 INFO  [Soap11HttpBindingImporter] importing operation getCategories
+2017-05-16 12:03:58,022 INFO  [Soap11HttpBindingImporter] importing operation getNicknames
+2017-05-16 12:03:58,022 INFO  [Soap11HttpBindingImporter] importing operation getURL
+2017-05-16 12:03:58,025 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?wsdl
+2017-05-16 12:03:58,026 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FeedRegistry/FeedRegistryService?xsd=1
+2017-05-16 12:04:02,165 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?wsdl]
+2017-05-16 12:04:02,165 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?wsdl
+2017-05-16 12:04:02,175 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?xsd=1
+2017-05-16 12:04:02,177 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:02,177 INFO  [SchemaUtils] schema for [http://apal.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:02,337 INFO  [WsdlImporter] Finding importer for {http://apal.technical.jSeduite.modalis.i3s.unice.fr/}ApalWrapperPortBinding
+2017-05-16 12:04:02,337 INFO  [WsdlImporter] Importing binding {http://apal.technical.jSeduite.modalis.i3s.unice.fr/}ApalWrapperPortBinding
+2017-05-16 12:04:02,337 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService
+2017-05-16 12:04:02,338 INFO  [Soap11HttpBindingImporter] importing operation getLoosers
+2017-05-16 12:04:02,338 INFO  [Soap11HttpBindingImporter] importing operation getPromos
+2017-05-16 12:04:02,338 INFO  [Soap11HttpBindingImporter] importing operation getTop10
+2017-05-16 12:04:02,338 INFO  [Soap11HttpBindingImporter] importing operation getTopWithTreshold
+2017-05-16 12:04:02,339 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?wsdl
+2017-05-16 12:04:02,340 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?xsd=1
+2017-05-16 12:04:02,474 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?wsdl]
+2017-05-16 12:04:02,474 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?wsdl
+2017-05-16 12:04:02,475 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?xsd=1
+2017-05-16 12:04:02,497 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:02,498 INFO  [SchemaUtils] schema for [http://apal.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:02,612 INFO  [WsdlImporter] Finding importer for {http://apal.technical.jSeduite.modalis.i3s.unice.fr/}ApalWrapperPortBinding
+2017-05-16 12:04:02,612 INFO  [WsdlImporter] Importing binding {http://apal.technical.jSeduite.modalis.i3s.unice.fr/}ApalWrapperPortBinding
+2017-05-16 12:04:02,612 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService
+2017-05-16 12:04:02,613 INFO  [Soap11HttpBindingImporter] importing operation getLoosers
+2017-05-16 12:04:02,613 INFO  [Soap11HttpBindingImporter] importing operation getPromos
+2017-05-16 12:04:02,613 INFO  [Soap11HttpBindingImporter] importing operation getTop10
+2017-05-16 12:04:02,614 INFO  [Soap11HttpBindingImporter] importing operation getTopWithTreshold
+2017-05-16 12:04:02,617 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?wsdl
+2017-05-16 12:04:02,618 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/ApalWrapper/ApalWrapperService?xsd=1
+2017-05-16 12:04:09,780 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl]
+2017-05-16 12:04:09,780 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:04:09,785 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:04:09,786 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:09,786 INFO  [SchemaUtils] schema for [http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:09,931 INFO  [WsdlImporter] Finding importer for {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:04:09,931 INFO  [WsdlImporter] Importing binding {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:04:09,931 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService
+2017-05-16 12:04:09,931 INFO  [Soap11HttpBindingImporter] importing operation merge
+2017-05-16 12:04:09,932 INFO  [Soap11HttpBindingImporter] importing operation shuffle
+2017-05-16 12:04:09,932 INFO  [Soap11HttpBindingImporter] importing operation truncate
+2017-05-16 12:04:09,933 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:04:09,933 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:04:10,049 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl]
+2017-05-16 12:04:10,049 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:04:10,054 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:04:10,056 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:10,057 INFO  [SchemaUtils] schema for [http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:10,206 INFO  [WsdlImporter] Finding importer for {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:04:10,207 INFO  [WsdlImporter] Importing binding {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:04:10,207 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService
+2017-05-16 12:04:10,207 INFO  [Soap11HttpBindingImporter] importing operation merge
+2017-05-16 12:04:10,207 INFO  [Soap11HttpBindingImporter] importing operation shuffle
+2017-05-16 12:04:10,207 INFO  [Soap11HttpBindingImporter] importing operation truncate
+2017-05-16 12:04:10,207 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:04:10,208 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:04:11,392 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?wsdl]
+2017-05-16 12:04:11,392 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?wsdl
+2017-05-16 12:04:11,393 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?xsd=1
+2017-05-16 12:04:11,398 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:11,408 INFO  [SchemaUtils] schema for [http://breaking.news.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:11,501 INFO  [WsdlImporter] Finding importer for {http://breaking.news.technical.jSeduite.modalis.i3s.unice.fr/}BreakingNewsPortBinding
+2017-05-16 12:04:11,501 INFO  [WsdlImporter] Importing binding {http://breaking.news.technical.jSeduite.modalis.i3s.unice.fr/}BreakingNewsPortBinding
+2017-05-16 12:04:11,501 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService
+2017-05-16 12:04:11,501 INFO  [Soap11HttpBindingImporter] importing operation getBreakingNews
+2017-05-16 12:04:11,502 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?wsdl
+2017-05-16 12:04:11,503 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?xsd=1
+2017-05-16 12:04:11,582 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?wsdl]
+2017-05-16 12:04:11,582 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?wsdl
+2017-05-16 12:04:11,585 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?xsd=1
+2017-05-16 12:04:11,586 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:11,588 INFO  [SchemaUtils] schema for [http://breaking.news.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:11,647 INFO  [WsdlImporter] Finding importer for {http://breaking.news.technical.jSeduite.modalis.i3s.unice.fr/}BreakingNewsPortBinding
+2017-05-16 12:04:11,647 INFO  [WsdlImporter] Importing binding {http://breaking.news.technical.jSeduite.modalis.i3s.unice.fr/}BreakingNewsPortBinding
+2017-05-16 12:04:11,647 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService
+2017-05-16 12:04:11,647 INFO  [Soap11HttpBindingImporter] importing operation getBreakingNews
+2017-05-16 12:04:11,650 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?wsdl
+2017-05-16 12:04:11,650 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/BreakingNews/BreakingNewsService?xsd=1
+2017-05-16 12:04:12,824 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl]
+2017-05-16 12:04:12,824 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:04:12,826 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:04:12,829 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:12,832 INFO  [SchemaUtils] schema for [http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:12,910 INFO  [WsdlImporter] Finding importer for {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:04:12,910 INFO  [WsdlImporter] Importing binding {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:04:12,911 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService
+2017-05-16 12:04:12,911 INFO  [Soap11HttpBindingImporter] importing operation merge
+2017-05-16 12:04:12,911 INFO  [Soap11HttpBindingImporter] importing operation shuffle
+2017-05-16 12:04:12,911 INFO  [Soap11HttpBindingImporter] importing operation truncate
+2017-05-16 12:04:12,912 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:04:12,912 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:04:13,062 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl]
+2017-05-16 12:04:13,062 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:04:13,063 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:04:13,065 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:13,065 INFO  [SchemaUtils] schema for [http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:13,157 INFO  [WsdlImporter] Finding importer for {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:04:13,157 INFO  [WsdlImporter] Importing binding {http://helper.image.technical.jSeduite.modalis.i3s.unice.fr/}PictureSetVirtualPortBinding
+2017-05-16 12:04:13,157 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService
+2017-05-16 12:04:13,157 INFO  [Soap11HttpBindingImporter] importing operation merge
+2017-05-16 12:04:13,157 INFO  [Soap11HttpBindingImporter] importing operation shuffle
+2017-05-16 12:04:13,157 INFO  [Soap11HttpBindingImporter] importing operation truncate
+2017-05-16 12:04:13,160 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?wsdl
+2017-05-16 12:04:13,160 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/PictureSetVirtual/PictureSetVirtualService?xsd=1
+2017-05-16 12:04:14,328 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?wsdl]
+2017-05-16 12:04:14,329 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?wsdl
+2017-05-16 12:04:14,331 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?xsd=1
+2017-05-16 12:04:14,335 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:14,335 INFO  [SchemaUtils] schema for [http://files.upload.jseduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:14,451 INFO  [WsdlImporter] Finding importer for {http://files.upload.jseduite.modalis.i3s.unice.fr/}FileUploaderPortBinding
+2017-05-16 12:04:14,451 INFO  [WsdlImporter] Importing binding {http://files.upload.jseduite.modalis.i3s.unice.fr/}FileUploaderPortBinding
+2017-05-16 12:04:14,451 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService
+2017-05-16 12:04:14,451 INFO  [Soap11HttpBindingImporter] importing operation deleteFile
+2017-05-16 12:04:14,451 INFO  [Soap11HttpBindingImporter] importing operation getAllFiles
+2017-05-16 12:04:14,451 INFO  [Soap11HttpBindingImporter] importing operation getURL
+2017-05-16 12:04:14,451 INFO  [Soap11HttpBindingImporter] importing operation uploadNewFile
+2017-05-16 12:04:14,453 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?wsdl
+2017-05-16 12:04:14,453 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?xsd=1
+2017-05-16 12:04:14,526 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?wsdl]
+2017-05-16 12:04:14,526 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?wsdl
+2017-05-16 12:04:14,527 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?xsd=1
+2017-05-16 12:04:14,527 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:14,529 INFO  [SchemaUtils] schema for [http://files.upload.jseduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:14,622 INFO  [WsdlImporter] Finding importer for {http://files.upload.jseduite.modalis.i3s.unice.fr/}FileUploaderPortBinding
+2017-05-16 12:04:14,622 INFO  [WsdlImporter] Importing binding {http://files.upload.jseduite.modalis.i3s.unice.fr/}FileUploaderPortBinding
+2017-05-16 12:04:14,622 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService
+2017-05-16 12:04:14,623 INFO  [Soap11HttpBindingImporter] importing operation deleteFile
+2017-05-16 12:04:14,623 INFO  [Soap11HttpBindingImporter] importing operation getAllFiles
+2017-05-16 12:04:14,623 INFO  [Soap11HttpBindingImporter] importing operation getURL
+2017-05-16 12:04:14,623 INFO  [Soap11HttpBindingImporter] importing operation uploadNewFile
+2017-05-16 12:04:14,624 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?wsdl
+2017-05-16 12:04:14,625 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/FileUploader/FileUploaderService?xsd=1
+2017-05-16 12:04:17,089 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?wsdl]
+2017-05-16 12:04:17,090 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?wsdl
+2017-05-16 12:04:17,090 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?xsd=1
+2017-05-16 12:04:17,092 INFO  [SchemaUtils] schema for [http://feeds.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:17,096 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:17,264 INFO  [WsdlImporter] Finding importer for {http://feeds.technical.jSeduite.modalis.i3s.unice.fr/}RssReaderPortBinding
+2017-05-16 12:04:17,264 INFO  [WsdlImporter] Importing binding {http://feeds.technical.jSeduite.modalis.i3s.unice.fr/}RssReaderPortBinding
+2017-05-16 12:04:17,265 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService
+2017-05-16 12:04:17,265 INFO  [Soap11HttpBindingImporter] importing operation read
+2017-05-16 12:04:17,265 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?wsdl
+2017-05-16 12:04:17,265 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?xsd=1
+2017-05-16 12:04:17,329 INFO  [SchemaUtils] Loading schema types from [http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?wsdl]
+2017-05-16 12:04:17,329 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?wsdl
+2017-05-16 12:04:17,331 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?xsd=1
+2017-05-16 12:04:17,333 INFO  [SchemaUtils] schema for [http://feeds.technical.jSeduite.modalis.i3s.unice.fr/] contained [{}] namespaces
+2017-05-16 12:04:17,335 INFO  [SchemaUtils] schema for [] contained [{}] namespaces
+2017-05-16 12:04:17,388 INFO  [WsdlImporter] Finding importer for {http://feeds.technical.jSeduite.modalis.i3s.unice.fr/}RssReaderPortBinding
+2017-05-16 12:04:17,388 INFO  [WsdlImporter] Importing binding {http://feeds.technical.jSeduite.modalis.i3s.unice.fr/}RssReaderPortBinding
+2017-05-16 12:04:17,388 INFO  [Soap11HttpBindingImporter] importing endpoint http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService
+2017-05-16 12:04:17,388 INFO  [Soap11HttpBindingImporter] importing operation read
+2017-05-16 12:04:17,388 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?wsdl
+2017-05-16 12:04:17,389 INFO  [SchemaUtils] Getting schema http://192.168.88.99:8080/jSeduite/RssReader/RssReaderService?xsd=1

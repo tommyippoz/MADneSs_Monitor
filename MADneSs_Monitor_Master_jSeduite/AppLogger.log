@@ -1,8 +1,34 @@
-May 10, 2017 3:12:24 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Readed 'GOLDEN' experiment: test.jsw
-May 10, 2017 3:12:24 PM ippoz.madness.commons.support.AppLogger log
+May 16, 2017 12:03:48 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.ExperimentMaster] MADneSs Server will start on host 'ippoz-VirtualBox'
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Readed 'FAULTY' experiment: test.jsw
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'
-May 10, 2017 3:12:24 PM ippoz.madness.commons.support.AppLogger log
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'
-May 10, 2017 3:12:24 PM ippoz.madness.commons.support.AppLogger log
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][UnSynchronizedClocksException@ippoz.madness.monitor.master.JSeduiteMasterManager] NTP clocks are not synchronized: Difference of (1291, -1281) ms was detected
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing experiment 1/1: FAULTY Repeated 40 times
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] FAULTY Experiment started: Run 1/40
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Starting SUT ..... 
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Executing workload "test.jsw"
+May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 16, 2017 12:04:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Shutdowning SUT ..... 
+May 16, 2017 12:04:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Collecting Data on Database .....
+May 16, 2017 12:04:20 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 16, 2017 12:04:20 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 16, 2017 12:04:21 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Data Stored (536 ms)
+May 16, 2017 12:04:21 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] FAULTY Experiment started: Run 2/40

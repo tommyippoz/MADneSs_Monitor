@@ -1,5 +1,0 @@
-workload_name,experiment_type,iterations,minObs,maxObs,injected_error
-Workload_AllServices.xml,GOLDEN,40
-Workload_AllServices.xml,FAULTY,40,LIFERAY;NETWORK;20000#injAD
-Workload_AllServices.xml,FAULTY,40,LIFERAY;NETWORK;20000#injEK
-Workload_AllServices.xml,FAULTY,40,LIFERAY;NETWORK;2000#injTSM

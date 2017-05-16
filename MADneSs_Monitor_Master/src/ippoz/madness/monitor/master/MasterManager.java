@@ -61,6 +61,8 @@ public abstract class MasterManager {
 	/** The available workloads. */
 	private LinkedList<Workload> availableWorkloads;
 	
+	protected long msDelay;
+	
 	/**
 	 * Instantiates a new master manager.
 	 *
@@ -79,6 +81,7 @@ public abstract class MasterManager {
 	 */
 	public MasterManager(PreferencesManager prefManager) throws IOException {
 		this.prefManager = prefManager;
+		msDelay = 0;
 		dbManager = new DatabaseManager(prefManager, false);
 		cManager = new CommunicationManager(prefManager.getPreference(SLAVE_IP), Integer.parseInt(prefManager.getPreference(SOCKET_OUT_PORT)), Integer.parseInt(prefManager.getPreference(SOCKET_IN_PORT)));
 	}
@@ -199,7 +202,7 @@ public abstract class MasterManager {
 		String[] failureData;
 		HashMap<Failure, Long> failMap = new HashMap<Failure, Long>();
 		try {
-			for(int i=7;i<splitted.length;i++){
+			for(int i=3;i<splitted.length;i++){
 				if(splitted[i].contains("#")) {
 					failureData = splitted[i].split("#")[0].trim().split(";");
 					failMap.put(new Failure(failureData[0], failureData[1], splitted[i].trim().substring(splitted[i].trim().indexOf("#")+1)), Long.valueOf(failureData[2]));
@@ -215,11 +218,11 @@ public abstract class MasterManager {
 	}
 	
 	/**
-	 * Checks the NTP synchronisation. If the difference is over 1 second, the check fails.
+	 * Checks the NTP synchronization. If the difference is over 1 second, the check fails.
 	 *
 	 * @param response the response
 	 * @param beforeMillis the machine time milliseconds
-	 * @return true, if the clocks are synchronised
+	 * @return true, if the clocks are synchronized
 	 */
 	private boolean checkNTP(LinkedList<Object> response, long beforeMillis){
 		if(((MessageType)response.get(0)).equals(MessageType.OK)){
@@ -228,8 +231,11 @@ public abstract class MasterManager {
 					AppLogger.logInfo(getClass(), "NTP Synchronization checked");
 					return true;
 				} else {
-					AppLogger.logError(getClass(), "UnSynchronizedClocksException", "NTP clocks are not synchronized");
-					return false;
+					AppLogger.logError(getClass(), "UnSynchronizedClocksException", 
+							"NTP clocks are not synchronized: Difference of (" + (((Long)response.get(1)) - beforeMillis) +  
+									", " + (System.currentTimeMillis() - ((Long)response.get(1))) + ") ms was detected");
+					msDelay = System.currentTimeMillis() - ((Long)response.get(1));
+					return true;
 				}
 			} else {
 				AppLogger.logInfo(getClass(), "Unable to check NTP clock alignment");
@@ -240,6 +246,8 @@ public abstract class MasterManager {
 			return false;
 		}
 	}
+	
+	protected abstract String getSUTName();
 
 	/**
 	 * Setups the experimental campaign.
@@ -250,7 +258,7 @@ public abstract class MasterManager {
 	private boolean setupCampaign() throws IOException {
 		long beforeMillis;
 		LinkedList<Object> response;
-		cManager.send(new Object[]{MessageType.SETUP_SUT, "LiferaySUT"});
+		cManager.send(new Object[]{MessageType.SETUP_SUT, getSUTName()});
 		cManager.waitForConfirm();
 		cManager.send(MessageType.START_CAMPAIGN);
 		beforeMillis = System.currentTimeMillis();
@@ -275,7 +283,7 @@ public abstract class MasterManager {
 	 */
 	public void startExperimentalCampaign() throws IOException {
 		if(setupCampaign()){
-			executeExperiments(testList, "test");
+			//executeExperiments(testList, "test");
 			executeExperiments(expList, "experiment");
 		}
 		shutdownCampaign();
@@ -291,7 +299,7 @@ public abstract class MasterManager {
 		int i = 1;
 		for(Experiment currentExp : currentList){
 			AppLogger.logInfo(getClass(), "Executing " + tag + " " + i + "/" + currentList.size() + ": " + currentExp.getExpType() + " Repeated " + currentExp.getIterations() + " times");
-			currentExp.executeExperiment(cManager);
+			currentExp.executeExperiment(cManager, msDelay);
 			currentExp = null;
 			i++;
 		}

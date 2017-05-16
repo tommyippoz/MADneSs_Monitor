@@ -16,6 +16,9 @@ public class Indicator implements Comparable<Indicator>{
 	/** The indicator name. */
 	private String indicatorName;
 	
+	/** The indicator name. */
+	private String indicatorDesc;
+	
 	/** The indicator layer. */
 	private LayerType indicatorLayer;
 	
@@ -30,9 +33,21 @@ public class Indicator implements Comparable<Indicator>{
 	 * @param indicatorType the indicator value type
 	 */
 	public Indicator(String indicatorName, LayerType indicatorLayer, Class<?> indicatorType) {
+		this(indicatorName, indicatorLayer, indicatorType, "");
+	}
+	
+	/**
+	 * Instantiates a new indicator.
+	 *
+	 * @param indicatorName the indicator name
+	 * @param indicatorLayer the indicator layer
+	 * @param indicatorType the indicator value type
+	 */
+	public Indicator(String indicatorName, LayerType indicatorLayer, Class<?> indicatorType, String indicatorDesc) {
 		this.indicatorName = indicatorName;
 		this.indicatorLayer = indicatorLayer;
 		this.indicatorType = indicatorType;
+		this.indicatorDesc = indicatorDesc;
 	}
 
 	/**
@@ -52,6 +67,15 @@ public class Indicator implements Comparable<Indicator>{
 	 */
 	public String getName(){
 		return indicatorName;
+	}
+	
+	/**
+	 * Gets the indicator name.
+	 *
+	 * @return the name
+	 */
+	public String getDesc(){
+		return indicatorDesc;
 	}
 	
 	/**

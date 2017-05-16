@@ -113,8 +113,8 @@ public class JSeduiteWorkload extends Workload {
 			invList = new LinkedList<Invocation>();
 			for(Service s : servicesList){
 				invStart = System.currentTimeMillis();
-				callReply = jsInvoker.invokeService((JSeduiteService)s, seeOutput);
-				invList.add(new Invocation(s, null, invStart, System.currentTimeMillis(), callReply));	
+				callReply = jsInvoker.invokeService((JSeduiteService)s, true);
+				invList.add(new Invocation(s, s.getName(), invStart, System.currentTimeMillis(), callReply));	
 				Thread.sleep(msDelay);
 			}
 			isRunning = false;
@@ -122,9 +122,6 @@ public class JSeduiteWorkload extends Workload {
 			AppLogger.logException(getClass(), ex, "Error while performing workload");
 		}
 	}
-	
-	//new Main().testWsrBenchTesting("http://" + ipAddress + ":8080/jSeduite/PictureSet/PictureSetService");
-	
 	
 	@Override
 	public LinkedList<Invocation> executedInvocations() {
@@ -145,7 +142,17 @@ public class JSeduiteWorkload extends Workload {
 	
 	private static LinkedList<Service> getAllJSeduiteServices(){
 		LinkedList<Service> sList = new LinkedList<Service>();
-		sList.add(new JSeduiteService("PictureSetService", "jSeduite/PictureSet/PictureSetService"));
+		sList.add(new JSeduiteService("PictureSetVirtual", true));
+		sList.add(new JSeduiteService("PictureSet", true));
+		sList.add(new JSeduiteService("PicasaWrapper", true));
+		sList.add(new JSeduiteService("ApalWrapper", true));
+		sList.add(new JSeduiteService("BreakingNews", true));
+		sList.add(new JSeduiteService("FeedRegistry", true));
+		sList.add(new JSeduiteService("FileUploader", true));
+		sList.add(new JSeduiteService("FlickrWrapper", true));
+		sList.add(new JSeduiteService("ICalReader", true));
+		sList.add(new JSeduiteService("InternalNews", true));
+		sList.add(new JSeduiteService("RssReader", true));
 		return sList;
 	}
 	
@@ -210,6 +217,7 @@ public class JSeduiteWorkload extends Workload {
 		 * (from Nuno stuff)
 		 */
 		@Override
+		@SuppressWarnings("rawtypes") 
 		public boolean supports(Class clazz)
 		{
 			boolean result = false;
@@ -230,11 +238,13 @@ public class JSeduiteWorkload extends Workload {
 	    	String fullUrl = jss.generateCompleteURL(ipAddress);
 	    	Wsdl wsdl2 = new Wsdl();
 			wsdl2.setUrl(fullUrl);
-			System.out.println(wsdl2.toString());
-			isValid=false;
+			if(printOutput)
+				System.out.println(wsdl2.toString());
+			isValid = false;
 			//set some config parameters
 			Configuration config = new Configuration();
-			System.out.println("T_SERVICE: Set config information for current test");
+			if(printOutput)
+				System.out.println("T_SERVICE: Set config information for current test");
 
 			//validate url using stuff from Nuno: check if address is reachable
 			validate(wsdl2, null);
@@ -244,7 +254,8 @@ public class JSeduiteWorkload extends Workload {
 				System.out.println("T_SERVICE: test not started. Address not reachable: "+ ipAddress);
 				return ADDRESS_NOT_REACHABLE;
 			}
-			System.out.println(wsdl2.toString());
+			if(printOutput)
+				System.out.println(wsdl2.toString());
 
 			//if url is valid, the test starts.
 			//Set how many faulty requests should be sent for each injected fault.
@@ -257,9 +268,12 @@ public class JSeduiteWorkload extends Workload {
 			//Define the timeout value for each connection to the server.
 			//DEFAULT_TIMEOUT=10000L
 			config.setTimeout(Configuration.DEFAULT_TIMEOUT);
-			System.out.println("T_SERVICE: WsrBench config information are now set and are:");
-			System.out.println("T_SERVICE: "+config.toString());
-			System.out.println(wsdl2.toString());
+			if(printOutput)
+				System.out.println("T_SERVICE: WsrBench config information are now set and are:");
+			if(printOutput)
+				System.out.println("T_SERVICE: "+config.toString());
+			if(printOutput)
+				System.out.println(wsdl2.toString());
 
 			SynchDriverImpl sinctest = new SynchDriverImpl();
 			//get the wsdl and analyzes it
@@ -270,7 +284,8 @@ public class JSeduiteWorkload extends Workload {
 				System.out.println("T_SERVICE: test aborted with result "+ ERROR);
 				return ERROR;
 			}
-			System.out.println(wsdl2.toString());
+			if(printOutput)
+				System.out.println(wsdl2.toString());
 			AsynchDriverImpl asinctest = new AsynchDriverImpl();
 			//set wsdl and config files
 			asinctest.setWsdl(wsdl2);
@@ -282,14 +297,21 @@ public class JSeduiteWorkload extends Workload {
 			//get result of the test from pt.uc.dei.wsrbench.common.pojo.Wsdl.java
 			String result=wsdl2.getStatus();
 			//System.out.println(wsdl.toString());
-			System.out.println("T_SERVICE: test of "+ fullUrl + "completed with result: " + result);
+			if(printOutput)
+				System.out.println("T_SERVICE: test of "+ fullUrl + "completed with result: " + result);
 
-			System.out.println("PRINTING wsdl.getOperationList().toString()");
-			System.out.println(wsdl2.getOperationList().toString());
-			System.out.println("PRINTING size of operationList wsdl.getOperationList().size()");
-			System.out.println(wsdl2.getOperationList().size());
-			System.out.println("PRINTING element 0 of operationList wsdl.getOperationList().get(0)");
-			System.out.println(wsdl2.getOperationList().get(0));
+			if(printOutput)
+				System.out.println("PRINTING wsdl.getOperationList().toString()");
+			if(printOutput)
+				System.out.println(wsdl2.getOperationList().toString());
+			if(printOutput)
+				System.out.println("PRINTING size of operationList wsdl.getOperationList().size()");
+			if(printOutput)
+				System.out.println(wsdl2.getOperationList().size());
+			if(printOutput)
+				System.out.println("PRINTING element 0 of operationList wsdl.getOperationList().get(0)");
+			if(printOutput)
+				System.out.println(wsdl2.getOperationList().get(0));
 
 			if(result.equals(FINISHED)){
 				return result;
@@ -299,84 +321,6 @@ public class JSeduiteWorkload extends Workload {
 			}
 	    }
 
-		/**
-		 * only for personal testing
-		 * @see main
-		 */
-		private String testWsrBenchTesting(String address){
-			//prepare the string for wsrbench
-			String url=prepareStringForWsrBench(address);
-			//use wsrbench api
-			Wsdl wsdl2 = new Wsdl();
-			wsdl2.setUrl(url);
-			System.out.println(wsdl2.toString());
-			isValid=false;
-			//set some config parameters
-			Configuration config = new Configuration();
-			System.out.println("T_SERVICE: Set config information for current test");
-
-			//validate url using stuff from Nuno: check if address is reachable
-			validate(wsdl2, null);
-	                
-			if (isValid==false){
-				wsdl2.setStatus(Wsdl.NOT_STARTED);
-				System.out.println("T_SERVICE: test not started. Address not reachable: "+address);
-				return ADDRESS_NOT_REACHABLE;
-			}
-			System.out.println(wsdl2.toString());
-
-			//if url is valid, the test starts.
-			//Set how many faulty requests should be sent for each injected fault.
-			//MAX_FAULTY_REQUEST_COUNT=10;
-			config.setFaultyRequestCount(Configuration.MAX_FAULTY_REQUEST_COUNT);
-				//Number of requests without faults to send to each operation.
-			//MAX_PLAIN_REQUEST_COUNT=10;
-			config.setPlainRequestCount(Configuration.MAX_PLAIN_REQUEST_COUNT);
-
-			//Define the timeout value for each connection to the server.
-			//DEFAULT_TIMEOUT=10000L
-			config.setTimeout(Configuration.DEFAULT_TIMEOUT);
-			System.out.println("T_SERVICE: WsrBench config information are now set and are:");
-			System.out.println("T_SERVICE: "+config.toString());
-			System.out.println(wsdl2.toString());
-
-			SynchDriverImpl sinctest = new SynchDriverImpl();
-			//get the wsdl and analyzes it
-			try {
-				wsdl2 = sinctest.submitWsdl(config, wsdl2);
-			} catch (DriverException e) {
-				System.out.println("T_SERVICE: impossible to retrieve the wsdl file.");
-				System.out.println("T_SERVICE: test aborted with result "+ ERROR);
-				return ERROR;
-			}
-			System.out.println(wsdl2.toString());
-			AsynchDriverImpl asinctest = new AsynchDriverImpl();
-			//set wsdl and config files
-			asinctest.setWsdl(wsdl2);
-			asinctest.setConfig(config);
-			//start the test
-			asinctest.startWsdlTestA();
-			//System.out.println(wsdl.toString());
-
-			//get result of the test from pt.uc.dei.wsrbench.common.pojo.Wsdl.java
-			String result=wsdl2.getStatus();
-			//System.out.println(wsdl.toString());
-			System.out.println("T_SERVICE: test of "+ url + "completed with result: " + result);
-
-			System.out.println("PRINTING wsdl.getOperationList().toString()");
-			System.out.println(wsdl2.getOperationList().toString());
-			System.out.println("PRINTING size of operationList wsdl.getOperationList().size()");
-			System.out.println(wsdl2.getOperationList().size());
-			System.out.println("PRINTING element 0 of operationList wsdl.getOperationList().get(0)");
-			System.out.println(wsdl2.getOperationList().get(0));
-
-			if(result.equals(FINISHED)){
-				return result;
-			}else{
-				System.out.println("T_SERVICE: STRANGE STUFF HERE!Check carefully!");
-				return result;
-			}
-		}
 	}
 
 }

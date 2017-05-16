@@ -1,5 +1,5 @@
 workload_name,experiment_type,iterations,minObs,maxObs,injected_error
-test.jsw,GOLDEN,40,,,
+test.jsw,FAULTY,40,JSEDUITE;NETWORK;1000#injMERGE
 Workload_AllServices.xml,FAULTY,40,LIFERAY,NETWORK,20000#injAD
 Workload_AllServices.xml,FAULTY,40,LIFERAY,NETWORK,20000#injEK
 Workload_AllServices.xml,FAULTY,40,LIFERAY,NETWORK,2000#injTSM

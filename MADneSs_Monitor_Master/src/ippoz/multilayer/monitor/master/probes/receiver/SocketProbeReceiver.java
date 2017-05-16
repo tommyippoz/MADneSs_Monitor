@@ -22,8 +22,8 @@ public abstract class SocketProbeReceiver extends ProbeReceiver{
 	private ServerSocket ssocket;
 	private boolean continuous;
 	
-	public SocketProbeReceiver(String receiverName, ObservationCollector collector, LayerType type, int port, boolean continuous) throws IOException {
-		super(receiverName, collector, type);
+	public SocketProbeReceiver(String receiverName, ObservationCollector collector, LayerType type, int port, long msDelay, boolean continuous) throws IOException {
+		super(receiverName, collector, type, msDelay);
 		this.continuous = continuous;
 		ssocket = new ServerSocket(port);
 	}

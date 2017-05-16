@@ -14,9 +14,16 @@ public class JSeduiteService extends RemoteService {
 
 	private String details;
 	
-	public JSeduiteService(String name, String details) {
+	public JSeduiteService(String name, boolean addMethod) {
+		this(name, "jSeduite/" + name + "/" + name + "Service", addMethod);
+	}
+	
+	public JSeduiteService(String name, String details, boolean addMethod) {
 		super(name);
 		this.details = details;
+		if(addMethod){
+			addMethodCall(new MethodCall("Unique Method", name));
+		}
 	}
 	
 	public String generateCompleteURL(String serverIP){

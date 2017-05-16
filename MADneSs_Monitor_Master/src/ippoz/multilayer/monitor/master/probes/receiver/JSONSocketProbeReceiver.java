@@ -28,6 +28,7 @@ public class JSONSocketProbeReceiver extends SocketProbeReceiver {
 
 	public static final String ARRAY_TAG = "observations";
 	public static final String INDICATOR_TAG = "attributeName";
+	public static final String DESCRIPTION_TAG = "attributeDesc";
 	public static final String VALUE_TAG = "attributeValue";
 	public static final String TIMESTAMP_TAG = "time_ms";
 	public static final String PROCESSING_TIME_TAG = "processingTime_ms";
@@ -36,8 +37,8 @@ public class JSONSocketProbeReceiver extends SocketProbeReceiver {
 	private DateFormat formatter;
 	private long obsArrivalTime;
 	
-	public JSONSocketProbeReceiver(String receiverName, ObservationCollector collector, LayerType type, int port, boolean continuous) throws IOException {
-		super(receiverName, collector, type, port, continuous);
+	public JSONSocketProbeReceiver(String receiverName, ObservationCollector collector, LayerType type, int port, long msDelay, boolean continuous) throws IOException {
+		super(receiverName, collector, type, port, msDelay, continuous);
 		formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	}
 
@@ -54,10 +55,10 @@ public class JSONSocketProbeReceiver extends SocketProbeReceiver {
 		Observation obs = null;
 		JSONArray array = null;
 		array = jObj.getJSONArray(ARRAY_TAG);
-		obs = new Observation(new Date(Long.valueOf(jObj.getString(TIMESTAMP_TAG))), formatter.format(new Date(Long.valueOf(jObj.getString(TIMESTAMP_TAG)))));
+		obs = new Observation(new Date(Long.valueOf(jObj.getString(TIMESTAMP_TAG)) + getMsDelay()), formatter.format(new Date(Long.valueOf(jObj.getString(TIMESTAMP_TAG)))));
 		for(int i=0;i<array.size();i++){
 			if(!obs.hasIndicator(array.getJSONObject(i).getString(INDICATOR_TAG)))
-			obs.addIndicator(new Indicator(array.getJSONObject(i).getString(INDICATOR_TAG), getLayerType(), String.class), array.getJSONObject(i).getString(VALUE_TAG));
+			obs.addIndicator(new Indicator(array.getJSONObject(i).getString(INDICATOR_TAG), getLayerType(), String.class, array.getJSONObject(i).getString(DESCRIPTION_TAG)), array.getJSONObject(i).getString(VALUE_TAG));
 		}
 		ExperimentTiming.setProbeObservation(this, jObj.getJSONArray(ARRAY_TAG).size(), jObj.getInt(PROCESSING_TIME_TAG), (int)(obsArrivalTime - jObj.getLong(DELIVERY_TIME_MS)), (int)(System.currentTimeMillis() - obsArrivalTime));
 		return obs;

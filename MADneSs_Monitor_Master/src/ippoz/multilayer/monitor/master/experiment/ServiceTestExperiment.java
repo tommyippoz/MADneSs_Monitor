@@ -59,8 +59,8 @@ public class ServiceTestExperiment extends Experiment {
 	}
 
 	@Override
-	public void executeExperiment(CommunicationManager cManager) {
-		super.executeExperiment(cManager);
+	public void executeExperiment(CommunicationManager cManager, long msDelay) {
+		super.executeExperiment(cManager, msDelay);
 		calculateServiceStats();
 	}	
 

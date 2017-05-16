@@ -42,7 +42,7 @@ public class AppLogger {
 	}
 	
 	public static void logException(Class<?> source, Exception ex, String message){
-		log("Exception", ex.getClass().getName() + "@" + source.getName(), ex.toString(), Level.SEVERE, true);
+		log("Exception", ex.getClass().getName() + "@" + source.getName() + " - " + message, ex.toString(), Level.SEVERE, true);
 		if(console)
 			ex.printStackTrace();
 	}

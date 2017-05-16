@@ -18,11 +18,13 @@ public abstract class ProbeReceiver implements Runnable {
 	protected String receiverName;
 	protected ObservationCollector collector;
 	private LayerType type;
+	private long msDelay;
 	
-	public ProbeReceiver(String receiverName, ObservationCollector collector, LayerType type){
+	public ProbeReceiver(String receiverName, ObservationCollector collector, LayerType type, long msDelay){
 		this.receiverName = receiverName;
 		this.collector = collector;
 		this.type = type;
+		this.msDelay = msDelay;
 	}
 	
 	public abstract boolean canRead();
@@ -41,6 +43,10 @@ public abstract class ProbeReceiver implements Runnable {
 	
 	public String getReceiverName(){
 		return receiverName;
+	}
+	
+	public long getMsDelay(){
+		return msDelay;
 	}
 
 	@Override

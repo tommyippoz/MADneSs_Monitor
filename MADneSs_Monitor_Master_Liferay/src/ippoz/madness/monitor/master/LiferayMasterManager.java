@@ -75,5 +75,10 @@ public class LiferayMasterManager extends MasterManager{
 		}
 		return wlDetails;
 	}
+
+	@Override
+	protected String getSUTName() {
+		return "LiferaySUT";
+	}
 	
 }
