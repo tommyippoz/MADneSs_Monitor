@@ -3,7 +3,6 @@ SLAVE_IP_ADDRESS = 192.168.88.99
 IN_PORT = 9876
 OUT_PORT = 9875
 
-TEST_ITERATIONS = 1
 EXPERIMENT_FILE = datafiles/master/experimentSetup.csv
 
 WORKLOAD_FOLDER = workloads
@@ -12,3 +11,9 @@ WORKLOAD_DETAILS = datafiles/master/workloadDescription.csv
 DB_USERNAME = root
 DB_PASSWORD = andrea
 DB_NAME = experiment
+
+* Integer if specifying absolute number, float if specifying confidence (n = 5/(1-conf), Borra&DiCaccio 2008)
+TEST_ITERATIONS = 0.5
+
+* Percentage of observations to discard while calculating stats
+STAT_DISCARD = 0.2

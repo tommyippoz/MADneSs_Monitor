@@ -14,6 +14,10 @@ public class Failure {
 	private String failureDetails;
 	private Long failureActivation;
 	
+	public Failure(String failureType, String failureTag) {
+		this(failureType, failureTag, null);
+	}
+	
 	public Failure(String failureType, String failureTag, String failureDetails) {
 		this.failureType = failureType;
 		this.failureTag = failureTag;
@@ -26,6 +30,10 @@ public class Failure {
 
 	public Long getFailureActivation() {
 		return failureActivation;
+	}
+	
+	public void setFailureDetails(String failureDetails) {
+		this.failureDetails = failureDetails;
 	}
 
 	public void setFailureActivation(Long failureActivation) {

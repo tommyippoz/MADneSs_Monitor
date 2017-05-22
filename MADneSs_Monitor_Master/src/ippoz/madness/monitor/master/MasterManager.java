@@ -122,8 +122,11 @@ public abstract class MasterManager {
 			reader = new BufferedReader(new FileReader(expFile));
 			while(reader.ready()){
 				readed = reader.readLine();
-				if(readed != null && readed.length() > 0 && !readed.startsWith("workload_name"))
-					parseExperiment(readed.trim());
+				if(readed != null){
+					readed = readed.trim();
+					if(readed.length() > 0 && !readed.startsWith("workload_name") && !readed.startsWith("*"))
+						parseExperiment(readed.trim());
+				}
 			}
 			reader.close();	
 		} catch(IOException ex){
@@ -146,7 +149,7 @@ public abstract class MasterManager {
 						exp = new Experiment(getWorkloadByName(splitted[0].trim()), ExperimentType.FAULTY, dbManager, Integer.parseInt(splitted[2].trim()), parseFailures(readed));
 					} else exp = new Experiment(getWorkloadByName(splitted[0].trim()), ExperimentType.GOLDEN, dbManager, Integer.parseInt(splitted[2].trim()), null);
 					if(!exp.canExecute()){
-						for(Experiment newExp : exp.getNeededTests(availableWorkloads, Integer.parseInt(prefManager.getPreference(TEST_ITERATIONS)))){
+						for(Experiment newExp : exp.getNeededTests(availableWorkloads, prefManager.getPreference(TEST_ITERATIONS))){
 							if(!isInTestList(newExp))
 								testList.add(newExp);
 						}
@@ -203,13 +206,8 @@ public abstract class MasterManager {
 		HashMap<Failure, Long> failMap = new HashMap<Failure, Long>();
 		try {
 			for(int i=3;i<splitted.length;i++){
-				if(splitted[i].contains("#")) {
-					failureData = splitted[i].split("#")[0].trim().split(";");
-					failMap.put(new Failure(failureData[0], failureData[1], splitted[i].trim().substring(splitted[i].trim().indexOf("#")+1)), Long.valueOf(failureData[2]));
-				} else {
-					failureData = splitted[i].trim().split(";");
-					failMap.put(new Failure(failureData[0], failureData[1], ""), Long.valueOf(failureData[2])); 
-				}
+				failureData = splitted[i].trim().split(";");
+				failMap.put(new Failure(failureData[0], failureData[1]), Long.valueOf(failureData[2])); 
 			}
 		} catch (Exception ex){
 			AppLogger.logException(getClass(), ex, "Unable to parse Fault details");
@@ -283,7 +281,7 @@ public abstract class MasterManager {
 	 */
 	public void startExperimentalCampaign() throws IOException {
 		if(setupCampaign()){
-			//executeExperiments(testList, "test");
+			executeExperiments(testList, "test");
 			executeExperiments(expList, "experiment");
 		}
 		shutdownCampaign();

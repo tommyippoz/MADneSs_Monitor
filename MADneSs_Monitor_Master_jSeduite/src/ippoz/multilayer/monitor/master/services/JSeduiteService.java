@@ -14,6 +14,10 @@ public class JSeduiteService extends RemoteService {
 
 	private String details;
 	
+	public JSeduiteService(String name, boolean addMethod, String extName) {
+		this(name, "jSeduite/" + name + "/" + extName + "Service", addMethod);
+	}
+	
 	public JSeduiteService(String name, boolean addMethod) {
 		this(name, "jSeduite/" + name + "/" + name + "Service", addMethod);
 	}

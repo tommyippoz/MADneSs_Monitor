@@ -96,7 +96,7 @@ insert into value_category (vc_description) values ('Plain'), ('Difference');
 insert into performance_type (pet_description) values ('ot'), ('pmtt'), ('dat'); 
     
 insert into failure_type (ft_description) values 
-	('Catastrophic'), ('Restart'), ('Abort'), ('Silent'), ('Hindering'), ('TEST'), ('LIFERAY');
+	('MEMORY'), ('NETWORK'), ('CPU'), ('DISK'), ('DEADLOCK'), ('NETPERM');
     
 insert into run_type (rt_description) values
 	('Golden'), ('Faulty'), ('Test');

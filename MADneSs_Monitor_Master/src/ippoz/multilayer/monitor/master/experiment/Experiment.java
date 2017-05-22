@@ -11,6 +11,7 @@ import java.util.LinkedList;
 
 import ippoz.madness.commons.layers.LayerType;
 import ippoz.madness.commons.support.AppLogger;
+import ippoz.madness.commons.support.AppUtility;
 import ippoz.madness.monitor.communication.CommunicationManager;
 import ippoz.madness.monitor.communication.MessageType;
 import ippoz.multilayer.monitor.master.database.DatabaseManager;
@@ -74,8 +75,14 @@ public class Experiment {
 		} else return false;
 	}
 	
-	public LinkedList<Experiment> getNeededTests(LinkedList<Workload> availableWorkloads, int testIterations){
+	public LinkedList<Experiment> getNeededTests(LinkedList<Workload> availableWorkloads, String iterString){
+		int testIterations;
 		LinkedList<Experiment> tests = new LinkedList<Experiment>();
+		if(AppUtility.isInteger(iterString)){
+			testIterations = Integer.parseInt(iterString);
+		} else if(AppUtility.isDouble(iterString)){
+			testIterations = (int) Math.round(5.0/(1-Float.parseFloat(iterString)));
+		} else testIterations = 10;
 		if(workload != null && workload.usedServices() != null) {
 			for(Service service : workload.usedServices()){
 				if(service.needTest(dbManager)) {
@@ -138,7 +145,7 @@ public class Experiment {
 			startMessage = new Object[injections.size() + 1];
 			startMessage[0] = MessageType.START_EXPERIMENT;
 			for(Failure failure : injections.keySet()){
-				startMessage[i++] = failure.getFailureType() + ";" + failure.getFailureTag() + ";" + injections.get(failure) + ";" + failure.getFailureDetails();
+				startMessage[i++] = failure.getFailureType() + ";" + failure.getFailureTag() + ";" + injections.get(failure);
 			}
 			return startMessage;
 		} else return new Object[]{MessageType.START_EXPERIMENT};
@@ -157,9 +164,9 @@ public class Experiment {
 		cManager.send(MessageType.END_EXPERIMENT);
 		cManager.waitFor(MessageType.CHECK_PROBE);
 		prManager.closeReceivers();
-		AppLogger.logOngoingInfo(getClass(), "Shutdowning SUT ..... ");
+		AppLogger.logInfo(getClass(), "Shutdowning SUT ..... ");
 		parseReceivedArray(cManager.receive());
-		System.out.println("DONE");
+		AppLogger.logInfo(getClass(), "SUT shutdowned");
 		startMs = System.currentTimeMillis();
 		AppLogger.logInfo(getClass(), "Collecting Data on Database .....");
 		validFlag = obCollector.isValid();
@@ -182,16 +189,19 @@ public class Experiment {
 	private void parseReceivedArray(Collection<Object> received) {
 		Iterator<Object> iterator = received.iterator();
 		String readed;
+		String[] splitted;
 		MessageType message = (MessageType) iterator.next();
 		if(!message.equals(MessageType.OK))
 			AppLogger.logError(getClass(), "UnrecognizedMessageType", "Not a valid END_EXPERIMENT outcome");
 		else {
 			while(iterator.hasNext()){
 				readed = (String) iterator.next();
-				if(readed.split(";").length == 3){
+				splitted = readed.split(";");
+				if(splitted.length == 3){
 					for(Failure failure : injections.keySet()){
-						if(readed.split(";")[0].equals(failure.getFailureType()) && readed.split(";")[1].equals(failure.getFailureTag())){
-							failure.setFailureActivation(Long.valueOf(readed.split(";")[2]));
+						if(splitted[0].equals(failure.getFailureType())){
+							failure.setFailureDetails(splitted[1]);
+							failure.setFailureActivation(Long.valueOf(splitted[2]));
 						}
 					}
 				}

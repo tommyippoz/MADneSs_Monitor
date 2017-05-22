@@ -290,7 +290,7 @@ public class DatabaseManager {
 		String toSave = "";
 		for(Failure failure : failures){
 			if(failure.getFailureActivation() != null){
-				toSave = toSave + " (" + failureTypes.get(failure.getFailureType()) + ", " + runId + ", '" + failure.getFailureTag() + "', '" + AppUtility.formatMillis(failure.getFailureActivation()) + "'),";
+				toSave = toSave + " (" + failureTypes.get(failure.getFailureType()) + ", " + runId + ", '" + failure.getFailureTag() + "@" + failure.getFailureDetails() + "', '" + AppUtility.formatMillis(failure.getFailureActivation()) + "'),";
 			}
 		}
 		if(toSave.length() > 0)

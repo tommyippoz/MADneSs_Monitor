@@ -1,34 +1,1660 @@
-May 16, 2017 12:03:48 PM ippoz.madness.commons.support.AppLogger log
+May 19, 2017 2:42:22 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.madness.monitor.master.ExperimentMaster] MADneSs Server will start on host 'ippoz-VirtualBox'
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+May 19, 2017 2:42:23 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Readed 'FAULTY' experiment: test.jsw
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Unable to parse workload 'Workload_AllServices.xml'
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
-SEVERE: [Error][UnSynchronizedClocksException@ippoz.madness.monitor.master.JSeduiteMasterManager] NTP clocks are not synchronized: Difference of (1291, -1281) ms was detected
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing experiment 1/1: FAULTY Repeated 40 times
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] FAULTY Experiment started: Run 1/40
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+May 19, 2017 2:42:37 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][UnSynchronizedClocksException@ippoz.madness.monitor.master.JSeduiteMasterManager] NTP clocks are not synchronized: Difference of (1083, -1073) ms was detected
+May 19, 2017 2:42:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing test 1/8: TEST Repeated 10 times
+May 19, 2017 2:42:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 1/10
+May 19, 2017 2:42:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:43:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:43:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:43:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:43:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:43:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:44:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:44:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:44:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (293 ms)
+May 19, 2017 2:44:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 2/10
+May 19, 2017 2:44:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:45:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:45:24 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:45:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:45:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:45:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:45:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:45:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:45:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (75 ms)
+May 19, 2017 2:45:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 3/10
+May 19, 2017 2:45:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:46:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:46:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:47:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:47:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:47:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:47:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:47:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:47:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (114 ms)
+May 19, 2017 2:47:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 4/10
+May 19, 2017 2:47:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:48:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:48:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:48:36 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:48:36 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:48:36 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:49:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:49:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:49:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (76 ms)
+May 19, 2017 2:49:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 5/10
+May 19, 2017 2:49:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:50:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:50:11 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:50:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:50:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:50:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (96 ms)
+May 19, 2017 2:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 6/10
+May 19, 2017 2:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:51:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:51:46 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:51:47 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:51:47 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:51:47 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:52:16 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:52:16 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:52:16 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (101 ms)
+May 19, 2017 2:52:16 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 7/10
+May 19, 2017 2:52:16 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:53:16 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:53:22 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:53:22 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:53:22 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:53:22 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:53:52 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:53:52 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:53:52 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (62 ms)
+May 19, 2017 2:53:52 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 8/10
+May 19, 2017 2:53:52 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:54:52 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:54:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:54:58 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:54:58 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:54:58 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:55:28 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:55:28 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:55:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (116 ms)
+May 19, 2017 2:55:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 9/10
+May 19, 2017 2:55:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:56:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:56:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:56:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:56:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:56:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:57:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:57:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:57:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (99 ms)
+May 19, 2017 2:57:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 10/10
+May 19, 2017 2:57:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:58:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FileUploader.jsw"
+May 19, 2017 2:58:11 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:58:12 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:58:12 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:58:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 2:58:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 2:58:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (92 ms)
+May 19, 2017 2:58:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing test 2/8: TEST Repeated 10 times
+May 19, 2017 2:58:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 1/10
+May 19, 2017 2:58:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 2:59:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 2:59:48 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 2:59:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:59:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 2:59:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:00:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:00:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:00:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (102 ms)
+May 19, 2017 3:00:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 2/10
+May 19, 2017 3:00:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:01:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:01:24 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:01:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:01:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:01:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:01:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:01:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:01:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (95 ms)
+May 19, 2017 3:01:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 3/10
+May 19, 2017 3:01:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:02:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:03:00 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:03:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:03:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:03:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:03:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:03:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:03:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (147 ms)
+May 19, 2017 3:03:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 4/10
+May 19, 2017 3:03:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:04:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:04:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:04:36 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:04:36 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:04:36 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:05:06 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:05:06 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:05:06 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (89 ms)
+May 19, 2017 3:05:06 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 5/10
+May 19, 2017 3:05:06 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:06:06 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:06:12 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:06:12 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:06:12 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:06:12 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:06:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:06:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:06:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (99 ms)
+May 19, 2017 3:06:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 6/10
+May 19, 2017 3:06:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:07:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:07:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:07:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:07:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:07:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:08:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:08:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:08:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (92 ms)
+May 19, 2017 3:08:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 7/10
+May 19, 2017 3:08:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:09:18 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:09:23 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:09:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:09:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:09:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:09:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:09:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:09:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (106 ms)
+May 19, 2017 3:09:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 8/10
+May 19, 2017 3:09:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:10:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:10:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:10:59 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:10:59 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:10:59 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:11:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:11:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:11:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (97 ms)
+May 19, 2017 3:11:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 9/10
+May 19, 2017 3:11:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:12:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:12:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:12:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:12:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:12:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:13:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:13:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:13:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (77 ms)
+May 19, 2017 3:13:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 10/10
+May 19, 2017 3:13:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:14:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "FeedRegistry.jsw"
+May 19, 2017 3:14:11 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:14:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:14:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:14:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:14:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:14:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:14:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (80 ms)
+May 19, 2017 3:14:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing test 3/8: TEST Repeated 10 times
+May 19, 2017 3:14:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 1/10
+May 19, 2017 3:14:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:15:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:15:50 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:15:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:15:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:15:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:16:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:16:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:16:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (221 ms)
+May 19, 2017 3:16:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 2/10
+May 19, 2017 3:16:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:17:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:17:28 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:17:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:17:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:17:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:17:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:17:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:17:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (139 ms)
+May 19, 2017 3:17:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 3/10
+May 19, 2017 3:17:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:18:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:19:07 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:19:07 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:19:07 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:19:07 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:19:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:19:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:19:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (94 ms)
+May 19, 2017 3:19:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 4/10
+May 19, 2017 3:19:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:20:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:20:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:20:46 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:20:46 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:20:46 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:21:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:21:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:21:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (128 ms)
+May 19, 2017 3:21:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 5/10
+May 19, 2017 3:21:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:22:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:22:23 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:22:23 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:22:23 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:22:23 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:22:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:22:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:22:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (94 ms)
+May 19, 2017 3:22:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 6/10
+May 19, 2017 3:22:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:23:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:24:01 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:24:02 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:24:02 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:24:02 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:24:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:24:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:24:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (85 ms)
+May 19, 2017 3:24:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 7/10
+May 19, 2017 3:24:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:25:32 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:25:39 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:25:40 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:25:40 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:25:40 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:26:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:26:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:26:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (81 ms)
+May 19, 2017 3:26:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 8/10
+May 19, 2017 3:26:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:27:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:27:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:27:17 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:27:17 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:27:17 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:27:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:27:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:27:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (69 ms)
+May 19, 2017 3:27:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 9/10
+May 19, 2017 3:27:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:28:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:28:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:28:55 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:28:55 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:28:55 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:29:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:29:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:29:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (123 ms)
+May 19, 2017 3:29:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 10/10
+May 19, 2017 3:29:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:30:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ApalWrapper.jsw"
+May 19, 2017 3:30:32 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:30:33 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:30:33 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:30:33 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:31:02 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:31:02 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:31:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (63 ms)
+May 19, 2017 3:31:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing test 4/8: TEST Repeated 10 times
+May 19, 2017 3:31:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 1/10
+May 19, 2017 3:31:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:32:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:32:11 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:32:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:32:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:32:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:32:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:32:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:32:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (102 ms)
+May 19, 2017 3:32:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 2/10
+May 19, 2017 3:32:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:33:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:33:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:33:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:33:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:33:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:34:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:34:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:34:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (96 ms)
+May 19, 2017 3:34:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 3/10
+May 19, 2017 3:34:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:35:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:35:28 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:35:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:35:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:35:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:35:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:35:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (90 ms)
+May 19, 2017 3:35:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 4/10
+May 19, 2017 3:35:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:36:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:37:06 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:37:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:37:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:37:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:37:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:37:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:37:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (119 ms)
+May 19, 2017 3:37:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 5/10
+May 19, 2017 3:37:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:38:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:38:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:38:46 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:38:46 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:38:46 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:39:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:39:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:39:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (226 ms)
+May 19, 2017 3:39:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 6/10
+May 19, 2017 3:39:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:40:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:40:23 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:40:23 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:40:23 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:40:23 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:40:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:40:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:40:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (123 ms)
+May 19, 2017 3:40:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 7/10
+May 19, 2017 3:40:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:41:53 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:42:01 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:42:01 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:42:01 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:42:01 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:42:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:42:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:42:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (83 ms)
+May 19, 2017 3:42:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 8/10
+May 19, 2017 3:42:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:43:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:43:39 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:43:39 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:43:39 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:43:39 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:44:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:44:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:44:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (91 ms)
+May 19, 2017 3:44:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 9/10
+May 19, 2017 3:44:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:45:09 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:45:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:45:18 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:45:18 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:45:18 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:45:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:45:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:45:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (159 ms)
+May 19, 2017 3:45:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 10/10
+May 19, 2017 3:45:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:46:48 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "DataCache.jsw"
+May 19, 2017 3:46:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:46:55 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:46:56 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:46:56 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:47:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:47:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:47:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (87 ms)
+May 19, 2017 3:47:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing test 5/8: TEST Repeated 10 times
+May 19, 2017 3:47:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 1/10
+May 19, 2017 3:47:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:48:26 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 3:48:33 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:48:34 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:48:34 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:48:34 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:49:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:49:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:49:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (78 ms)
+May 19, 2017 3:49:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 2/10
+May 19, 2017 3:49:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:50:03 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 3:50:11 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:50:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:50:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:50:11 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (125 ms)
+May 19, 2017 3:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 3/10
+May 19, 2017 3:50:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:51:41 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 3:51:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:51:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:51:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:51:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:52:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:52:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:52:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (60 ms)
+May 19, 2017 3:52:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 4/10
+May 19, 2017 3:52:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:53:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 3:53:27 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:53:27 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:53:27 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:53:27 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:53:57 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:53:57 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:53:57 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (85 ms)
+May 19, 2017 3:53:57 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 5/10
+May 19, 2017 3:53:57 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:54:57 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 3:55:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:55:05 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:55:05 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:55:05 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:55:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:55:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:55:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (89 ms)
+May 19, 2017 3:55:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 6/10
+May 19, 2017 3:55:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:56:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 3:56:43 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:56:43 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:56:43 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:56:43 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:57:13 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:57:13 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:57:13 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (58 ms)
+May 19, 2017 3:57:13 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 7/10
+May 19, 2017 3:57:13 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:58:13 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 3:58:21 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:58:21 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:58:21 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:58:21 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:58:51 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 3:58:51 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 3:58:51 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (65 ms)
+May 19, 2017 3:58:51 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 8/10
+May 19, 2017 3:58:51 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 3:59:51 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 3:59:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 3:59:59 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:59:59 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 3:59:59 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:00:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:00:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:00:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (92 ms)
+May 19, 2017 4:00:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 9/10
+May 19, 2017 4:00:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:01:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 4:01:37 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:01:37 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:01:37 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:01:37 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:02:07 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:02:07 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:02:07 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (79 ms)
+May 19, 2017 4:02:07 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 10/10
+May 19, 2017 4:02:07 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:03:07 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "ErrorLogger.jsw"
+May 19, 2017 4:03:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:03:15 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:03:15 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:03:15 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:03:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:03:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:03:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (62 ms)
+May 19, 2017 4:03:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing test 6/8: TEST Repeated 10 times
+May 19, 2017 4:03:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 1/10
+May 19, 2017 4:03:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:04:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:04:50 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:04:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:04:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:04:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:05:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:05:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:05:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (60 ms)
+May 19, 2017 4:05:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 2/10
+May 19, 2017 4:05:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:06:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:06:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:06:25 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:06:25 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:06:25 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:06:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:06:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:06:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (78 ms)
+May 19, 2017 4:06:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 3/10
+May 19, 2017 4:06:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:07:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:08:00 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:08:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:08:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:08:00 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:08:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:08:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:08:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (55 ms)
+May 19, 2017 4:08:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 4/10
+May 19, 2017 4:08:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:09:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:09:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:09:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:09:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:09:35 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:10:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:10:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:10:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (55 ms)
+May 19, 2017 4:10:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 5/10
+May 19, 2017 4:10:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:11:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:11:10 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:11:10 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:11:10 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:11:10 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:11:40 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:11:40 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:11:40 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (71 ms)
+May 19, 2017 4:11:40 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 6/10
+May 19, 2017 4:11:40 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:12:40 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:12:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:12:45 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:12:45 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:12:45 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:13:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:13:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:13:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (48 ms)
+May 19, 2017 4:13:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 7/10
+May 19, 2017 4:13:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:14:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:14:20 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:14:20 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:14:20 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:14:20 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:14:50 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:14:50 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:14:50 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (67 ms)
+May 19, 2017 4:14:50 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 8/10
+May 19, 2017 4:14:50 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:15:50 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:15:55 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:15:56 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:15:56 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:15:56 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:16:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:16:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:16:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (36 ms)
+May 19, 2017 4:16:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 9/10
+May 19, 2017 4:16:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:17:25 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:17:30 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:17:30 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:17:30 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:17:30 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:18:00 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:18:00 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:18:00 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (53 ms)
+May 19, 2017 4:18:00 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 10/10
+May 19, 2017 4:18:00 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:19:00 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "InternalNews.jsw"
+May 19, 2017 4:19:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:19:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:19:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:19:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:19:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:19:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:19:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (49 ms)
+May 19, 2017 4:19:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing test 7/8: TEST Repeated 10 times
+May 19, 2017 4:19:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 1/10
+May 19, 2017 4:19:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:20:36 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:20:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:20:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:20:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:20:50 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:21:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:21:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:21:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (96 ms)
+May 19, 2017 4:21:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 2/10
+May 19, 2017 4:21:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:22:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:22:28 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:22:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:22:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:22:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:22:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:22:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:22:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (79 ms)
+May 19, 2017 4:22:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 3/10
+May 19, 2017 4:22:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:23:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:24:08 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:24:09 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:24:09 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:24:09 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:24:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:24:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:24:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (95 ms)
+May 19, 2017 4:24:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 4/10
+May 19, 2017 4:24:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:25:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:25:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:25:47 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:25:47 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:25:47 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:26:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:26:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:26:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (119 ms)
+May 19, 2017 4:26:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 5/10
+May 19, 2017 4:26:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:27:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:27:26 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:27:26 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:27:26 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:27:26 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:27:56 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:27:56 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:27:56 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (79 ms)
+May 19, 2017 4:27:56 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 6/10
+May 19, 2017 4:27:56 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:28:56 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:29:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:29:05 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:29:05 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:29:05 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:29:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:29:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:29:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (57 ms)
+May 19, 2017 4:29:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 7/10
+May 19, 2017 4:29:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:30:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:30:44 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:30:44 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:30:44 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:30:44 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:31:14 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:31:14 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:31:14 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (85 ms)
+May 19, 2017 4:31:14 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 8/10
+May 19, 2017 4:31:14 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:32:14 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:32:29 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:32:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:32:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:32:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:32:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:32:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:32:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (106 ms)
+May 19, 2017 4:32:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 9/10
+May 19, 2017 4:32:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:33:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:34:08 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:34:08 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:34:08 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:34:08 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:34:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:34:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:34:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (75 ms)
+May 19, 2017 4:34:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 10/10
+May 19, 2017 4:34:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:35:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "Twitter.jsw"
+May 19, 2017 4:35:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:35:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:35:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:35:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:36:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:36:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:36:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (111 ms)
+May 19, 2017 4:36:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing test 8/8: TEST Repeated 10 times
+May 19, 2017 4:36:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 1/10
+May 19, 2017 4:36:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:37:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:37:24 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:37:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:37:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:37:24 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:37:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:37:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:37:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (50 ms)
+May 19, 2017 4:37:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 2/10
+May 19, 2017 4:37:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:38:54 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:39:01 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:39:01 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:39:01 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:39:01 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:39:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:39:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:39:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (91 ms)
+May 19, 2017 4:39:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 3/10
+May 19, 2017 4:39:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:40:31 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:40:38 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:40:38 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:40:38 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:40:38 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:41:08 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:41:08 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:41:08 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (93 ms)
+May 19, 2017 4:41:08 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 4/10
+May 19, 2017 4:41:08 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:42:08 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:42:15 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:42:15 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:42:15 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:42:15 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:42:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:42:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:42:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (46 ms)
+May 19, 2017 4:42:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 5/10
+May 19, 2017 4:42:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:43:45 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:43:51 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:43:52 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:43:52 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:43:52 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:44:21 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:44:21 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:44:22 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (68 ms)
+May 19, 2017 4:44:22 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 6/10
+May 19, 2017 4:44:22 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:45:22 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:45:28 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:45:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:45:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:45:29 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:45:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:45:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:45:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (102 ms)
+May 19, 2017 4:45:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 7/10
+May 19, 2017 4:45:58 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:46:59 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:47:05 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:47:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:47:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:47:06 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:47:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:47:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:47:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (49 ms)
+May 19, 2017 4:47:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 8/10
+May 19, 2017 4:47:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:48:35 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:48:42 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:48:42 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:48:42 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:48:42 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:49:12 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:49:12 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:49:12 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (60 ms)
+May 19, 2017 4:49:12 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 9/10
+May 19, 2017 4:49:12 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:50:12 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:50:19 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:50:20 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:50:20 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:50:20 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:50:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:50:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:50:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (61 ms)
+May 19, 2017 4:50:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] TEST Experiment started: Run 10/10
+May 19, 2017 4:50:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Starting SUT ..... 
+May 19, 2017 4:51:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Executing workload "TvHelper.jsw"
+May 19, 2017 4:51:56 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Shutdowning SUT ..... 
+May 19, 2017 4:51:56 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:51:56 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:51:56 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:52:26 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] SUT shutdowned
+May 19, 2017 4:52:26 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Collecting Data on Database .....
+May 19, 2017 4:52:26 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.ServiceTestExperiment] Data Stored (48 ms)
+May 19, 2017 4:52:26 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.madness.monitor.master.JSeduiteMasterManager] Executing experiment 1/1: FAULTY Repeated 2 times
+May 19, 2017 4:52:26 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] FAULTY Experiment started: Run 1/2
+May 19, 2017 4:52:27 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Starting SUT ..... 
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
+May 19, 2017 4:53:27 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Executing workload "test.jsw"
-May 16, 2017 12:03:49 PM ippoz.madness.commons.support.AppLogger log
-SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
-May 16, 2017 12:04:20 PM ippoz.madness.commons.support.AppLogger log
+May 19, 2017 4:54:16 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Shutdowning SUT ..... 
-May 16, 2017 12:04:20 PM ippoz.madness.commons.support.AppLogger log
+May 19, 2017 4:54:17 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:54:17 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:54:17 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:54:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] SUT shutdowned
+May 19, 2017 4:54:47 PM ippoz.madness.commons.support.AppLogger log
 INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Collecting Data on Database .....
-May 16, 2017 12:04:20 PM ippoz.madness.commons.support.AppLogger log
+May 19, 2017 4:54:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Data Stored (2066 ms)
+May 19, 2017 4:54:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] FAULTY Experiment started: Run 2/2
+May 19, 2017 4:54:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Starting SUT ..... 
+May 19, 2017 4:55:49 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Executing workload "test.jsw"
+May 19, 2017 4:56:47 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Shutdowning SUT ..... 
+May 19, 2017 4:56:48 PM ippoz.madness.commons.support.AppLogger log
 SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
-May 16, 2017 12:04:20 PM ippoz.madness.commons.support.AppLogger log
+May 19, 2017 4:56:48 PM ippoz.madness.commons.support.AppLogger log
 SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
-May 16, 2017 12:04:21 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Data Stored (536 ms)
-May 16, 2017 12:04:21 PM ippoz.madness.commons.support.AppLogger log
-INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] FAULTY Experiment started: Run 2/40
+May 19, 2017 4:56:48 PM ippoz.madness.commons.support.AppLogger log
+SEVERE: [Error][EndOfStream@ippoz.multilayer.monitor.master.probes.receiver.JSONSocketProbeReceiver] Detected end of stream
+May 19, 2017 4:57:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] SUT shutdowned
+May 19, 2017 4:57:17 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Collecting Data on Database .....
+May 19, 2017 4:57:21 PM ippoz.madness.commons.support.AppLogger log
+INFO: [Info][ippoz.multilayer.monitor.master.experiment.Experiment] Data Stored (4012 ms)

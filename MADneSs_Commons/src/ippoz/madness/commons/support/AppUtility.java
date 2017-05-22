@@ -214,5 +214,23 @@ public class AppUtility {
 		}
 		return std / values.length;
 	}
+
+	public static boolean isInteger(String toTest) {
+		try {
+			Integer.parseInt(toTest);
+			return true;
+		} catch(Exception ex){
+			return false;
+		}
+	}
+	
+	public static boolean isDouble(String toTest) {
+		try {
+			Double.parseDouble(toTest);
+			return true;
+		} catch(Exception ex){
+			return false;
+		}
+	}
 	
 }

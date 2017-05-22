@@ -113,7 +113,7 @@ public class JSeduiteWorkload extends Workload {
 			invList = new LinkedList<Invocation>();
 			for(Service s : servicesList){
 				invStart = System.currentTimeMillis();
-				callReply = jsInvoker.invokeService((JSeduiteService)s, true);
+				callReply = jsInvoker.invokeService((JSeduiteService)s, false);
 				invList.add(new Invocation(s, s.getName(), invStart, System.currentTimeMillis(), callReply));	
 				Thread.sleep(msDelay);
 			}
@@ -153,6 +153,23 @@ public class JSeduiteWorkload extends Workload {
 		sList.add(new JSeduiteService("ICalReader", true));
 		sList.add(new JSeduiteService("InternalNews", true));
 		sList.add(new JSeduiteService("RssReader", true));
+		sList.add(new JSeduiteService("Twitter", true, "TwitterWrapper"));
+		sList.add(new JSeduiteService("TvHelper", true));
+		sList.add(new JSeduiteService("BreakingNews", true));
+		sList.add(new JSeduiteService("DataCache", true));
+		sList.add(new JSeduiteService("ErrorLogger", true));
+		sList.add(new JSeduiteService("HyperMachin", true));
+		sList.add(new JSeduiteService("ICalReader", true));
+		sList.add(new JSeduiteService("InternalNews", true));
+		sList.add(new JSeduiteService("jDisplayer", true));
+		sList.add(new JSeduiteService("MenuService", true, "MenuFinder"));
+		sList.add(new JSeduiteService("PartnerKeys", true));
+		sList.add(new JSeduiteService("PictureAlbumRegistry", true));
+		sList.add(new JSeduiteService("ProfileManager", true, "SourceFinder"));
+		sList.add(new JSeduiteService("SchoolLife", true, "BreakTimeFinder"));
+		sList.add(new JSeduiteService("TimeMachine", true));
+		sList.add(new JSeduiteService("VideoPublisher", true, "VideoPublisherBusiness"));
+		sList.add(new JSeduiteService("WebAdmin", true));
 		return sList;
 	}
 	
