@@ -16,21 +16,37 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 /**
- * @author root
+ * The Class CycleProbe.
  *
+ * @author ippoz
  */
 public abstract class CycleProbe extends Probe {
 	
+	/** The Constant OBSERVATION_MS_DELAY. */
 	private static final int OBSERVATION_MS_DELAY = 1000;
+	
+	/** The Constant CONN_ATTEMPTS_NUMBER. */
 	private static final int CONN_ATTEMPTS_NUMBER = 20;
 	
+	/** The halt flag. */
 	private boolean halt;
 
+	/**
+	 * Instantiates a new cycle probe.
+	 *
+	 * @param probeLayer the probe layer
+	 * @param probeName the probe name
+	 * @param receiverIp the receiver IP address
+	 * @param probePort the probe port
+	 */
 	public CycleProbe(LayerType probeLayer, String probeName, String receiverIp, int probePort) {
 		super(probeLayer, probeName, receiverIp, probePort);
 		halt = false;
 	}
 
+	/* (non-Javadoc)
+	 * @see ippoz.madness.monitor.slave.probes.Probe#startProbe()
+	 */
 	@Override
 	public void startProbe() {
 		long startTime;
@@ -71,6 +87,13 @@ public abstract class CycleProbe extends Probe {
 		
 	}
 	
+	/**
+	 * Builds the JSON of a single observation.
+	 *
+	 * @param startTime the start time
+	 * @param attributes the attributes
+	 * @return the JSON object
+	 */
 	private JSONObject buildJSON(long startTime, HashMap<String, String> attributes) {
 		JSONObject partial, jObj = new JSONObject();
 		JSONArray jArr = new JSONArray();
@@ -78,7 +101,12 @@ public abstract class CycleProbe extends Probe {
 		jObj.put("datetime", new Date().toString());
 		for(String attName : attributes.keySet()){
 			partial = new JSONObject();
-			partial.accumulate("attributeName", attName);
+			if(attName.contains(".")){
+				partial.accumulate("attributeName", attName.substring(attName.indexOf(".") + 1));
+			} else {
+				partial.accumulate("attributeName", attName);
+			}
+			partial.accumulate("attributeDesc", attName);
 			partial.accumulate("attributeValue", attributes.get(attName));
 			jArr.add(partial);
 		}
@@ -88,8 +116,16 @@ public abstract class CycleProbe extends Probe {
 		return jObj;
 	}
 
+	/**
+	 * Reads the parameters of the probe.
+	 *
+	 * @return the hash map
+	 */
 	protected abstract HashMap<String, String> readParams();
 
+	/* (non-Javadoc)
+	 * @see ippoz.madness.monitor.slave.probes.Probe#shutdownProbe()
+	 */
 	@Override
 	public void shutdownProbe() {
 		halt = true;

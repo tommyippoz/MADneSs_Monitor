@@ -10,7 +10,7 @@ import ippoz.madness.commons.support.PreferencesManager;
 import ippoz.madness.monitor.communication.CommunicationManager;
 import ippoz.madness.monitor.communication.MessageType;
 import ippoz.madness.monitor.slave.probes.CentOSProbe;
-import ippoz.madness.monitor.slave.probes.JMXProbe;
+import ippoz.madness.monitor.slave.probes.JMXLocalProbe;
 import ippoz.madness.monitor.slave.probes.Probe;
 import ippoz.madness.monitor.slave.probes.ProbeManager;
 import ippoz.madness.monitor.slave.probes.UnixNetworkProbe;
@@ -32,7 +32,11 @@ import java.util.LinkedList;
  */
 public class SlaveManager {
 	
+	private static final String JVM_PROBE = "JVM_ATTRIBUTES_FILE";
+	
 	private static final String CENTOS_PROBE = "OS_ATTRIBUTES_FILE";
+	
+	private static final String ANOMALY_ACTIVATION_FILE = "ANOMALY_ACTIVATION_FILE";
 	
 	private ProbeManager pManager;
 	private CommunicationManager cManager;
@@ -77,7 +81,9 @@ public class SlaveManager {
 					PreferencesManager probePrefManager = new PreferencesManager(new File(prefManager.getPreference("PROBE_PREFERENCES_FILE")));
 					switch(((LayerType)commArray[1])){
 						case JVM:
-							newProbe = new JMXProbe(probePrefManager.getPreference("JMXProbe"), "", cManager.getIpAddress(), (Integer)commArray[2]);
+							if(probePrefManager.getPreference(JVM_PROBE) != null && new File(probePrefManager.getPreference(JVM_PROBE)).exists()){
+								newProbe = new JMXLocalProbe(cManager.getIpAddress(), (Integer)commArray[2], new File(probePrefManager.getPreference(JVM_PROBE)));
+							} else AppLogger.logError(getClass(), "ProbeError", "Unable to instantiate JVM probe: preferences are not valid");
 							break;
 						case CENTOS:
 							newProbe = new CentOSProbe(AppUtility.readPairsFromCSV(probePrefManager.getPreference(CENTOS_PROBE)), cManager.getIpAddress(), (Integer)commArray[2]);
@@ -89,7 +95,9 @@ public class SlaveManager {
 							AppLogger.logError(getClass(), "ProbeNotRecognized", "Unable to recognize probe type");
 							break;
 					}
-					pManager.addProbe(newProbe);
+					if(newProbe != null) {
+						pManager.addProbe(newProbe);
+					}
 					cManager.send(MessageType.OK);
 					break;
 				case SETUP_SUT:
@@ -155,25 +163,11 @@ public class SlaveManager {
 				if(commArray[i] instanceof String){
 					toCompare = ((String) commArray[i]).split(";")[0].toUpperCase();
 					if(toCompare.equals("TEST")){
-						toCompare = ((String) commArray[i]).split(";")[1].toUpperCase();
-						if(toCompare.equals("FIREFOX")){
-							current = new BashInjection("TEST", "FIREFOX", Long.valueOf(((String) commArray[i]).split(";")[2]), "firefox -search pokemon", "pkill -f firefox");
-						} else {
-							AppLogger.logError(getClass(), "UnrecognizedTESTinjection", "Unable to recognize test type " + ((String) commArray[i]).split(",")[1]);
-						}
-					} else if(toCompare.equals("LIFERAY")){
-						toCompare = ((String) commArray[i]).split(";")[1].toUpperCase();	
-						if(toCompare.equals("CPU")){
-							current = new EnvInjection("LIFERAY", "CPU", Long.valueOf(((String) commArray[i]).split(";")[2]), "/home/cecris/start_instrumented.sh", "/tmp/liferayErrLog_", parseInjDetails("CPU", ((String) commArray[i]).split(";")));
-						} else if(toCompare.equals("MEMORY")){
-							current = new EnvInjection("LIFERAY", "MEMORY", Long.valueOf(((String) commArray[i]).split(";")[2]), "/home/cecris/start_instrumented.sh", "/tmp/liferayErrLog_", parseInjDetails("MEMORY", ((String) commArray[i]).split(";")));
-						} else if(toCompare.equals("NETWORK")){
-							current = new EnvInjection("LIFERAY", "NETWORK", Long.valueOf(((String) commArray[i]).split(";")[2]), "/home/cecris/start_instrumented.sh", "/tmp/liferayErrLog_", parseInjDetails("NETWORK", ((String) commArray[i]).split(";")));
-						} else {
-							AppLogger.logError(getClass(), "UnrecognizedLIFERAYinjection", "Unable to recognize test type " + ((String) commArray[i]).split(",")[1]);
-						}
+						current = new BashInjection("FIREFOX", Long.valueOf(((String) commArray[i]).split(";")[2]), "firefox -search pokemon", "pkill -f firefox");
+					} if(systemUnderTest.hasInjection(toCompare)){
+							current = new EnvInjection(toCompare, Long.valueOf(((String) commArray[i]).split(";")[2]), systemUnderTest.getStartScriptPath(), prefManager.getPreference(ANOMALY_ACTIVATION_FILE), parseInjDetails(toCompare, ((String) commArray[i]).split(";")));
 					} else {
-						AppLogger.logError(getClass(), "UnrecognizedInjection", "Unable to recognize Injection");
+						AppLogger.logError(getClass(), "Unrecognized" + toCompare + "injection", "Unable to recognize test type " + ((String) commArray[i]).split(",")[1]);
 					}
 					outList.add(current);
 				}
@@ -183,9 +177,9 @@ public class SlaveManager {
 	}
 	
 	private String[] parseInjDetails(String injTag, String[] details){
-		String[] outList = new String[details.length-2];
-		for(int i=3;i<details.length;i++){
-			outList[i-3] = details[i];
+		String[] outList = new String[(int)(details.length/3)+1];
+		for(int i=1;i<details.length;i=i+3){
+			outList[(i-1)/3] = details[i];
 		}
 		outList[outList.length-1] = "FAILURE_" + injTag;
 		return outList;
@@ -205,9 +199,9 @@ public class SlaveManager {
 				} catch (IOException ex) {
 					AppLogger.logException(getClass(), ex, "Unable to receive data");
 					break;
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				} catch (InterruptedException ex) {
+					AppLogger.logException(getClass(), ex, "Error while executing");
+					break;
 				}
 			}
 		}

@@ -5,3 +5,5 @@ OUT_PORT=9876
 
 SUT_PREFERENCES_FILE=./datafiles/slave/jSeduite_SUT.preferences
 PROBE_PREFERENCES_FILE=./datafiles/slave/probe.preferences
+
+ANOMALY_ACTIVATION_FILE = /tmp/jSeduiteErrLog_

@@ -1,5 +1,8 @@
-SCRIPT_PATH=/home/andrea/SUNWappserver/bin
-START_SCRIPT_NAME=start-default-domain.sh 
-SHUTDOWN_SCRIPT_NAME=stop-default-domain.sh 
-START_DELAY=30000
-SHUTDOWN_DELAY=20000
+SCRIPT_PATH = /home/andrea/SUNWappserver/bin
+SUT_FOLDER = /home/andrea/SUNWappserver
+
+START_SCRIPT_NAME = start-domain-madness.sh 
+SHUTDOWN_SCRIPT_NAME = stop-domain-madness.sh 
+
+START_DELAY = 60000
+SHUTDOWN_DELAY = 30000

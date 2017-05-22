@@ -35,6 +35,10 @@ public class AppUtility {
 		return System.getProperty("os.name").toUpperCase().contains("UNIX");
 	}
 	
+	public static boolean isLINUX(){
+		return System.getProperty("os.name").toUpperCase().contains("LINUX");
+	}
+	
 	public static LinkedList<String> runScriptInto(String path, String args, boolean setOnFolder) throws IOException {
 		Process p;
 		LinkedList<String> outList = new LinkedList<String>();
@@ -143,8 +147,8 @@ public class AppUtility {
 				readed = reader.readLine();
 				if(readed.length() > 0) {
 					if(readed.contains("=") && readed.split("=").length == 2){
-						tag = readed.split("=")[0];
-						value = readed.split("=")[1];
+						tag = readed.split("=")[0].trim();
+						value = readed.split("=")[1].trim();
 						if(tags != null && tags.length > 0){
 							for(String current : tags){
 								if(current.toUpperCase().equals(tag.toUpperCase())){

@@ -15,15 +15,27 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * @author Tommy
+ * The Class JMXProbe. Gathers data from the JVM
  *
+ * @author Tommy
  */
 public class JMXProbe extends ScriptProbe {
 
+	/**
+	 * Instantiates a new JMX probe.
+	 *
+	 * @param filePath the file path
+	 * @param fileArgs the file arguments
+	 * @param receiverIp the receiver IP address
+	 * @param probePort the probe port
+	 */
 	public JMXProbe(String filePath, String fileArgs, String receiverIp, int probePort) {
 		super(System.getProperty("user.dir") + "/" + filePath, fileArgs, LayerType.JVM, "JMX", receiverIp, probePort);
 	}
 
+	/* (non-Javadoc)
+	 * @see ippoz.madness.monitor.slave.probes.Probe#setupParameters()
+	 */
 	@Override
 	public void setupParameters() {
 		File preferencesFile;
@@ -63,6 +75,9 @@ public class JMXProbe extends ScriptProbe {
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see ippoz.madness.monitor.slave.probes.Probe#canRun()
+	 */
 	@Override
 	public boolean canRun() {
 		return true;

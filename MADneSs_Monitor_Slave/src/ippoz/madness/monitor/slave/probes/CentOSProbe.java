@@ -12,18 +12,30 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
- * @author root
+ * The Class CentOSProbe.
  *
+ * @author ippoz
  */
 public class CentOSProbe extends CycleProbe {
 
+	/** The involved OS attributes. */
 	private HashMap<String, String> involvedAttributes;
 	
+	/**
+	 * Instantiates a CentOS probe.
+	 *
+	 * @param involvedAttributes the involved attributes
+	 * @param receiverIp the receiver IP address
+	 * @param probePort the probe port
+	 */
 	public CentOSProbe(HashMap<String, String> involvedAttributes, String receiverIp, int probePort) {
 		super(LayerType.CENTOS, "CentOS", receiverIp, probePort);
 		this.involvedAttributes = involvedAttributes;
 	}
 
+	/* (non-Javadoc)
+	 * @see ippoz.madness.monitor.slave.probes.CycleProbe#readParams()
+	 */
 	@Override
 	protected HashMap<String, String> readParams() {
 		HashMap<String, String> outMap = new HashMap<String, String>();
@@ -33,6 +45,11 @@ public class CentOSProbe extends CycleProbe {
 		return outMap;
 	}
 
+	/**
+	 * Gets the memory info (/proc/meminfo).
+	 *
+	 * @return the memory info
+	 */
 	private HashMap<String, String> getMemInfo() {
 		String[] splitted;
 		String attValue;
@@ -56,6 +73,11 @@ public class CentOSProbe extends CycleProbe {
 		return outMap;
 	}
 
+	/**
+	 * Gets the virtual memory info (/proc/vmstat).
+	 *
+	 * @return the virtual memory info
+	 */
 	private HashMap<String, String> getVirtMemInfo() {
 		String[] splitted;
 		HashMap<String, String> outMap = new HashMap<String, String>();
@@ -72,6 +94,11 @@ public class CentOSProbe extends CycleProbe {
 		return outMap;
 	}
 	
+	/**
+	 * Gets the CPU info (/proc/stat).
+	 *
+	 * @return the CPU info
+	 */
 	private HashMap<String, String> getCpuInfo() {
 		String[] splitted;
 		HashMap<String, String> outMap = new HashMap<String, String>();
@@ -94,15 +121,21 @@ public class CentOSProbe extends CycleProbe {
 		return outMap;
 	}
 
+	/* (non-Javadoc)
+	 * @see ippoz.madness.monitor.slave.probes.Probe#setupParameters()
+	 */
 	@Override
 	public void setupParameters() {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see ippoz.madness.monitor.slave.probes.Probe#canRun()
+	 */
 	@Override
 	public boolean canRun() {
-		return AppUtility.isUNIX();
+		return AppUtility.isLINUX();
 	}
 	
 }

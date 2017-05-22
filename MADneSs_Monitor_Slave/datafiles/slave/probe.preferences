@@ -1,5 +1,5 @@
 * Path of the JAVA Probe
-JMXProbe = datafiles/slave/probes/JMX/JVM6Probe_BeanFetcher.jar
+JVM_ATTRIBUTES_FILE = datafiles/slave/probes/JMX/bean.preferences
 
 * Path of the OS Attributes
 OS_ATTRIBUTES_FILE = datafiles/slave/probes/OS/OS_Attributes.csv
